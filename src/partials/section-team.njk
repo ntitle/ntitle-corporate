@@ -14,7 +14,7 @@
                     <div class="team-member-info">
                         <img class="mx-auto rounded-circle" src="{{ teamMember.avatar }}" alt="{{ teamMember.name }}">
                         <h3 class="col-heading">{{ teamMember.displayName | safe }}</h3>
-                        <h4>CEO</h4>
+                        <h4>{{ teamMember.role }}</h4>
                         <p class="team-member-description">{{ teamMember.description }}</p>
                     </div>
                     <ul class="list-inline social-buttons">
