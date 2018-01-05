@@ -3,6 +3,6 @@ module.exports = {
       tokenSaleEnabled: false
     },
     meta: {
-        title: 'nTitle'
+        title: 'nTitle: Where Gamers and Independent Developers are in Control'
     }
 };
