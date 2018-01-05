@@ -16,12 +16,12 @@ iframe {
 
 .button-light {
   @extend %button-default;
-  color:$third-blue;
-  border-color:$third-blue;
+  color:$blue-on-light;
+  border-color:$blue-on-light;
   margin-top:$breather/2;
   &:hover {
     color:$light;
-    background-color:$third-blue;
+    background-color:$blue-on-light;
   }
 }
 

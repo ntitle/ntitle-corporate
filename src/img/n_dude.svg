@@ -13,19 +13,15 @@
         filter: url(#filter);
       }
 
-      .cls-3, .cls-4 {
-        stroke-width: 1px;
-      }
-
       .cls-3 {
         opacity: 0.64;
         fill: url(#linear-gradient);
-        stroke: url(#linear-gradient-2);
       }
 
       .cls-4 {
-        fill: url(#linear-gradient-3);
-        stroke: url(#linear-gradient-4);
+        stroke-width: 1px;
+        fill: url(#linear-gradient-2);
+        stroke: url(#linear-gradient-3);
       }
 
       .cls-5 {
@@ -47,14 +43,16 @@
     </filter>
     <linearGradient id="linear-gradient" x1="60.5" y1="92" x2="60.5" y2="109" gradientUnits="userSpaceOnUse">
       <stop offset="0"/>
+      <stop offset="1" stop-color="#edd7b7"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x2="0" y2="-1" gradientUnits="userSpaceOnUse">
+      <stop offset="0"/>
       <stop offset="1" stop-opacity="0"/>
     </linearGradient>
-    <linearGradient id="linear-gradient-2" x1="60.5" y1="109" x2="60.5" y2="92" gradientUnits="userSpaceOnUse">
+    <linearGradient id="linear-gradient-3" y1="-1" x2="0" gradientUnits="userSpaceOnUse">
       <stop offset="0"/>
       <stop offset="1" stop-color="#fff"/>
     </linearGradient>
-    <linearGradient id="linear-gradient-3" x1="0" y1="0" x2="0" y2="-1" xlink:href="#linear-gradient"/>
-    <linearGradient id="linear-gradient-4" x1="0" y1="-1" x2="0" y2="0" xlink:href="#linear-gradient-2"/>
     <filter id="filter-2" x="32.344" y="23.344" width="53.188" height="74.063" filterUnits="userSpaceOnUse">
       <feFlood result="flood" flood-color="#edd7b7"/>
       <feComposite result="composite" operator="in" in2="SourceGraphic"/>
@@ -66,7 +64,7 @@
     <path class="cls-1" d="M121,167.26L99.763,122.632s-3.785-6.285-9.374-6.464-4.326-.718-4.326-0.718,5.588-3.951,1.082-7.542S79.033,99.468,72,99.289c0.18,0.539.18-1.975,1.442-6.823-0.361-.18-26.679-0.718-26.679-0.718a29.908,29.908,0,0,1,1.082,7.9c0.18,0.538-3.425-.539-9.734,3.95-5.408,5.028-10.095,7.183-7.21,13.288,7.03,5.028,2.163,3.95,2.163,3.95s-5.408,2.155-10.095,4.31-5.408,6.285-7.931,13.288S3.143,170.4,3.143,170.4a96.181,96.181,0,0,0,13.619,18.816c2.357,4.705,1.048,10.454,1.048,10.454l5.762,3.659,2.619,8.363,8.9,0.523,19.381,5.749,29.857-.522,11-6.795-2.619-5.227,11-5.75L101.1,191.3S114.452,182.68,121,167.26Z"/>
     <path class="cls-1" d="M33.094,202.276L13.962,302.2,0,311H23.786l-0.517-7.766,27.923-64.2,25.338-4.66V201.758Z"/>
     <path id="Shape_26_copy" data-name="Shape 26 copy" class="cls-1" d="M82.668,202.276L101.8,302.2l13.962,8.8H91.976l0.517-7.766-27.923-64.2-25.338-4.66V201.758Z"/>
-    <image id="Vector_Smart_Object" data-name="Vector Smart Object" x="27" y="140" width="67" height="31" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAWCAMAAACxKe+eAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAACo1BMVEUAAABPpO1hrPRutvlsxfs9nOdPpO1sxftq1Pw9nOdq1PwpleE9nOdhrPRq1PwpleFPpO1hrPRutvlq1Pxp4/4WjdspleFPpO1utvlp4/4WjdtPpO1utvlsxftp4/4Egs4AesACcbEWjds9nOdsxftp4/5n8v8Vi9YEgs4GZ6MJXpUChtUWjds9nOdsxftn8v8Vi9YJXpUNVIcNIDMRJDsUKUIXLUobMlIaOl8WRXERT4INWpQJZaUChtUpleE9nOdsxftq1Pxn8v8mlN0Vi9YRS3kVQmsZOl4bM1MXLUoTKEEPIjgNHzINHzINIDMJZaUFb7cAgNAChtUpleFq1Pxp7P8mlN0Egs4AesACcbEPIjgNHzINHzIFb7cBeskAgNAWjdspleFq1Pxp7P84nOUmlN0Egs4CcbEGZ6MPIjgNHzINIDMRJDsUKUIXLUobMlIaOl8WRXERT4IBeskWjdtq1Pxp4/5p7P84nOUVi9YEgs4JXpUNVIcRS3kVQmsZOl4bM1MXLUoTKEEPIjgRT4INWpQChtUWjdtp4/5q3P1LpOw4nOUVi9YNWpQJZaUAgNAChtVp4/5q3P1LpOwVi9YJZaUFb7cBeskAgNBn8v9q3P1syvtLpOwmlN1n8v9syvtfrPMmlN1n8v9p7P9syvtutvlfrPM4nOVp7P9utvk4nOVp7P9q3P1LpOxq3P1frPNLpOxq3P1syvtutvlfrPNhrPRutvlPpO1sxfs9nOdq1PwpleEAesACcbFp4/4Egs4GZ6MWjdsJXpUNVIcRJDsUKUIXLUobMlIaOl8WRXERT4INWpRn8v8Vi9YRS3kVQmsZOl4bM1MTKEENIDMJZaUChtUFb7cAgNAmlN0Beslp7P84nOVq3P1LpOxsyvtfrPMAAACSj8JVAAAAtXRSTlMAK9brMhDj1AKRTxn64bKD+h2t+xYF5qFSaFMyCfS9F3E8usio/RYM2poGIv5eU22HxCwz2fDw8PDozpUbjOsHCfTFFffs4ODg4ODUEAHW6SkL74imHoTwK8X+Eh3kJXn6HEh6DO+FCKOiBHSAgICAh7L5+5QD59ps+hk/gZCQkJCQeQkq6OkVjToC3qI08fZAMJxTMCqutDjS9RDKuG5wQj8S990Ev8CWrjgk+qiJ4hYGc4ga1CykHwAAAAFiS0dEAIgFHUgAAAAJcEhZcwAAFxEAABcRAcom8z8AAAAHdElNRQfiAQQPJSmER6F4AAABlUlEQVQ4y2NgwACMTMwsDCQAVrat29g5SNDAuX3rth1cxKvn5tnOu20HH/Ea+HcKCArtEBYhVr2o2E5xBokduySJ1SC1e6c0g4zsLjmEkLyCIh4NSruVgaTKLlU1mIi6xp69mlq41Gvr7NYFUnq79unDhAz279l7wNAIocbYxNTM3MLSytoGyLE9aGcPpBwc9zlBpZ1dQBoOHXZ1c/fw9PL2YfD1O3L02PETJ0+d9g9gCAw6GAxWFrLvTChEQ9jZ8IhIoIZz5y9cPHYpKpoh5jJMw5XYuPirCYlgZUn7ziSDGSmpZ9MY0jNgGjIZGLKyc3Lz8gsKi05fuVZ8/WoJxNzSsjPlYEbFjcoqIFVdU1tX39DY1IzwSkvrlWs3r7e1Q7kdZ251Aqmu7hs9uAKot+/azf4JMN7EM7cmAanJt29MwRkFU6dNn4Hgzbw1azYDw5zbc4mN8nm37sxnWHD39kJiNSxafGfJ0mV3lxOrnoFhxZ17K+/fXUW8htVr7m27v5Z49QwM6+5tW7+BFA0bN23egikKALGTmsPyewB9AAAAAElFTkSuQmCC"/>
+    <image id="Vector_Smart_Object" data-name="Vector Smart Object" x="27" y="140" width="67" height="31" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAWCAMAAACxKe+eAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAACo1BMVEUAAABPpO1hrPRutvlsxfs9nOdPpO1sxftq1Pw9nOdq1PwpleE9nOdhrPRq1PwpleFPpO1hrPRutvlq1Pxp4/4WjdspleFPpO1utvlp4/4WjdtPpO1utvlsxftp4/4Egs4AesACcbEWjds9nOdsxftp4/5n8v8Vi9YEgs4GZ6MJXpUChtUWjds9nOdsxftn8v8Vi9YJXpUNVIcNIDMRJDsUKUIXLUobMlIaOl8WRXERT4INWpQJZaUChtUpleE9nOdsxftq1Pxn8v8mlN0Vi9YRS3kVQmsZOl4bM1MXLUoTKEEPIjgNHzINHzINIDMJZaUFb7cAgNAChtUpleFq1Pxp7P8mlN0Egs4AesACcbEPIjgNHzINHzIFb7cBeskAgNAWjdspleFq1Pxp7P84nOUmlN0Egs4CcbEGZ6MPIjgNHzINIDMRJDsUKUIXLUobMlIaOl8WRXERT4IBeskWjdtq1Pxp4/5p7P84nOUVi9YEgs4JXpUNVIcRS3kVQmsZOl4bM1MXLUoTKEEPIjgRT4INWpQChtUWjdtp4/5q3P1LpOw4nOUVi9YNWpQJZaUAgNAChtVp4/5q3P1LpOwVi9YJZaUFb7cBeskAgNBn8v9q3P1syvtLpOwmlN1n8v9syvtfrPMmlN1n8v9p7P9syvtutvlfrPM4nOVp7P9utvk4nOVp7P9q3P1LpOxq3P1frPNLpOxq3P1syvtutvlfrPNhrPRutvlPpO1sxfs9nOdq1PwpleEAesACcbFp4/4Egs4GZ6MWjdsJXpUNVIcRJDsUKUIXLUobMlIaOl8WRXERT4INWpRn8v8Vi9YRS3kVQmsZOl4bM1MTKEENIDMJZaUChtUFb7cAgNAmlN0Beslp7P84nOVq3P1LpOxsyvtfrPMAAACSj8JVAAAAtXRSTlMAK9brMhDj1AKRTxn64bKD+h2t+xYF5qFSaFMyCfS9F3E8usio/RYM2poGIv5eU22HxCwz2fDw8PDozpUbjOsHCfTFFffs4ODg4ODUEAHW6SkL74imHoTwK8X+Eh3kJXn6HEh6DO+FCKOiBHSAgICAh7L5+5QD59ps+hk/gZCQkJCQeQkq6OkVjToC3qI08fZAMJxTMCqutDjS9RDKuG5wQj8S990Ev8CWrjgk+qiJ4hYGc4ga1CykHwAAAAFiS0dEAIgFHUgAAAAJcEhZcwAAFxEAABcRAcom8z8AAAAHdElNRQfiAQUJGBLjlRs1AAABlUlEQVQ4y2NgwACMTMwsDCQAVrat29g5SNDAuX3rth1cxKvn5tnOu20HH/Ea+HcKCArtEBYhVr2o2E5xBokduySJ1SC1e6c0g4zsLjmEkLyCIh4NSruVgaTKLlU1mIi6xp69mlq41Gvr7NYFUnq79unDhAz279l7wNAIocbYxNTM3MLSytoGyLE9aGcPpBwc9zlBpZ1dQBoOHXZ1c/fw9PL2YfD1O3L02PETJ0+d9g9gCAw6GAxWFrLvTChEQ9jZ8IhIoIZz5y9cPHYpKpoh5jJMw5XYuPirCYlgZUn7ziSDGSmpZ9MY0jNgGjIZGLKyc3Lz8gsKi05fuVZ8/WoJxNzSsjPlYEbFjcoqIFVdU1tX39DY1IzwSkvrlWs3r7e1Q7kdZ251Aqmu7hs9uAKot+/azf4JMN7EM7cmAanJt29MwRkFU6dNn4Hgzbw1azYDw5zbc4mN8nm37sxnWHD39kJiNSxafGfJ0mV3lxOrnoFhxZ17K+/fXUW8htVr7m27v5Z49QwM6+5tW7+BFA0bN23egikKALGTmsPyewB9AAAAAElFTkSuQmCC"/>
     <g id="AURI">
       <path class="cls-1" d="M32.808,49.008l-6.48-1.434-6.12,5.737s-2.52,1.793-1.8,6.813,1.8,10.04,1.8,10.04,1.08,3.347,3.96,4.3,7.56,2.151,7.56,2.151a1.415,1.415,0,0,0,1.8-1.793s-0.96-10.279-.72-14.343C33.168,54.148,32.808,52,32.808,49.008Z"/>
       <path id="Shape_5_copy" data-name="Shape 5 copy" class="cls-1" d="M83.669,47.928L90.081,46.5l6.057,5.728s2.494,1.79,1.781,6.8-1.781,10.025-1.781,10.025-1.069,3.341-3.919,4.3S84.737,75.5,84.737,75.5a1.4,1.4,0,0,1-1.781-1.79s0.95-10.263.713-14.321C83.312,53.06,83.669,50.912,83.669,47.928Z"/>
