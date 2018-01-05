@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="121" height="311" viewBox="0 0 121 311">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2, .cls-5 {
+        fill: gray;
+      }
+
+      .cls-2 {
+        filter: url(#filter);
+      }
+
+      .cls-3, .cls-4 {
+        stroke-width: 1px;
+      }
+
+      .cls-3 {
+        opacity: 0.64;
+        fill: url(#linear-gradient);
+        stroke: url(#linear-gradient-2);
+      }
+
+      .cls-4 {
+        fill: url(#linear-gradient-3);
+        stroke: url(#linear-gradient-4);
+      }
+
+      .cls-5 {
+        filter: url(#filter-2);
+      }
+
+      .cls-6 {
+        fill: #fff;
+      }
+
+      .cls-7 {
+        opacity: 0.5;
+      }
+    </style>
+    <filter id="filter" x="47.5" y="88.719" width="27.375" height="40.375" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#edd7b7"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+    <linearGradient id="linear-gradient" x1="60.5" y1="92" x2="60.5" y2="109" gradientUnits="userSpaceOnUse">
+      <stop offset="0"/>
+      <stop offset="1" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="60.5" y1="109" x2="60.5" y2="92" gradientUnits="userSpaceOnUse">
+      <stop offset="0"/>
+      <stop offset="1" stop-color="#fff"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-3" x1="0" y1="0" x2="0" y2="-1" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-4" x1="0" y1="-1" x2="0" y2="0" xlink:href="#linear-gradient-2"/>
+    <filter id="filter-2" x="32.344" y="23.344" width="53.188" height="74.063" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#edd7b7"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="CUERPO">
+    <path class="cls-1" d="M33.247,75.227s-3.515,7.864-7.03,7.593c1.893-.271,2.434,3.254,8.653,4.881,0.811,1.356-4.6,7.322-3.785,11.932,0.811-.814,1.352-0.814,8.112-2.169s2.7,4.339,2.7,4.339l10.275-3.255Z"/>
+    <path class="cls-1" d="M121,167.26L99.763,122.632s-3.785-6.285-9.374-6.464-4.326-.718-4.326-0.718,5.588-3.951,1.082-7.542S79.033,99.468,72,99.289c0.18,0.539.18-1.975,1.442-6.823-0.361-.18-26.679-0.718-26.679-0.718a29.908,29.908,0,0,1,1.082,7.9c0.18,0.538-3.425-.539-9.734,3.95-5.408,5.028-10.095,7.183-7.21,13.288,7.03,5.028,2.163,3.95,2.163,3.95s-5.408,2.155-10.095,4.31-5.408,6.285-7.931,13.288S3.143,170.4,3.143,170.4a96.181,96.181,0,0,0,13.619,18.816c2.357,4.705,1.048,10.454,1.048,10.454l5.762,3.659,2.619,8.363,8.9,0.523,19.381,5.749,29.857-.522,11-6.795-2.619-5.227,11-5.75L101.1,191.3S114.452,182.68,121,167.26Z"/>
+    <path class="cls-1" d="M33.094,202.276L13.962,302.2,0,311H23.786l-0.517-7.766,27.923-64.2,25.338-4.66V201.758Z"/>
+    <path id="Shape_26_copy" data-name="Shape 26 copy" class="cls-1" d="M82.668,202.276L101.8,302.2l13.962,8.8H91.976l0.517-7.766-27.923-64.2-25.338-4.66V201.758Z"/>
+    <image id="Vector_Smart_Object" data-name="Vector Smart Object" x="27" y="140" width="67" height="31" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAWCAMAAACxKe+eAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAACo1BMVEUAAABPpO1hrPRutvlsxfs9nOdPpO1sxftq1Pw9nOdq1PwpleE9nOdhrPRq1PwpleFPpO1hrPRutvlq1Pxp4/4WjdspleFPpO1utvlp4/4WjdtPpO1utvlsxftp4/4Egs4AesACcbEWjds9nOdsxftp4/5n8v8Vi9YEgs4GZ6MJXpUChtUWjds9nOdsxftn8v8Vi9YJXpUNVIcNIDMRJDsUKUIXLUobMlIaOl8WRXERT4INWpQJZaUChtUpleE9nOdsxftq1Pxn8v8mlN0Vi9YRS3kVQmsZOl4bM1MXLUoTKEEPIjgNHzINHzINIDMJZaUFb7cAgNAChtUpleFq1Pxp7P8mlN0Egs4AesACcbEPIjgNHzINHzIFb7cBeskAgNAWjdspleFq1Pxp7P84nOUmlN0Egs4CcbEGZ6MPIjgNHzINIDMRJDsUKUIXLUobMlIaOl8WRXERT4IBeskWjdtq1Pxp4/5p7P84nOUVi9YEgs4JXpUNVIcRS3kVQmsZOl4bM1MXLUoTKEEPIjgRT4INWpQChtUWjdtp4/5q3P1LpOw4nOUVi9YNWpQJZaUAgNAChtVp4/5q3P1LpOwVi9YJZaUFb7cBeskAgNBn8v9q3P1syvtLpOwmlN1n8v9syvtfrPMmlN1n8v9p7P9syvtutvlfrPM4nOVp7P9utvk4nOVp7P9q3P1LpOxq3P1frPNLpOxq3P1syvtutvlfrPNhrPRutvlPpO1sxfs9nOdq1PwpleEAesACcbFp4/4Egs4GZ6MWjdsJXpUNVIcRJDsUKUIXLUobMlIaOl8WRXERT4INWpRn8v8Vi9YRS3kVQmsZOl4bM1MTKEENIDMJZaUChtUFb7cAgNAmlN0Beslp7P84nOVq3P1LpOxsyvtfrPMAAACSj8JVAAAAtXRSTlMAK9brMhDj1AKRTxn64bKD+h2t+xYF5qFSaFMyCfS9F3E8usio/RYM2poGIv5eU22HxCwz2fDw8PDozpUbjOsHCfTFFffs4ODg4ODUEAHW6SkL74imHoTwK8X+Eh3kJXn6HEh6DO+FCKOiBHSAgICAh7L5+5QD59ps+hk/gZCQkJCQeQkq6OkVjToC3qI08fZAMJxTMCqutDjS9RDKuG5wQj8S990Ev8CWrjgk+qiJ4hYGc4ga1CykHwAAAAFiS0dEAIgFHUgAAAAJcEhZcwAAFxEAABcRAcom8z8AAAAHdElNRQfiAQQPJSmER6F4AAABlUlEQVQ4y2NgwACMTMwsDCQAVrat29g5SNDAuX3rth1cxKvn5tnOu20HH/Ea+HcKCArtEBYhVr2o2E5xBokduySJ1SC1e6c0g4zsLjmEkLyCIh4NSruVgaTKLlU1mIi6xp69mlq41Gvr7NYFUnq79unDhAz279l7wNAIocbYxNTM3MLSytoGyLE9aGcPpBwc9zlBpZ1dQBoOHXZ1c/fw9PL2YfD1O3L02PETJ0+d9g9gCAw6GAxWFrLvTChEQ9jZ8IhIoIZz5y9cPHYpKpoh5jJMw5XYuPirCYlgZUn7ziSDGSmpZ9MY0jNgGjIZGLKyc3Lz8gsKi05fuVZ8/WoJxNzSsjPlYEbFjcoqIFVdU1tX39DY1IzwSkvrlWs3r7e1Q7kdZ251Aqmu7hs9uAKot+/azf4JMN7EM7cmAanJt29MwRkFU6dNn4Hgzbw1azYDw5zbc4mN8nm37sxnWHD39kJiNSxafGfJ0mV3lxOrnoFhxZ17K+/fXUW8htVr7m27v5Z49QwM6+5tW7+BFA0bN23egikKALGTmsPyewB9AAAAAElFTkSuQmCC"/>
+    <g id="AURI">
+      <path class="cls-1" d="M32.808,49.008l-6.48-1.434-6.12,5.737s-2.52,1.793-1.8,6.813,1.8,10.04,1.8,10.04,1.08,3.347,3.96,4.3,7.56,2.151,7.56,2.151a1.415,1.415,0,0,0,1.8-1.793s-0.96-10.279-.72-14.343C33.168,54.148,32.808,52,32.808,49.008Z"/>
+      <path id="Shape_5_copy" data-name="Shape 5 copy" class="cls-1" d="M83.669,47.928L90.081,46.5l6.057,5.728s2.494,1.79,1.781,6.8-1.781,10.025-1.781,10.025-1.069,3.341-3.919,4.3S84.737,75.5,84.737,75.5a1.4,1.4,0,0,1-1.781-1.79s0.95-10.263.713-14.321C83.312,53.06,83.669,50.912,83.669,47.928Z"/>
+      <circle cx="21.891" cy="49.734" r="4.672"/>
+      <path id="Ellipse_1_copy" data-name="Ellipse 1 copy" class="cls-1" d="M94.366,45.066a4.666,4.666,0,1,1-4.677,4.666A4.671,4.671,0,0,1,94.366,45.066Z"/>
+      <path class="cls-1" d="M19.931,46.621A91.646,91.646,0,0,1,28.5,20.571a21.546,21.546,0,0,1,8.184-6.221c0-.13,1.949-2.722,1.949-2.722s6.5-3.888,19.875-4.277c0.65,0,0,8.943,0,8.943,0.011,0.044-3.96.135-11.034,1.066a52.662,52.662,0,0,0-7.672.1,18.7,18.7,0,0,0-7.015,4.277C30.713,24.459,25,34.179,23.049,48.176,23.179,48.176,19.931,46.621,19.931,46.621Z"/>
+      <path id="Shape_6_copy" data-name="Shape 6 copy" class="cls-1" d="M97.094,46.621a91.479,91.479,0,0,0-8.6-26.05,21.594,21.594,0,0,0-8.2-6.221c0-.13-1.953-2.722-1.953-2.722S71.829,7.74,58.416,7.351c-0.651,0,0,8.943,0,8.943-0.011.044,3.97,0.135,11.061,1.066a52.925,52.925,0,0,1,7.692.1A18.759,18.759,0,0,1,84.2,21.737c2.084,2.722,7.814,12.442,9.767,26.439C93.838,48.176,97.094,46.621,97.094,46.621Z"/>
+      <path class="cls-1" d="M88.947,74.149l1.082,6.105h3.245l0.721-7.183Z"/>
+      <path class="cls-1" d="M90.75,79.536h1.442v73.981H90.75V79.536Z"/>
+    </g>
+    <path class="cls-2" d="M47.487,93.183s0.721,8.979.721,15.084A8.979,8.979,0,0,0,49.65,113.3c1.622,2.514,9.374,11.312,10.095,15.8a3.752,3.752,0,0,1,1.442,0s3.605-6.824,6.489-10.056a34.3,34.3,0,0,1,7.21-5.746s-3.9-2.938-2.524-15.084c1.442-12.749,1.8-8.978,1.8-8.978Z"/>
+    <path class="cls-3" d="M48,101V94s6.579,3.283,12,3,13-5,13-5l-1,10s-5.316,7.121-10,7S48,101,48,101Z"/>
+    <path class="cls-4" d="M148,84"/>
+    <path class="cls-5" d="M32.706,58.707s-0.541,16.879,2.137,23.317C37.6,89.981,54.016,96.8,53.977,96.775c0,0,8.566,1.381,11.537,0A49.786,49.786,0,0,0,82.458,83.487c3.064-3.95,2.344-21.727,2.524-26.576s1.442-16.52-6.489-25.857c-7.571-7.9-29.2-14.186-43.623,4.669C31.8,42.366,32.165,50.985,32.706,58.707Z"/>
+  </g>
+  <g id="CARA">
+    <path class="cls-1" d="M39.292,62.986s3.149-10.1,12.662-5.753A17.158,17.158,0,0,0,54.169,55.5S41.566,49.515,39.292,62.986Z"/>
+    <path id="Shape_8_copy" data-name="Shape 8 copy" class="cls-1" d="M78.234,63.243s-2.8-10.227-12.438-6.206a17.168,17.168,0,0,1-2.151-1.812S76.424,49.674,78.234,63.243Z"/>
+    <path class="cls-1" d="M30.543,62.3s3.065-8.08,2.884-10.774,2.163-10.953,4.326-12.57,6.489-5.387,6.489-7.183c0.541,0.18,14.421,3.412,21.631,5.387,0.541,0.359-2.884-10.774-2.884-10.774s12.8,8.44,12.979,10.774c0.541-.359-1.983-5.746-8.292-11.851,0.18,0.359,9.554,6.285,11.176,12.929s3.966,9.7,4.687,12.21,2.884,12.211,2.884,12.211,1.262-13.467,5.047-22.266,3.966-23.7,3.966-23.7l-7.571,4.669A48.993,48.993,0,0,0,96.518,7.71c0.18-1.257,0,1.616-13.339-.718s-22.893-.359-29.563,8.619C53.256,15.791,61.367,4.657,72.724,1.6c-1.081-.359-33.709-8.619-38.215,16.161-0.9,0-2.884-6.823-2.884-6.823s-1.622,7.542,0,10.415c0,0.18-7.03-2.155-10.095,3.951a11.81,11.81,0,0,1,4.687.359c0.36,0-4.326,2.693-5.047,12.21,0.68,0.339,4.623,5.318,6.489,11.133-0.673-2.1,2.524,14.006,2.524,14.006"/>
+    <path id="Shape_2_copy" data-name="Shape 2 copy" class="cls-6" d="M53.256,62.657a13.165,13.165,0,0,0-1.442-6.464c0.36,0.24-10.335-3.643-11.9,6.442C40.036,62.875,44.723,63.013,53.256,62.657Z"/>
+    <path id="Shape_2_copy_2" data-name="Shape 2 copy 2" class="cls-6" d="M64.443,62.936a13.664,13.664,0,0,1,1.441-6.592c-0.36.245,10.326-3.729,11.887,6.555C77.651,63.144,72.968,63.3,64.443,62.936Z"/>
+    <path class="cls-1" d="M58.3,74.149l-3.966-1.8L56.5,70.917h5.408l1.442,1.437-3.605,1.8H58.3Z"/>
+    <path class="cls-1" d="M63.04,53.926a17.061,17.061,0,0,1,15.151-3.359c0.79,0.158,3.4,4.287,3.4,4.287S71.009,53.008,63.98,57.392c-0.411-.137-2.519-3.783-2.519-3.783Z"/>
+    <path id="Shape_4_copy" data-name="Shape 4 copy" class="cls-1" d="M54.658,52.126A17.2,17.2,0,0,0,39.19,50.868c-0.761.262-2.78,4.667-2.78,4.667S46.639,52.3,54.2,55.655c0.388-.19,1.974-4.052,1.974-4.052Z"/>
+    <path class="cls-1" d="M51.453,78.818s6.369-2.394,12.258-1.8c1.322,0.12,2.788.886,2.884-.359,0.6,0.12,2.452,1.755-1.082,2.514C59.384,80.494,51.453,78.818,51.453,78.818Z"/>
+    <path class="cls-7" d="M54.7,83.685a12.187,12.187,0,0,1,9.374,0C63.848,83.978,59.831,89.556,54.7,83.685Z"/>
+    <circle id="Ellipse_2_copy" data-name="Ellipse 2 copy" cx="70.375" cy="59.328" r="3.063"/>
+    <circle id="Ellipse_2_copy_2" data-name="Ellipse 2 copy 2" cx="47.656" cy="59.328" r="3.063"/>
+  </g>
+</svg>
