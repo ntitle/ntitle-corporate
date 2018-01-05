@@ -8,8 +8,8 @@ var server = new StaticServer({
     followSymlink: true,      // optional, defaults to a 404 error
     templates: {
         index: 'index.html',
-        privacy: 'privacy.html',
-        terms: 'terms.html'
+        privacy: '/privacy.html',
+        terms: '/terms.html'
     }
 });
 
