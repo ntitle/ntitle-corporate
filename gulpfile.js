@@ -4,7 +4,7 @@ var data = require('gulp-data');
 var sass = require('gulp-sass');
 var uglify = require('gulp-uglify');
 var pump = require('pump');
-var gulpCopy = require('gulp-copy');
+const autoprefixer = require('gulp-autoprefixer');
 
 
 /**
@@ -32,6 +32,10 @@ gulp.task('compile-templates', function () {
 gulp.task('sass', function () {
     return gulp.src('./src/sass/**/*.scss')
         .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+        .pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
         .pipe(gulp.dest('./dist/css'));
 });
 
