@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var nunjucksRender = require('gulp-nunjucks-render');
 var data = require('gulp-data');
+var sass = require('gulp-sass');
 
 /**
  * Compile nunjucks with corresponding data.js file context
@@ -21,4 +22,20 @@ gulp.task('compile-templates', function () {
         .pipe(gulp.dest('dist'));
 });
 
-gulp.task('default', ['compile-templates']);
+/**
+ * Build sass files
+ */
+gulp.task('sass', function () {
+    return gulp.src('./src/sass/**/*.scss')
+        .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+        .pipe(gulp.dest('./dist/css'));
+});
+
+/**
+ * Watch sass files
+ */
+gulp.task('sass:watch', function () {
+    gulp.watch('./src/sass/**/*.scss', ['sass']);
+});
+
+gulp.task('default', ['compile-templates', 'sass']);
