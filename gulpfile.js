@@ -93,8 +93,8 @@ gulp.task('video', function () {
  */
 gulp.task('favicons', function () {
     return gulp
-        .src('src/favicons/**/*.*')
-        .pipe(gulp.dest('dist/favicons/'));
+        .src('src/favicon/**/*.*')
+        .pipe(gulp.dest('dist/favicon/'));
 });
 
 gulp.task('default', ['compile-templates', 'sass', 'uglify', 'images', 'vendors', 'favicons', 'video']);
