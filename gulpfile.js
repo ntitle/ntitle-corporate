@@ -2,6 +2,10 @@ var gulp = require('gulp');
 var nunjucksRender = require('gulp-nunjucks-render');
 var data = require('gulp-data');
 var sass = require('gulp-sass');
+var uglify = require('gulp-uglify');
+var pump = require('pump');
+var gulpCopy = require('gulp-copy');
+
 
 /**
  * Compile nunjucks with corresponding data.js file context
@@ -38,4 +42,27 @@ gulp.task('sass:watch', function () {
     gulp.watch('./src/sass/**/*.scss', ['sass']);
 });
 
-gulp.task('default', ['compile-templates', 'sass']);
+
+/**
+ * Uglify js
+ */
+gulp.task('uglify', function (cb) {
+    pump([
+            gulp.src('src/js/*.js'),
+            uglify(),
+            gulp.dest('dist/js')
+        ],
+        cb
+    );
+});
+
+/**
+ * Copy images
+ */
+gulp.task('copy', function () {
+    return gulp
+        .src('src/img/**/*.*')
+        .pipe(gulp.dest('dist/img/'));
+});
+
+gulp.task('default', ['compile-templates', 'sass', 'uglify', 'copy']);
