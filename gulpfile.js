@@ -5,6 +5,7 @@ var sass = require('gulp-sass');
 var uglify = require('gulp-uglify');
 var pump = require('pump');
 const autoprefixer = require('gulp-autoprefixer');
+const imagemin = require('gulp-imagemin');
 
 
 /**
@@ -63,10 +64,11 @@ gulp.task('uglify', function (cb) {
 /**
  * Copy images
  */
-gulp.task('copy', function () {
+gulp.task('images', function () {
     return gulp
         .src('src/img/**/*.*')
+        .pipe(imagemin())
         .pipe(gulp.dest('dist/img/'));
 });
 
-gulp.task('default', ['compile-templates', 'sass', 'uglify', 'copy']);
+gulp.task('default', ['compile-templates', 'sass', 'uglify', 'images']);
