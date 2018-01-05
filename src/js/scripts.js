@@ -23,38 +23,40 @@ $(function () {
     sr.reveal('.team-member-description', {mobile: false});
 
     //mailchimp
-    $('.mailchimp-form').submit(function (e) {
-        $form = $(this);
-        e.preventDefault();
-        $.ajax({
-            type: 'GET',
-            url: $form.attr('action'),
-            data: $form.serialize(),
-            cache: false,
-            dataType: 'jsonp',
-            jsonp: 'c', // trigger MailChimp to return a JSONP response
-            contentType: 'application/json; charset=utf-8',
-            error: function (error) {
-                // According to jquery docs, this is never called for cross-domain JSONP requests
-            },
-            success: function (data) {
-                if (data.result != 'success') {
-                    var message = data.msg || 'Sorry. Unable to subscribe. Please try again later.';
-                    if (data.msg && data.msg.indexOf('already subscribed') >= 0) {
-                        message = 'You\'re already subscribed. Thank you.';
-                    }
-                } else {
-                    $form.find('input[type=email]').val('');
-                    message = 'Thanks for signing up. Please check your inbox for a confirmation email.';
-                }
-                $('.news-thanks-message').show();
-                setTimeout(function () {
-                    $('.news-thanks-message').hide();
-                }, 4000);
+    $('.mailchimp-form').submit(function(e){
+      e.preventDefault();
+      var $form = $(this);
+      $.ajax({
+        type: 'GET',
+        url: $form.attr('action'),
+        data: $form.serialize(),
+        cache: false,
+        dataType: 'jsonp',
+        jsonp: 'c', // trigger MailChimp to return a JSONP response
+        contentType: 'application/json; charset=utf-8',
+        error: function(error){
+          // According to jquery docs, this is never called for cross-domain JSONP requests
+        },
+        success: function(data){
+          var message = "";
+          if (data.result != 'success') {
+            message = data.msg || 'Sorry. Unable to subscribe. Please try again later.';
+            if (data.msg && data.msg.indexOf('already subscribed') >= 0) {
+              message = 'You\'re already subscribed. Thank you.';
             }
-        });
+          } else {
+            $form.find('input[type=email]').val('');
+            message = 'Thanks for signing up. Please check your inbox for a confirmation email.';
+          }
+          $('.news-thanks-message').append('<p>' + message + '</p>');
+          $('.news-thanks-message').show();
+          setTimeout(function(){
+            $('.news-thanks-message').hide();
+            $('.news-thanks-message').empty();
+          }, 4000);
+        }
+      });
     });
-
 
     //jq form plugin
     $('#formContact').ajaxForm({
