@@ -1,14 +1,6 @@
 $(function () {
     "use strict"; // Start of use strict
 
-    // $('a.page-scroll').on('click', function (event) {
-    //     var $anchor = $(this);
-    //     $('html, body').stop().animate({
-    //         scrollTop: ($($anchor.attr('href')).offset().top - 1)
-    //     }, 1250, 'easeInOutExpo');
-    //     event.preventDefault();
-    // });
-
     //scroll-reveal
     window.sr = ScrollReveal({reset: true});
     sr.reveal('.section-heading', {mobile: false});
