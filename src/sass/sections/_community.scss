@@ -1,0 +1,20 @@
+.community i.fab {
+  @extend %icon-border;
+  color:$light;
+  line-height: 2.5em;
+  width: 2.5em;
+  height: 2.5em;
+
+  &:hover {
+    color:$blue-on-dark;
+  }
+}
+
+.social {
+  padding:0 20px;
+}
+@media(max-width:767px){
+   .social {
+     padding:10px 0;
+   }
+}

@@ -1,0 +1,28 @@
+blockquote i {
+  color:$blue-on-light;
+}
+
+.testimonial-text {
+  font-weight: 200;
+  font-size:26px;
+  color:$dark;
+}
+
+.testimonial-author{
+  font-size:22px;
+  font-weight:400;
+  color:$dark;
+}
+
+@media(max-width:992px) {
+  blockquote i {
+    font-size:18px;
+  }
+  .testimonial-text {
+    font-size:18px;
+  }
+
+  .testimonial-author{
+    font-size:18px;
+  }
+}

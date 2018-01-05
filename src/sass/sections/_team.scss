@@ -1,0 +1,46 @@
+.team i.fab {
+  @extend %icon-border;
+  border:2px solid $gray;
+  color:$gray;
+  line-height: 1.5em;
+  width: 1.5em;
+  height: 1.5em;
+
+  &:hover {
+    color:$blue-on-light;
+    border-color:$blue-on-light;
+  }
+}
+
+.team-member {
+  margin-bottom: 80px;
+  text-align: center;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  img {
+    width: 180px;
+    height: 180px;
+  }
+
+  h3 {
+    color:$blue-on-light;
+    margin-bottom:20px;
+  }
+  h4 {
+    margin-bottom: 30px;
+  }
+
+  .team-member-description {
+    @extend %col-text;
+    font-weight: 500;
+    margin-bottom:15px;
+  }
+}
+
+@media(min-width:992px) {
+  .team-member img {
+    width: 200px;
+    height: 200px;
+  }
+}

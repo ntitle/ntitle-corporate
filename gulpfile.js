@@ -2,18 +2,23 @@ var gulp = require('gulp');
 var nunjucksRender = require('gulp-nunjucks-render');
 var data = require('gulp-data');
 
-function getDataForFile(file) {
-    var dataFileName = file.relative.replace('.njk', '.data.js');
-    var dataPath = file.path.replace(file.relative, dataFileName);
+/**
+ * Compile nunjucks with corresponding data.js file context
+ */
+gulp.task('compile-templates', function () {
+    function getDataForFile(file) {
+        var dataFileName = file.relative.replace('.njk', '.data.js');
+        var dataPath = file.path.replace(file.relative, dataFileName);
 
-    return require(dataPath);
-}
+        return require(dataPath);
+    }
 
-gulp.task('default', function () {
-    return gulp.src('src/templates/*.njk')
+    return gulp.src(['src/templates/*.njk', '!src/templates/default.njk'])
         .pipe(data(getDataForFile))
         .pipe(nunjucksRender({
-            path: 'src/partials'
+            path: ['src/partials', 'src/templates']
         }))
         .pipe(gulp.dest('dist'));
 });
+
+gulp.task('default', ['compile-templates']);

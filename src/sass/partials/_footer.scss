@@ -1,0 +1,29 @@
+footer {
+  padding: 50px 0 25px 0;
+  text-align: center;
+  background-color:#1e1e1e;
+  span.copyright, span.connaxis {
+    font-size: 70%;
+    line-height: 40px;
+    text-transform: none;
+  }
+  span.connaxis a {
+    text-transform: uppercase;
+    color:#F18823;
+  }
+
+  ul.footerlinks {
+    font-size: 70%;
+    line-height: 40px;
+    margin-bottom: 0;
+    text-transform: none;
+    a {
+      padding-right:5px;
+      color:$light;
+      text-decoration:underline;
+    }
+    a:hover {
+      color:$blue-on-light;
+    }
+  }
+}

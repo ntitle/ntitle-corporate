@@ -1,0 +1,14 @@
+.industries i.fa,
+.industries i.fas {
+  @extend %icon-border;
+  color:$blue-on-dark;
+  line-height: 2.5em;
+  width: 2.5em;
+  height: 2.5em;
+}
+
+.industry-text {
+  @extend %col-text;
+  color:$blue-on-dark;
+  font-size:15px;
+}

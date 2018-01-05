@@ -1,0 +1,32 @@
+%col-text {
+  font-size:14px;
+  font-weight: 200;
+  line-height: 1.5;
+  margin-bottom:50px;
+  font-family: $text-font;
+}
+
+%heading {
+  font-weight: 200;
+  font-size: 30px;
+  letter-spacing: 2px;
+  font-family: $headig-font;
+}
+
+@media(min-width:992px) {
+  %heading {
+    font-size: 38px;
+  }
+  }
+
+
+//icons with rounded border
+%icon-border {
+  display: inline-block;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 50%;
+  text-align: center;
+  display: inline-block;
+  transition:0.3s;
+}

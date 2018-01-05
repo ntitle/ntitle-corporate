@@ -1,0 +1,61 @@
+//background video
+%video-background {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background-size: cover;
+
+}
+video#bgvid {
+  @extend %video-background;
+  z-index: -100;
+}
+
+.video-overlay {
+  @extend %video-background;
+  z-index: -99;
+  background-color: rgba(0,0,0,0.6);
+
+  .overlay-off & {
+    z-index: 0;
+  }
+}
+
+@media screen and (max-device-width: 800px) {
+  #bgvid {
+    display: none;
+  }
+}
+
+//yt videos
+
+.video-wrapper {
+  position:relative;
+}
+.video-back {
+  position:absolute;
+  width:100%;
+  top:0;
+  left:0;
+
+  img {
+    width:100%;
+    height: 100%;
+  }
+}
+
+.video-subheading {
+  @extend %heading;
+  margin-bottom:$breather;
+  color: $light;
+  margin-top:$breather/2;
+  margin-bottom:0;
+}

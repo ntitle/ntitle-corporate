@@ -2,7 +2,7 @@ const defaultData = require('./default.data');
 
 const data = {
     meta: {
-        title: 'nTitle'
+        title: 'Terms - nTitle'
     }
 };
 
