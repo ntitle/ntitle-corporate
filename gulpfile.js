@@ -70,5 +70,13 @@ gulp.task('images', function () {
         .pipe(imagemin())
         .pipe(gulp.dest('dist/img/'));
 });
+/**
+ * Copy vendors
+ */
+gulp.task('vendors', function () {
+    return gulp
+        .src('src/vendors/**/*.*')
+        .pipe(gulp.dest('dist/vendors/'));
+});
 
-gulp.task('default', ['compile-templates', 'sass', 'uglify', 'images']);
+gulp.task('default', ['compile-templates', 'sass', 'uglify', 'images', 'vendors']);
