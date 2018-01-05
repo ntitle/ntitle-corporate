@@ -1,13 +1,12 @@
-#faq {
-  padding-left:32px;
+.faq-items {
+  padding-left:40px;
 }
 
-.faq-heading {
+.faq-question {
   color: $light;
-  text-transform: uppercase;
   letter-spacing: 4px;
   font-size: 14px;
-  font-weight: 300;
+  font-weight: 200;
   margin: 20px 0;
   cursor: pointer;
 
@@ -19,50 +18,41 @@
     margin-bottom:0;
   }
 
-  i {
-    line-height: 1.4em;
+  &:before {
+    font-family: 'Font Awesome 5 Free';
+    content: '\f068';
+    color: $blue-on-dark;
+    font-weight:900;
+    margin:0 5px 0 -30px;
+    display:inline-block;
+    transition: .5s 0s all;
+  }
+
+  &.collapsed:before {
+
+    content: '\f067';
+    transform: rotate(90deg);
+    display:inline-block;
   }
 }
 
-#faq dd {
+.faq-answer {
   font-size: 16px;
   color: $light;
   font-weight: 100;
   margin: 0;
 }
 
-.faq .fa-minus {
-  color:$blue-on-dark;
-  position: absolute;
-  margin-left: -30px;
-  transition: .5s 0s all;
-}
-
-.faq .faq-heading.collapsed .fa-minus.vertical {
-  transform: rotate(90deg);
-  margin-left: -32px;
-  margin-top: 2px;
-}
-
 @media(min-width:992px) {
-  #faq {
-    padding-left:52px;
-  }
+.faq-question {
+  font-size: 22px;
 
-  .faq-heading {
-    font-size: 22px;
-    margin: 20px 0;
+  &:before {
+    margin:0 5px 0 -40px;
   }
-  .faq dd {
-    font-size: 16px;
-  }
+}
 
-  .faq .fa-minus {
-    margin-left: -50px;
-  }
-
-  .faq .faq-heading.collapsed .fa-minus.vertical {
-    margin-top: 1px;
-    margin-left: -52px;
-  }
+.faq-answer {
+  font-size: 16px;
+}
 }
