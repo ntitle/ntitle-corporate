@@ -70,6 +70,7 @@ gulp.task('images', function () {
         .pipe(imagemin())
         .pipe(gulp.dest('dist/img/'));
 });
+
 /**
  * Copy vendors
  */
@@ -78,5 +79,22 @@ gulp.task('vendors', function () {
         .src('src/vendors/**/*.*')
         .pipe(gulp.dest('dist/vendors/'));
 });
+/**
+ * Copy video
+ */
+gulp.task('video', function () {
+    return gulp
+        .src('src/video/**/*.*')
+        .pipe(gulp.dest('dist/video/'));
+});
 
-gulp.task('default', ['compile-templates', 'sass', 'uglify', 'images', 'vendors']);
+/**
+ * Copy favicons
+ */
+gulp.task('favicons', function () {
+    return gulp
+        .src('src/favicons/**/*.*')
+        .pipe(gulp.dest('dist/favicons/'));
+});
+
+gulp.task('default', ['compile-templates', 'sass', 'uglify', 'images', 'vendors', 'favicons', 'video']);
