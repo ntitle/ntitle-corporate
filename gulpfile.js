@@ -1,11 +1,13 @@
-var gulp = require('gulp');
-var nunjucksRender = require('gulp-nunjucks-render');
-var data = require('gulp-data');
-var sass = require('gulp-sass');
-var uglify = require('gulp-uglify');
-var pump = require('pump');
+const gulp = require('gulp');
+const nunjucksRender = require('gulp-nunjucks-render');
+const data = require('gulp-data');
+const sass = require('gulp-sass');
+const uglify = require('gulp-uglify');
+const pump = require('pump');
 const autoprefixer = require('gulp-autoprefixer');
 const imagemin = require('gulp-imagemin');
+const htmlmin = require('gulp-htmlmin');
+
 
 
 /**
@@ -13,8 +15,8 @@ const imagemin = require('gulp-imagemin');
  */
 gulp.task('compile-templates', function () {
     function getDataForFile(file) {
-        var dataFileName = file.relative.replace('.njk', '.data.js');
-        var dataPath = file.path.replace(file.relative, dataFileName);
+        const dataFileName = file.relative.replace('.njk', '.data.js');
+        const dataPath = file.path.replace(file.relative, dataFileName);
 
         return require(dataPath);
     }
@@ -24,6 +26,7 @@ gulp.task('compile-templates', function () {
         .pipe(nunjucksRender({
             path: ['src/partials', 'src/templates']
         }))
+        .pipe(htmlmin({collapseWhitespace: true}))
         .pipe(gulp.dest('dist'));
 });
 
@@ -49,7 +52,7 @@ gulp.task('sass:watch', function () {
 
 
 /**
- * Uglify js
+ * Compress js
  */
 gulp.task('uglify', function (cb) {
     pump([
