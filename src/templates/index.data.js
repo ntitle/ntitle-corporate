@@ -1,11 +1,9 @@
 const defaultData = require('./default.data');
 
 const data = {
-    meta: {
-        title: 'nTitle'
-    },
     team: {
-        members: require('./data/team.data')
+        members: require('./data/team.data'),
+        advisors: require('./data/advisors.data')
     }
 };
 
