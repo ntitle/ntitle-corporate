@@ -1,3 +1,22 @@
+{% macro TeamMember(teamMember) %}
+    <div class="col-xl-4 col-lg-6 team-member">
+        <div class="team-member-info">
+            <img class="mx-auto rounded-circle" src="{{ teamMember.avatar }}" alt="{{ teamMember.name }}">
+            <h3 class="col-heading">{{ teamMember.displayName | safe }}</h3>
+            <h4>{{ teamMember.role }}</h4>
+            <p class="team-member-description">{{ teamMember.description }}</p>
+        </div>
+        <ul class="list-inline social-buttons">
+            <li class="list-inline-item">
+                <a href="{{ teamMember.linkedin }}" target="_blank"
+                   aria-label="Go to team member Linkedin">
+                    <i class="fab fa-2x fa-linkedin-in"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+{% endmacro %}
+
 <section class="light-bg team" id="team">
     <div class="container">
         <div class="row">
@@ -7,28 +26,9 @@
             </div>
         </div>
         <div class="row">
-
             {% for teamMember in team.members %}
-
-                <div class="col-xl-4 col-lg-6 team-member">
-                    <div class="team-member-info">
-                        <img class="mx-auto rounded-circle" src="{{ teamMember.avatar }}" alt="{{ teamMember.name }}">
-                        <h3 class="col-heading">{{ teamMember.displayName | safe }}</h3>
-                        <h4>{{ teamMember.role }}</h4>
-                        <p class="team-member-description">{{ teamMember.description }}</p>
-                    </div>
-                    <ul class="list-inline social-buttons">
-                        <li class="list-inline-item">
-                            <a href="{{ teamMember.linkedin }}" target="_blank"
-                               aria-label="Go to team member Linkedin">
-                                <i class="fab fa-2x fa-linkedin-in"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
+                {{ TeamMember(teamMember) }}
             {% endfor %}
-
         </div>
 
         <!--advisors-->
@@ -44,27 +44,10 @@
         <div class="row">
 
             {% for advisor in team.advisors %}
-
-                <div class="col-xl-4 col-lg-6 team-member">
-                    <div class="team-member-info">
-                        <img class="mx-auto rounded-circle" src="{{ advisor.avatar }}" alt="{{ advisor.name }}">
-                        <h3 class="col-heading">{{ advisor.displayName | safe }}</h3>
-                        <h4>{{ advisor.role }}</h4>
-                        <p class="team-member-description">{{ advisor.description }}</p>
-                    </div>
-                    <ul class="list-inline social-buttons">
-                        <li class="list-inline-item">
-                            <a href="{{ advisor.linkedin }}" target="_blank"
-                               aria-label="Go to team member Linkedin">
-                                <i class="fab fa-2x fa-linkedin-in"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
+                {{ TeamMember(advisor) }}
             {% endfor %}
 
         </div>
-       
+
     </div>
 </section>
