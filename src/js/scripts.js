@@ -15,39 +15,39 @@ $(function () {
     sr.reveal('.team-member-description', {mobile: false});
 
     //mailchimp
-    $('.mailchimp-form').submit(function(e){
-      e.preventDefault();
-      var $form = $(this);
-      $.ajax({
-        type: 'GET',
-        url: $form.attr('action'),
-        data: $form.serialize(),
-        cache: false,
-        dataType: 'jsonp',
-        jsonp: 'c', // trigger MailChimp to return a JSONP response
-        contentType: 'application/json; charset=utf-8',
-        error: function(error){
-          // According to jquery docs, this is never called for cross-domain JSONP requests
-        },
-        success: function(data){
-          var message = "";
-          if (data.result != 'success') {
-            message = data.msg || 'Sorry. Unable to subscribe. Please try again later.';
-            if (data.msg && data.msg.indexOf('already subscribed') >= 0) {
-              message = 'You\'re already subscribed. Thank you.';
+    $('.mailchimp-form').submit(function (e) {
+        e.preventDefault();
+        var $form = $(this);
+        $.ajax({
+            type: 'GET',
+            url: $form.attr('action'),
+            data: $form.serialize(),
+            cache: false,
+            dataType: 'jsonp',
+            jsonp: 'c', // trigger MailChimp to return a JSONP response
+            contentType: 'application/json; charset=utf-8',
+            error: function (error) {
+                // According to jquery docs, this is never called for cross-domain JSONP requests
+            },
+            success: function (data) {
+                var message = "";
+                if (data.result != 'success') {
+                    message = data.msg || 'Sorry. Unable to subscribe. Please try again later.';
+                    if (data.msg && data.msg.indexOf('already subscribed') >= 0) {
+                        message = 'You\'re already subscribed. Thank you.';
+                    }
+                } else {
+                    $form.find('input[type=email]').val('');
+                    message = 'Thanks for signing up. Please check your inbox for a confirmation email.';
+                }
+                $('.news-thanks-message').append('<p>' + message + '</p>');
+                $('.news-thanks-message').show();
+                setTimeout(function () {
+                    $('.news-thanks-message').hide();
+                    $('.news-thanks-message').empty();
+                }, 4000);
             }
-          } else {
-            $form.find('input[type=email]').val('');
-            message = 'Thanks for signing up. Please check your inbox for a confirmation email.';
-          }
-          $('.news-thanks-message').append('<p>' + message + '</p>');
-          $('.news-thanks-message').show();
-          setTimeout(function(){
-            $('.news-thanks-message').hide();
-            $('.news-thanks-message').empty();
-          }, 4000);
-        }
-      });
+        });
     });
 
     //jq form plugin
@@ -105,5 +105,17 @@ $(function () {
     navbarCollapse();
     // Collapse the navbar when page is scrolled
     $(window).scroll(navbarCollapse);
+
+    /**
+     * Defer youtube loading
+     */
+    (function init() {
+        var vidDefer = document.getElementsByTagName('iframe');
+        for (var i = 0; i < vidDefer.length; i++) {
+            if (vidDefer[i].getAttribute('data-src')) {
+                vidDefer[i].setAttribute('src', vidDefer[i].getAttribute('data-src'));
+            }
+        }
+    })()
 
 }); // End of use strict
