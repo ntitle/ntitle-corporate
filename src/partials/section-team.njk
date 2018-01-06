@@ -1,3 +1,22 @@
+{% macro TeamMember(teamMember) %}
+    <div class="col-xl-4 col-lg-6 team-member">
+        <div class="team-member-info">
+            <img class="mx-auto rounded-circle" src="{{ teamMember.avatar }}" alt="{{ teamMember.name }}">
+            <h3 class="col-heading">{{ teamMember.displayName | safe }}</h3>
+            <h4>{{ teamMember.role }}</h4>
+            <p class="team-member-description">{{ teamMember.description }}</p>
+        </div>
+        <ul class="list-inline social-buttons">
+            <li class="list-inline-item">
+                <a href="{{ teamMember.linkedin }}" target="_blank"
+                   aria-label="Go to team member Linkedin">
+                    <i class="fab fa-2x fa-linkedin-in"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+{% endmacro %}
+
 <section class="light-bg team" id="team">
     <div class="container">
         <div class="row">
@@ -7,108 +26,27 @@
             </div>
         </div>
         <div class="row">
-
             {% for teamMember in team.members %}
-
-                <div class="col-xl-4 col-lg-6 team-member">
-                    <div class="team-member-info">
-                        <img class="mx-auto rounded-circle" src="{{ teamMember.avatar }}" alt="{{ teamMember.name }}">
-                        <h3 class="col-heading">{{ teamMember.displayName | safe }}</h3>
-                        <h4>{{ teamMember.role }}</h4>
-                        <p class="team-member-description">{{ teamMember.description }}</p>
-                    </div>
-                    <ul class="list-inline social-buttons">
-                        <li class="list-inline-item">
-                            <a href="{{ teamMember.linkedin }}" target="_blank"
-                               aria-label="Go to team member Linkedin">
-                                <i class="fab fa-2x fa-linkedin-in"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
+                {{ TeamMember(teamMember) }}
             {% endfor %}
-
         </div>
 
         <!--advisors-->
 
         <div class="row">
             <div class="col-xl-12 text-center">
-                <img class="separator img-fluid" src="/img/shining_line.png" alt="line site separator"
-                     aria-label="Go to team member Linkedin">
+                <hr class="separator line-separator" />
                 <h2 class="section-heading text-uppercase">Our advisors</h2>
             </div>
         </div>
+
         <div class="row">
-            <div class="col-xl-4 team-member">
-                <div class="team-member-info">
-                    <img class="mx-auto rounded-circle" src="/img/team/Anthony.jpg" alt="Anthony Eufemio">
-                    <h3 class="col-heading">Anthony<br>Eufemio</h3>
-                    <h4>CTO, Digixdao</h4>
-                    <p class="team-member-description">Anthony is a 19 year veteran of the software development,
-                        computer security, and IT industries. He is the Chief Technology Officer and Co-Founder of Digix
-                        Global which raised over $5.5 Million in 16 hours (now currently valued at $150,000,000.00) in
-                        the first ever fully on-chain Ethereum ICO. As an early adopter and contributor in the Ethereum
-                        ecosystem he made the first ever transaction on Ethereum and developed several open sourced
-                        Ethereum tools and libraries. He has a BSc in
-                        Computer Science from USC.</p>
-                </div>
-                <ul class="list-inline social-buttons">
-                    <li class="list-inline-item">
-                        <a href="https://www.linkedin.com/in/anthony-eufemio-a4284b100/" target="_blank"
-                           aria-label="Go to team member Linkedin">
-                            <i class="fab fa-2x fa-linkedin-in" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
 
-            <div class="col-xl-4 team-member">
-                <div class="team-member-info">
-                    <img class="mx-auto rounded-circle" src="/img/team/michael.jpg" alt="Michael Widjaja">
-                    <h3 class="col-heading">Michael<br>Widjaja</h3>
-                    <h4>Managing Director, Accenture</h4>
-                    <p class="team-member-description">Michael is responsible for global application security
-                        technology. His expertise covers the design, implementation and operations of complex software
-                        solution architectures, SOA, integration and enterprise architecture, security, digital
-                        transformations, omni channel platforms, rules and document management, data warehouse, cloud,
-                        infrastructure, and more. He leads large re-engineering, ERP, commercial and supply chain
-                        programs with solutions built on Oracle, Siebel, Retek, SAP, Guidewire, Java, Microsoft, .NET,
-                        Google, and Lotus.</p>
-                </div>
-                <ul class="list-inline social-buttons">
-                    <li class="list-inline-item">
-                        <a href="https://www.linkedin.com/in/michaelwidjaja/" target="_blank"
-                           aria-label="Go to team member Linkedin">
-                            <i class="fab fa-2x fa-linkedin-in" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+            {% for advisor in team.advisors %}
+                {{ TeamMember(advisor) }}
+            {% endfor %}
 
-            <div class="col-xl-4 team-member">
-                <div class="team-member-info">
-                    <img class="mx-auto rounded-circle" src="/img/team/gavin.jpg" alt="Gavin Nicol">
-                    <h3 class="col-heading">Gavin<br>Nicol</h3>
-                    <h4>CTO, Context Labs BV</h4>
-                    <p class="team-member-description">Gavin has been a technology leader and innovator for 25+ years
-                        working at corporate research centers in Japan, and corporations and startups in the US and the
-                        Netherlands. Through his work at EBT, a founding member of the W3C, he has broadly influenced
-                        many of the technologies underlying the modern web. He played a significant role in the
-                        development of the HTML, HTTP, XML, XSL, DOM, XPath, SVG, XQuery and XLink standards, and in
-                        building some of the earliest prototypes and implementations of the technologies. He is
-                        considered "the father of I18N on the WWW".</p>
-                </div>
-                <ul class="list-inline social-buttons">
-                    <li class="list-inline-item">
-                        <a href="https://www.linkedin.com/in/gtnicol/" target="_blank"
-                           aria-label="Go to team member Linkedin">
-                            <i class="fab fa-2x fa-linkedin-in" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
         </div>
+
     </div>
 </section>

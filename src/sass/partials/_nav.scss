@@ -1,7 +1,7 @@
 #mainNav {
   background-color: rgba(255, 255, 255, 1);
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.1), 0 10px 10px rgba(0, 0, 0, 0.1);
-  border-bottom:1px solid #C6CACD;
+  border-bottom: 1px solid #C6CACD;
   padding: 10px 0;
 
   .navbar-toggler {
@@ -42,7 +42,7 @@
   }
 }
 
-@media(min-width:992px) {
+@media(min-width: 992px) {
   #mainNav {
     -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
     -moz-transition: padding-top 0.3s, padding-bottom 0.3s;
@@ -60,16 +60,16 @@
     .navbar-nav {
       .nav-item {
         .nav-link {
-          font-size:12px;
+          font-size: 12px;
           padding: 1.1em 1em !important;
-          color:$light;
+          color: $light;
         }
       }
     }
 
     #token-button {
-      color:$blue-on-light;
-      padding:10px 20px;
+      color: $blue-on-light;
+      padding: 10px 20px;
       border: 2px solid $blue-on-light;
       background-color: transparent;
       border-radius: 5px;
@@ -78,16 +78,15 @@
       letter-spacing: 2px;
 
       &:hover {
-        color:$light;
-        background-color:$blue-on-light;
+        color: $light;
+        background-color: $blue-on-light;
       }
 
     }
 
-
     &.navbar-shrink {
       box-shadow: 0 14px 28px rgba(0, 0, 0, 0.1), 0 10px 10px rgba(0, 0, 0, 0.1);
-      border-bottom:1px solid #C6CACD;
+      border-bottom: 1px solid #C6CACD;
       background-color: rgba(255, 255, 255, 1);
       padding: 0;
       .navbar-brand {
@@ -97,7 +96,7 @@
 
         .nav-item {
           .nav-link {
-            color:$dark;
+            color: $dark;
             &:hover,
             &.active {
               color: $blue-on-light;
@@ -109,10 +108,11 @@
   }
 }
 
-
 //bootstrap overwrite
-@media (max-width: 991px) {}
-.navbar-expand-lg>.container, .navbar-expand-lg>.container-fluid {
+@media (max-width: 991px) {
+}
+
+.navbar-expand-lg > .container, .navbar-expand-lg > .container-fluid {
   padding-right: 15px;
   padding-left: 15px;
 }

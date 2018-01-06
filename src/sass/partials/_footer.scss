@@ -1,7 +1,7 @@
 footer {
   padding: 50px 0 25px 0;
   text-align: center;
-  background-color:#1e1e1e;
+  background-color: $bg-color;
   span.copyright, span.connaxis {
     font-size: 70%;
     line-height: 40px;
@@ -9,7 +9,7 @@ footer {
   }
   span.connaxis a {
     text-transform: uppercase;
-    color:#F18823;
+    color: #F18823;
   }
 
   ul.footerlinks {
@@ -18,12 +18,12 @@ footer {
     margin-bottom: 0;
     text-transform: none;
     a {
-      padding-right:5px;
-      color:$light;
-      text-decoration:underline;
+      padding-right: 5px;
+      color: $light;
+      text-decoration: underline;
     }
     a:hover {
-      color:$blue-on-light;
+      color: $blue-on-light;
     }
   }
 }

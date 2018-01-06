@@ -14,6 +14,7 @@
   background-size: cover;
 
 }
+
 video#bgvid {
   @extend %video-background;
   z-index: -100;
@@ -22,7 +23,7 @@ video#bgvid {
 .video-overlay {
   @extend %video-background;
   z-index: -99;
-  background-color: rgba(0,0,0,0.6);
+  background-color: rgba(0, 0, 0, 0.6);
 
   .overlay-off & {
     z-index: 0;
@@ -38,24 +39,25 @@ video#bgvid {
 //yt videos
 
 .video-wrapper {
-  position:relative;
+  position: relative;
 }
+
 .video-back {
-  position:absolute;
-  width:100%;
-  top:0;
-  left:0;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
 
   img {
-    width:100%;
+    width: 100%;
     height: 100%;
   }
 }
 
 .video-subheading {
   @extend %heading;
-  margin-bottom:$breather;
+  margin-bottom: $breather;
   color: $light;
-  margin-top:$breather/2;
-  margin-bottom:0;
+  margin-top: $breather/2;
+  margin-bottom: 0;
 }

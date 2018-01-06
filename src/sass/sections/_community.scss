@@ -1,21 +1,21 @@
 .community-item {
-  padding:0 20px;
+  padding: 0 20px;
 
   &__icon {
     @extend %icon-border;
-    color:$light;
+    color: $light;
     line-height: 2.5em;
     width: 2.5em;
     height: 2.5em;
 
     &:hover {
-      color:$blue-on-dark;
+      color: $blue-on-dark;
     }
   }
 }
 
-@media(max-width:767px){
+@media(max-width: 767px) {
   .community-item {
-    padding:10px 0;
+    padding: 10px 0;
   }
 }
