@@ -1,5 +1,5 @@
 .faq-items {
-  padding-left:40px;
+  padding-left: 40px;
 }
 
 .faq-question {
@@ -11,20 +11,20 @@
   cursor: pointer;
 
   &:first-of-type {
-    margin-top:0;
+    margin-top: 0;
   }
 
   &:last-of-type {
-    margin-bottom:0;
+    margin-bottom: 0;
   }
 
   &:before {
     font-family: 'Font Awesome 5 Free';
     content: '\f068';
     color: $blue-on-dark;
-    font-weight:900;
-    margin:0 5px 0 -30px;
-    display:inline-block;
+    font-weight: 900;
+    margin: 0 5px 0 -30px;
+    display: inline-block;
     transition: .2s 0s all;
   }
 
@@ -32,7 +32,7 @@
 
     content: '\f067';
     transform: rotate(90deg);
-    display:inline-block;
+    display: inline-block;
   }
 }
 
@@ -43,16 +43,16 @@
   margin: 0;
 }
 
-@media(min-width:992px) {
-.faq-question {
-  font-size: 22px;
+@media(min-width: 992px) {
+  .faq-question {
+    font-size: 22px;
 
-  &:before {
-    margin:0 5px 0 -40px;
+    &:before {
+      margin: 0 5px 0 -40px;
+    }
   }
-}
 
-.faq-answer {
-  font-size: 16px;
-}
+  .faq-answer {
+    font-size: 16px;
+  }
 }

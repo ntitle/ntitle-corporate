@@ -2,13 +2,13 @@
 
   &__description {
     @extend %col-text;
-    color:$blue-on-dark;
-    font-size:15px;
+    color: $blue-on-dark;
+    font-size: 15px;
   }
 
   &__icon {
     @extend %icon-border;
-    color:$blue-on-dark;
+    color: $blue-on-dark;
     line-height: 2.5em;
     width: 2.5em;
     height: 2.5em;
