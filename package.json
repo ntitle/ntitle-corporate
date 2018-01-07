@@ -7,13 +7,14 @@
     "compile": "gulp",
     "start": "gulp && node main.js"
   },
-  "author": "",
+  "author": "Lukasz Ostrowski<lukasz.ostrowski@ntitle.network>",
   "license": "ISC",
   "devDependencies": {
     "@types/gulp": "^4.0.5",
     "@types/node": "^8.5.5",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.1.0",
+    "gulp-concat": "^2.6.1",
     "gulp-data": "^1.2.1",
     "gulp-htmlmin": "^4.0.0",
     "gulp-imagemin": "^4.1.0",
