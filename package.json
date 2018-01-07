@@ -7,7 +7,7 @@
     "compile": "gulp",
     "start": "gulp && node main.js"
   },
-  "author": "",
+  "author": "Lukasz Ostrowski<lukasz.ostrowski@ntitle.network>",
   "license": "ISC",
   "devDependencies": {
     "@types/gulp": "^4.0.5",
