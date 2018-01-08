@@ -1,6 +1,23 @@
 $(function () {
     "use strict"; // Start of use strict
 
+    /**
+     * Defer youtube loading
+     */
+    function lazyLoadIframes() {
+        var vidDefer = document.getElementsByTagName('iframe');
+        console.log(vidDefer)
+        for (var i = 0; i < vidDefer.length; i++) {
+            if (vidDefer[i].getAttribute('data-src')) {
+                vidDefer[i].setAttribute('src', vidDefer[i].getAttribute('data-src'));
+            }
+        }
+    }
+
+    lazyLoadIframes();
+
+    console.log(ScrollReveal)
+
     //scroll-reveal
     window.sr = ScrollReveal({reset: true});
     sr.reveal('.section-heading', {mobile: false});
@@ -106,16 +123,6 @@ $(function () {
     // Collapse the navbar when page is scrolled
     $(window).scroll(navbarCollapse);
 
-    /**
-     * Defer youtube loading
-     */
-    (function init() {
-        var vidDefer = document.getElementsByTagName('iframe');
-        for (var i = 0; i < vidDefer.length; i++) {
-            if (vidDefer[i].getAttribute('data-src')) {
-                vidDefer[i].setAttribute('src', vidDefer[i].getAttribute('data-src'));
-            }
-        }
-    })()
+
 
 }); // End of use strict
