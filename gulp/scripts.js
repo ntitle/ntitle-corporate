@@ -5,7 +5,7 @@ const pump = require('pump');
 module.exports = (cb) => {
     pump([
             gulp.src('src/js/*.js'),
-            // uglify(),
+            uglify(),
             gulp.dest('dist/js')
         ],
         cb
