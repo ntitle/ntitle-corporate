@@ -21,8 +21,6 @@
     "gulp-nunjucks-render": "^2.2.1",
     "gulp-sass": "^3.1.0",
     "gulp-uglify": "^3.0.0",
-    "install": "^0.10.2",
-    "npm": "^5.6.0",
     "pump": "^2.0.0",
     "static-server": "^3.0.0"
   }
