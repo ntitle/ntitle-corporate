@@ -9,4 +9,5 @@ module.exports = {
     },
     navVisible: true,
     logoUrl: '/',
+    newsletter: require('./data/newsletter.data'),
 };
