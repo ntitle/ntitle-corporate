@@ -1,6 +1,6 @@
 module.exports = {
     settings: {
-      tokenSaleEnabled: false
+        tokenSaleEnabled: true,
     },
     meta: {
         title: 'nTitle: Where Gamers and Independent Developers are in Control',
@@ -8,5 +8,5 @@ module.exports = {
         keywords: 'blockchain, token, gamers, video game, developers, peer to peer, marketplace, platform, DRM, digital rights management'
     },
     navVisible: true,
-    logoUrl: '/'
+    logoUrl: '/',
 };
