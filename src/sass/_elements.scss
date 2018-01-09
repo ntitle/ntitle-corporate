@@ -53,3 +53,9 @@ iframe {
     margin-bottom: 20px;
   }
 }
+
+.dude-image {
+  @media(max-width: 767px) {
+    max-width: 100px;
+  }
+}
