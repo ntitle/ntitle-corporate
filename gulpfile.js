@@ -1,5 +1,4 @@
 const gulp = require('gulp');
-const watch = require('gulp-watch');
 
 /**
  * Compile nunjucks with corresponding data.js file context
