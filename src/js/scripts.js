@@ -15,6 +15,8 @@ $(function () {
 
     // lazyLoadIframes();
 
+console.log('dupa');
+
     //scroll-reveal
     window.sr = ScrollReveal({reset: true});
     sr.reveal('.section-heading', {mobile: false});
