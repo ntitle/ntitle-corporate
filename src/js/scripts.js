@@ -15,6 +15,28 @@ $(function () {
 
     // lazyLoadIframes();
 
+    function getCookie(name) {
+        var value = "; " + document.cookie;
+        var parts = value.split("; " + name + "=");
+        if (parts.length === 2) return parts.pop().split(";").shift();
+    }
+
+    // Show cookie
+    var cookieAccepted = getCookie('cookie_accepted') === "true";
+
+    if (cookieAccepted) {
+        $('.cookie-bar').remove();
+    } else {
+        $('.cookie-bar').show();
+    }
+    // Accept cookie
+
+    $('.js-acccept-cookie').on('click', function () {
+        document.cookie = "cookie_accepted=true";
+
+        $('.cookie-bar').remove();
+    });
+
     //scroll-reveal
     window.sr = ScrollReveal({reset: true});
     sr.reveal('.section-heading', {mobile: false});
