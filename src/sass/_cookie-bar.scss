@@ -8,14 +8,35 @@
   padding: 10px 20px;
   z-index: 10;
   display: none;
+  padding-right: 180px;
+
+  @media(max-width: 992px) {
+    padding-right: 20px;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    @media(max-width: 992px) {
+      flex-wrap: wrap;
+    }
+  }
 
   &__text{
 
+    @media(max-width: 992px) {
+     flex: 0 0 100%;
+      padding: 0 20px;
+    }
   }
 
   &__button {
     margin: 0;
     margin-left: 20px;
+    display: inline-block;
 
     @media(max-width: 992px) {
       margin: 20px auto 10px;
