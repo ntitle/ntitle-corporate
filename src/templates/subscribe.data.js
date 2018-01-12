@@ -6,7 +6,8 @@ const data = {
     },
     navVisible: false,
     newsletter: {
-        headline: 'SUBSCRIBE TO GET NOTIFIED WHEN TOKEN SALE WILL BE AVAILABLE'
+        headline: 'SORRY, YOU’RE A BIT TOO EARLY. ',
+        subtext: 'SUBSCRIBE BELOW TO BE NOTIFIED WHEN THE TOKEN SALE BEGINS.'
     },
 };
 
