@@ -5,6 +5,16 @@
     padding: 70px 0;
   }
 
+  &__intro-wrapper {
+    @media (min-width: 768px) {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+  }
+
   &__cta {
     @media (max-width: 768px) {
       margin-bottom: 30px;
