@@ -1,3 +1,26 @@
 .section-intro {
   padding: 150px 0;
+
+  @media (max-width: 768px) {
+    padding: 70px 0;
+  }
+
+  &__intro-wrapper {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+
+    @media (max-width: 768px) {
+      display: block;
+    }
+
+  }
+
+  &__cta {
+    @media (max-width: 768px) {
+      margin-bottom: 30px;
+    }
+  }
 }
