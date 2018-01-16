@@ -4,6 +4,30 @@
   border-bottom: 1px solid #C6CACD;
   padding: 10px 0;
 
+  .nav-logo__on-white {
+    display: none;
+  }
+
+  &.navbar-shrink {
+    // Its white now... jeez
+
+    .nav-logo__on-white {
+      display: block;
+    }
+    .nav-logo__on-dark {
+      display: none;
+    }
+  }
+
+  @media (max-width: 991px) {
+    .nav-logo__on-white {
+      display: block;
+    }
+    .nav-logo__on-dark {
+      display: none;
+    }
+  }
+
   .navbar-toggler {
     font-size: 22px;
     right: 0;
