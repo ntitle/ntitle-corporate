@@ -7,12 +7,14 @@
             <p class="team-member-description">{{ teamMember.description }}</p>
         </div>
         <ul class="list-inline social-buttons">
+            {% if teamMember.linkedin %}
             <li class="list-inline-item">
                 <a href="{{ teamMember.linkedin }}" target="_blank"
                    aria-label="Go to team member Linkedin">
                     <i class="fab fa-2x fa-linkedin-in"></i>
                 </a>
             </li>
+            {% endif %}
         </ul>
     </div>
 {% endmacro %}
