@@ -33,7 +33,7 @@
         // Accept cookie
 
         $('.js-acccept-cookie').on('click', function () {
-            document.cookie = "cookie_accepted=true";
+            document.cookie = "cookie_accepted=true;domain=.ntitle.network";
 
             $('.cookie-bar').remove();
         });
