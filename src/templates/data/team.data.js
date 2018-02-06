@@ -63,4 +63,12 @@ module.exports = [
         avatar: '/img/team/marlena.png',
         role: 'Web Developer',
     },
+    {
+        name: 'Guido Hakkenberg',
+        displayName: 'Guido<br/>Hakkenberg',
+        description: 'Guido Hakkenberg is a multicultural former business & innovation student who\'s passion for innovation has lead him to the world of blockchain and cryptocurrencies. His previous experience in social media management for a large IT company and his keen interest in business development combined with his well-developed "people skills" make him the perfect community manager for nTitle. Guido is likeable and easy-going and always manages to make friends where ever he goes. He speaks fluent English, French, Dutch and dabbles in Japanese.',
+        linkedin: 'https://www.linkedin.com/in/guido-hakkenberg/',
+        avatar: '/img/team/guido.png',
+        role: 'Community Manager',
+    },
 ];
