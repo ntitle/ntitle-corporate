@@ -24,6 +24,14 @@ module.exports = [
         role: 'CMO',
     },
     {
+        name: 'Freddy Bucknell',
+        displayName: 'Freddy<br/>Bucknell',
+        description: 'Freddy is an ICAEW Chartered Accountant having spent 5 years at Deloitte LLP. He joined Deloitte as a graduate in the UK Financial Services Audit and Advisory team where he gained experience with a range of clients in insurance, banking and asset finance. He worked in the Deloitte London office as a Manager specializing in banking, where his main client was a FTSE 250 bank. Freddy took an early interest in blockchain technology and has been an active trader and avid investor in cryptocurrencies. He spends his spare time learning all he can about technical analysis and fundamental trading strategies.',
+        linkedin: 'https://www.linkedin.com/in/freddy-bucknell-0985a322/',
+        avatar: '/img/team/freddy.png',
+        role: 'CFO',
+    },
+    {
         name: 'Gonzalo Balabasquer',
         displayName: 'Gonzalo<br>Balabasquer',
         description: 'Gonzalo is a systems engineer who started his professional career as a PHP programmer. In the years that followed, he led a team of developers at a fast-paced agency located in Argentina. Recently, he followed his passion and returned to a technical position to leverage his IT experience as a full stack blockchain developer participating as an active developer of the MakerDao project.',
