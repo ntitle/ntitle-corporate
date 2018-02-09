@@ -23,4 +23,12 @@ module.exports = [
         avatar: '/img/team/gavin.jpg',
         role: 'CTO, Context Labs BV',
     },
+    {
+        name: 'Richard van Barneveld',
+        displayName: 'Richard van Barneveld',
+        description: 'Richard is a tech entrepreneur, constantly seeking innovative business opportunities. His dominant areas of expertise include strategic business planning, corporate business development and fundraising for tech startups. He is the Strategic Director at Utomik Inc., a game subscription service with partners from Disney, Take2, Ubisoft, Warner and more. Prior to that he was Strategic Director at Kalydo. Kalydo successfully powers games for game publishers & developers from companies that include The Cartoon Network (Turner), Gungho, Gameforge, COG, Chiyu, Gamigo and Gravity. Richard has an MBA from Bradford University.',
+        linkedin: 'https://www.linkedin.com/in/richardvanbarneveld',
+        avatar: '/img/team/richard.png',
+        role: 'Strategic Director at Utomik Inc.',
+    },
 ];
