@@ -59,7 +59,7 @@ module.exports = [
         name: 'Marlena Pawlukowska',
         displayName: 'Marlena<br>Pawlukowska',
         description: 'Marlena gained extensive experience in web development and digital marketing at several leading digital agencies and through her freelance work. She has an eye for good design, meticulous attention to quality and detail and is addicted to following the newest trends and searching for smart solutions. Her work is driven by a conviction that only from a well-balanced mixture of tech, design and creativity can you craft digital experiences that people fall in love with.',
-        linkedin: null,
+        linkedin: 'https://www.linkedin.com/in/marlenape/',
         avatar: '/img/team/marlena.png',
         role: 'Web Developer',
     },
