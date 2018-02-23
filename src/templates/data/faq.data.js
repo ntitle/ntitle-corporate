@@ -12,12 +12,12 @@ module.exports = [
     {
         id: '#faq-3',
         question: 'What is the difference between nTitle and other gaming marketplaces?',
-        answer: 'nTitle is a next-generation gaming platform. Unlike other platforms, nTitle will provide a reward system using gamification and other motivational tools that will allow both gamers and game developers to profit. Gamers will earn money, rewards and free games for helping to promote games and developers will build an army of ambassadors by connecting with gamers and profiting from their social reach. On top of that, nTitle will enable gamers and game developers to profit from a secondary market where gamers will actually own the game they purchase along with the alienable right to lend, sell, or gift it to whomever they like and developers will have full control over the sale of their games without the exorbitant costs and lack of marketing support they currently receive.'
+        answer: 'nTitle is a next-generation gaming platform. Unlike other platforms, nTitle will provide a reward system using gamification and other motivational tools that will allow both gamers and game developers to profit. Gamers will earn money, rewards and free games for helping to promote games and developers will build an army of ambassadors by connecting with gamers and profiting from their social reach. On top of that, nTitle will enable gamers and game developers to profit from a peer-to-peer market where gamers will actually own the game they purchase along with the alienable right to lend, sell, or gift it to whomever they like and developers will have full control over the sale of their games without the exorbitant costs and lack of marketing support they currently receive.'
     },
     {
         id: '#faq-4',
         question: 'What is the purpose of a blockchain technology in a game trading marketplace?',
-        answer: 'Blockchain technology has many advantages. The one that we focus on with our licencing platform is specifically "proof of ownership". If ownership, identity and authentication are established, then licenses and payments can seamlessly change hands through both primary and secondary markets.'
+        answer: 'Blockchain technology has many advantages. The one that we focus on with our licencing platform is specifically "proof of ownership". If ownership, identity and authentication are established, then licenses and payments can seamlessly change hands through both primary and peer-to-peer markets.'
     },
     {
         id: '#faq-5',
