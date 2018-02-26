@@ -8,7 +8,7 @@
         </div>
         <div class="row text-center">
             {% for socialMedium in social %}
-                <div class="community-item {{ 'offset-sm-2' if loop.first }} col-sm-2 col-xs-6">
+                <div class="community-item {{ 'offset-sm-1' if loop.first }} col-sm-2 col-xs-6">
                     <a href="{{ socialMedium.url }}" target="_blank" aria-label="{{ socialMedium.cta }}">
                         <i class="community-item__icon fab fa-2x fa-{{ socialMedium.icon }}" aria-hidden="true"></i>
                     </a>

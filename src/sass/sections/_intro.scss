@@ -1,5 +1,5 @@
 .section-intro {
-  padding: 150px 0;
+  padding: 150px 0 50px;
 
   @media (max-width: 768px) {
     padding: 70px 0;
@@ -23,6 +23,23 @@
 
     @media (max-width: 768px) {
       margin-bottom: 30px;
+    }
+  }
+}
+
+.intro-newsletter {
+  color: $blue-on-light;
+
+
+  &:focus, &:active {
+    color: $blue-on-light;
+  }
+
+  button {
+    color: $blue-on-light;
+
+    &:focus, &:active {
+      color: $blue-on-light;
     }
   }
 }
