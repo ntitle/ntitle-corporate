@@ -19,6 +19,7 @@ iframe {
   color: $blue-on-light;
   border-color: $blue-on-light;
   margin-top: $breather/2;
+  background: transparent;
   &:hover {
     color: $light;
     background-color: $blue-on-light;
