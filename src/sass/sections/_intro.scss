@@ -26,3 +26,20 @@
     }
   }
 }
+
+.intro-newsletter {
+  color: $blue-on-light;
+
+
+  &:focus, &:active {
+    color: $blue-on-light;
+  }
+
+  button {
+    color: $blue-on-light;
+
+    &:focus, &:active {
+      color: $blue-on-light;
+    }
+  }
+}
