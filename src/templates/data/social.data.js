@@ -1,5 +1,10 @@
 module.exports = [
     {
+        cta: 'Go to our Facebok',
+        icon: 'facebook',
+        url: 'https://www.facebook.com/nTitleNetwork/'
+    },
+    {
         cta: 'Go to our Linkedin',
         icon: 'linkedin-in',
         url: 'https://www.linkedin.com/company/ntitle/'
