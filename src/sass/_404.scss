@@ -1,0 +1,37 @@
+.notfound {
+  background-color: $bg-color;
+  min-height: calc(100vh - 8rem);
+
+  &__container {
+    margin: 0 auto;
+    max-width: 900px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-top: 100px;
+  }
+
+  &__image {
+    width: 100%;
+    margin-bottom: 4rem;
+    max-width: 50rem;
+    display: block;
+  }
+
+  &__headline {
+    color: $blue-on-light;
+    margin-bottom: 4rem;
+  }
+
+  &__text {
+    color: $light;
+    font-size: 2rem;
+    margin: 0 auto 4rem;
+  }
+
+  &__button {
+  }
+}
