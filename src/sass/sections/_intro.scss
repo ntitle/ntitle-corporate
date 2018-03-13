@@ -29,6 +29,7 @@
 
 .intro-newsletter {
   color: $blue-on-light;
+  display: block;
 
 
   &:focus, &:active {
@@ -42,5 +43,10 @@
     &:focus, &:active {
       color: $blue-on-light;
     }
+  }
+
+  @media (max-width: 990px) {
+    margin-bottom: 20px;
+    text-align: center;
   }
 }
