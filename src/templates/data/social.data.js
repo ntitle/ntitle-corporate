@@ -5,6 +5,11 @@ module.exports = [
         url: 'https://www.facebook.com/nTitleNetwork/'
     },
     {
+        cta: 'Go to our Twitter',
+        icon: 'twitter',
+        url: 'https://twitter.com/ntitle_network'
+    },
+    {
         cta: 'Go to our Linkedin',
         icon: 'linkedin-in',
         url: 'https://www.linkedin.com/company/ntitle/'
