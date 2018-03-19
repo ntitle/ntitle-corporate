@@ -54,7 +54,7 @@ class PrizeForm {
                     this.showMessage('Sorry, this code has been used', 'error');
                     return;
                 } else {
-                    this.showMessage(`You have successfully redeemed ${this.codeStatus.ntl} NDT! You will be notified via email.`, 'success')
+                    this.showMessage(`You have successfully redeemed ${this.codeStatus.ntl} NTL! You will be notified via email.`, 'success')
                 }
 
                 this.signToNewsletter()
