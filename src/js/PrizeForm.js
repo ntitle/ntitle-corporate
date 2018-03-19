@@ -47,8 +47,8 @@ class PrizeForm {
 
     submitCode() {
         this.callCodeApi()
-            .done(req => {
-                this.codeStatus = req.data;
+            .done(data => {
+                this.codeStatus = data;
 
                 if (this.codeStatus.redeemed) {
                     this.showMessage('Sorry, this code has been used', 'error');
@@ -58,16 +58,18 @@ class PrizeForm {
                 }
 
                 this.signToNewsletter()
-                    .succcess(status => {
-                        if (data.result === 'error') {
+                    .done(status => {
+                        if (status.result === 'error') {
                             this.newsletterEmailValid = false;
+                            this.showMessage('Email can\'t be submitted to newsletter. Maybe you are already signed?', 'error');
 
                         } else {
                             this.newsletterEmailValid = true;
+                            this.showMessage('Email has been submitted, check your inbox', 'success');
+
                         }
 
-                        this.showMessage('Email has been submitted, check your inbox', 'success');
-                    }).catch(err => {
+                    }).fail(err => {
                     this.showMessage('Email can\'t be submitted to newsletter. Maybe you are already signed?', 'error');
                 });
             })
@@ -78,9 +80,14 @@ class PrizeForm {
     }
 
     callCodeApi() {
-        return $.post(this.codeApiUrl, {
-            code: this.code,
-            email: this.email,
+        return $.ajax({
+            type: 'POST',
+            contentType: "application/json",
+            data: JSON.stringify({
+                code: this.code,
+                email: this.email,
+            }),
+            url: this.codeApiUrl
         });
     }
 
