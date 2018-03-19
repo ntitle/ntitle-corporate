@@ -1,4 +1,4 @@
-(function($) {
+(function ($) {
     $(function () {
         "use strict"; // Start of use strict
 
@@ -43,8 +43,20 @@
         sr.reveal('.section-heading', {mobile: false});
         sr.reveal('.section-headingwithsub', {mobile: false});
         sr.reveal('.section-subheading', {mobile: false});
-        sr.reveal('.from-left', {origin: 'left', distance: '300px', duration: 1000, delay: 3, mobile: false});
-        sr.reveal('.from-right', {origin: 'right', distance: '300px', duration: 1000, delay: 3, mobile: false});
+        sr.reveal('.from-left', {
+            origin: 'left',
+            distance: '300px',
+            duration: 1000,
+            delay: 3,
+            mobile: false
+        });
+        sr.reveal('.from-right', {
+            origin: 'right',
+            distance: '300px',
+            duration: 1000,
+            delay: 3,
+            mobile: false
+        });
         sr.reveal('.col-heading', {mobile: false});
         sr.reveal('.fas', {mobile: false});
         sr.reveal('.fab', {mobile: false});

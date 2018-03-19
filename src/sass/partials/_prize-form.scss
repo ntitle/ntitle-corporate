@@ -1,0 +1,56 @@
+.prize-form {
+  height: 100vh;
+  color: $dark;
+
+  input[type="text"],
+  input[type="email"] {
+    border: 1px solid $gray;
+    border-radius: 10px;
+    color: #000000;
+    font-size: 16px;
+    height: 65px;
+    text-align: center;
+    width: 100%;
+  }
+
+  input:focus {
+    outline: none;
+    border: 1px solid $blue-on-light;
+  }
+
+  &__container {
+    background: $light;
+    padding: 50px;
+    border-radius: 10px;
+  }
+
+  &__headline {
+    text-align: center;
+  }
+
+  &__input {
+    margin-bottom: 2rem;
+  }
+
+  &__button {
+    display: block;
+    width: 100%;
+  }
+
+  &__message {
+    text-align: center;
+    font-size: 1.6rem;
+
+    a {
+      text-decoration: underline;
+    }
+
+    &--success {
+      color: $blue-on-light;
+    }
+
+    &--error{
+      color: red;
+    }
+  }
+}
