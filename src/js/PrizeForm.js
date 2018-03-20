@@ -70,11 +70,17 @@ class PrizeForm {
                         }
 
                     }).fail(err => {
+
                     this.showMessage('Email can\'t be submitted to newsletter. Maybe you are already signed?', 'error');
                 });
             })
-            .fail(err => {
-                this.showMessage('Sorry, code not valid', 'error');
+            .fail( (xhr) => {
+                if(xhr.status === 404) {
+                    this.showMessage('Sorry, code not valid', 'error');
+                } else {
+                    this.showMessage('Something went wrong, try again later', 'error');
+                }
+
             });
 
     }
