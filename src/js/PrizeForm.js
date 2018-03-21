@@ -54,7 +54,9 @@ class PrizeForm {
                     this.showMessage('Sorry, this code has been used', 'error');
                     return;
                 } else {
-                    this.showMessage(`You have successfully redeemed ${this.codeStatus.ntl} NTL! You will be notified via email.`, 'success')
+                    this.showMessage(`Congratulations! You have won ${this.codeStatus.ntl} NTL! (1 NTL = 0.10 USD)`, 'success')
+                    this.showMessage(`To claim your prize, please check the email we sent with further instructions.`, 'success')
+                    this.showMessage(`If you do not receive an email contact us at contact@ntitle.network. But first, please make sure you check your spam folder.`, 'success')
                 }
 
                 this.signToNewsletter()
