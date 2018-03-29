@@ -56,14 +56,6 @@ module.exports = [
         role: 'Blockchain Engineer',
     },
     {
-        name: 'Lukasz Ostrowski',
-        displayName: 'Łukasz<br>Ostrowski',
-        description: 'Łukasz is a web developer that specializes in creating modern and scalable frontend applications in Javascript, React and Node.js. His most recent experience was with an e-commerce agency, where he created enterprise level shops for large corporations throughout Europe. His superpower is having a holistic view on the entire process, from business, UX and design to well engineered code and app architecture. Łukasz is a big fan of productivity and process optimization, both in work and in his private life.',
-        linkedin: 'https://www.linkedin.com/in/lukaszostrowski1/',
-        avatar: '/img/team/lukasz.png',
-        role: 'Web Developer',
-    },
-    {
         name: 'Marlena Pawlukowska',
         displayName: 'Marlena<br>Pawlukowska',
         description: 'Marlena gained extensive experience in web development and digital marketing at several leading digital agencies and through her freelance work. She has an eye for good design, meticulous attention to quality and detail and is addicted to following the newest trends and searching for smart solutions. Her work is driven by a conviction that only from a well-balanced mixture of tech, design and creativity can you craft digital experiences that people fall in love with.',
