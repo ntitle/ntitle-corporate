@@ -7,7 +7,6 @@
 .section-funding {
   margin-top: 100px;
   padding-bottom: 100px;
-  border-bottom: 1px solid $blue-on-light;
 }
 
 .funding-header {
@@ -41,6 +40,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.funding-separator {
+  border-bottom: 1px solid $blue-on-light;
+  border-top: 1px solid $blue-on-light;
 }
 
 .funding-num {
