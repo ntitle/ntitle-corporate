@@ -1,0 +1,44 @@
+.funding-center {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.section-funding {
+  margin-top: 100px;
+  padding-bottom: 100px;
+  border-bottom: 1px solid $blue-on-light;
+}
+
+.funding-header {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 700px;
+}
+
+.funding-list {
+  list-style: none;
+}
+
+.upper {
+  text-transform: uppercase;
+}
+
+.txt-center {
+  text-align: center;
+}
+
+.banner {
+  background: $blue-on-light;
+  height: 58px;
+  width: 460px;
+  font-size: 24px;
+  font-family: $headig-font;
+  font-weight: 900;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
