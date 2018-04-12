@@ -1,4 +1,7 @@
 const gulp = require('gulp');
+const watch = require('gulp-watch');
+
+let isWatching = false;
 
 /**
  * Compile nunjucks with corresponding data.js file context
@@ -40,17 +43,18 @@ gulp.task('vendors', require('./gulp/vendors'));
  */
 gulp.task('cleanup', require('./gulp/cleanup'));
 
-// // Watchers
-//
-//
-// gulp.task('watch', () => {
-//     watch('/src/sass/**/*.*', 'sass');
-//
-//     watch(['./src/partials/**/*.*', './src/templates/**/*.*'], 'compile-templates');
-// });
+gulp.task('compile', () => gulp.start('compile-templates', 'sass', 'scripts', 'images', 'vendors', 'favicons', 'video'));
 
-gulp.task('default', ['cleanup'], () => {
-    return gulp.start('compile-templates', 'sass', 'scripts', 'images', 'vendors', 'favicons', 'video', () => {
-        // return gulp.start('watch');
-    });
+gulp.task('watch', () => {
+    isWatching = true;
+    watch(['src/**/*.*'], () => gulp.start('compile'));
 });
+
+gulp.task('build', ['cleanup'], () => gulp.start('compile-templates', 'sass', 'scripts', 'images', 'vendors', 'favicons', 'video'));
+
+
+gulp.task('dev', () => gulp.start('compile-templates', 'sass', 'scripts', 'images', 'vendors', 'favicons', 'video', () => {
+    if (isWatching) return;
+
+    return gulp.start('watch');
+}));

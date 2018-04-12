@@ -1,18 +1,19 @@
 const opn = require('opn');
+const server = require('node-static');
+const path = require('path');
 
-const StaticServer = require('static-server');
-
-const server = new StaticServer({
-    rootPath: './dist',
-    name: 'static-server',
-    port: 3000,
-    host: '0.0.0.0',
-    cors: '*',
-    followSymlink: true,
+const dir = new server.Server(path.join(process.cwd(), 'dist'), {
+    cache: false,
 });
 
-server.start(() => {
-    console.log('Server listening to', server.port); // eslint-disable-line no-console
-});
+
+require('http').createServer((request, response) => {
+    request.addListener('end', () => {
+        //
+        // Serve files!
+        //
+        dir.serve(request, response);
+    }).resume();
+}).listen(3000);
 
 opn('http://localhost:3000');
