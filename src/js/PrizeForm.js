@@ -22,7 +22,6 @@ class PrizeForm {
     }
 
     checkboxClicked(e) {
-        console.log('terms clicked')
         this.termsAgree = !this.termsAgree;
     }
 
@@ -54,8 +53,6 @@ class PrizeForm {
     }
 
     submitCode() {
-
-        console.log(this.termsAgree);
 
         if (!this.termsAgree) {
             this.showMessage('Please  accept terms before submit', 'error');
