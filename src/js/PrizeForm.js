@@ -6,6 +6,7 @@ class PrizeForm {
         this.newsletterEmailValid = undefined;
         this.code = '';
         this.email = '';
+        this.termsAgree = false;
         this.codeStatus = {};
     }
 
@@ -16,9 +17,12 @@ class PrizeForm {
         this.message = document.querySelector('.prize-form__message-container');
         this.checkbox = document.querySelector('.prize-form__terms');
 
-        console.log('checkbox', this.checkbox);
-
         this.form.addEventListener('submit', (e) => this.onFormSubmit(e));
+        this.checkbox.addEventListener('click', (e) => this.checkboxClicked(e));
+    }
+
+    checkboxClicked(e) {
+        this.termsAgree = !this.termsAgree;
     }
 
     onFormSubmit(e) {
@@ -49,6 +53,12 @@ class PrizeForm {
     }
 
     submitCode() {
+
+        if (!this.termsAgree) {
+            this.showMessage('Please  accept terms before submit', 'error');
+            return;
+        }
+
         this.callCodeApi()
             .done(data => {
                 this.codeStatus = data;
@@ -79,8 +89,8 @@ class PrizeForm {
                     this.showMessage('Email can\'t be submitted to newsletter. Maybe you are already signed?', 'error');
                 });
             })
-            .fail( (xhr) => {
-                if(xhr.status === 404) {
+            .fail((xhr) => {
+                if (xhr.status === 404) {
                     this.showMessage('Sorry, code not valid', 'error');
                 } else {
                     this.showMessage('Something went wrong, try again later', 'error');
