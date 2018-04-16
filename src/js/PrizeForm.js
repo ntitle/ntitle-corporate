@@ -1,7 +1,7 @@
 class PrizeForm {
     constructor() {
         this.newsletterFormUrl = 'https://network.us17.list-manage.com/subscribe/post-json?u=38836b86bdc2b88a242addc37&id=1bf326666b';
-        this.codeApiUrl = 'https://prize-api.ntitle.network/codes/assign';
+        this.codeApiUrl = 'http://localhost:8888/codes/assign';
         this.formSubmitted = false;
         this.newsletterEmailValid = undefined;
         this.code = '';
@@ -14,6 +14,9 @@ class PrizeForm {
         this.emailInput = document.querySelector('.prize-form__email');
         this.codeInput = document.querySelector('.prize-form__code');
         this.message = document.querySelector('.prize-form__message-container');
+        this.checkbox = document.querySelector('.prize-form__terms');
+
+        console.log('checkbox', this.checkbox);
 
         this.form.addEventListener('submit', (e) => this.onFormSubmit(e));
     }

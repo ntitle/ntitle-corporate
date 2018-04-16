@@ -8,8 +8,15 @@
             <input type="text" minlength="10" maxlength="10" name="CODE"
                    class="input prize-form__input prize-form__code" required placeholder="CODE">
             <div class="prize-form__message-container"></div>
+            <div class="prize-form__checkbox">
+                <label class="check">
+                    <input class="prize-form__terms" name="checkbox" required type="checkbox"/>
+                    <div class="box"></div>
+                </label>
+                <p class="prize-form__checkbox-text">By entering my email I acknowledge that I will receive periodic email updates from nTitle. Note: You will never be spammed and can unsubscribe at any time.</p>
+            </div>
             <button class="btn button-light button prize-form__button" type="submit">Submit</button>
-            <p class="prize-form__terms">By playing Blockchain Bonanza you are agreeing to receive further information via email about how to claim your free tokens. You will also be subscribed to receive future updates about the development of the nTitle project. You can opt out at any time.</p>
+            {#<p class="prize-form__terms">By playing Blockchain Bonanza you are agreeing to receive further information via email about how to claim your free tokens. You will also be subscribed to receive future updates about the development of the nTitle project. You can opt out at any time.</p>#}
         </div>
     </form>
 </section>
