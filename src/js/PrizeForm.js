@@ -1,11 +1,12 @@
 class PrizeForm {
     constructor() {
         this.newsletterFormUrl = 'https://network.us17.list-manage.com/subscribe/post-json?u=38836b86bdc2b88a242addc37&id=1bf326666b';
-        this.codeApiUrl = 'https://prize-api.ntitle.network/codes/assign';
+        this.codeApiUrl = 'http://localhost:8888/codes/assign';
         this.formSubmitted = false;
         this.newsletterEmailValid = undefined;
         this.code = '';
         this.email = '';
+        this.termsAgree = false;
         this.codeStatus = {};
     }
 
@@ -14,8 +15,14 @@ class PrizeForm {
         this.emailInput = document.querySelector('.prize-form__email');
         this.codeInput = document.querySelector('.prize-form__code');
         this.message = document.querySelector('.prize-form__message-container');
+        this.checkbox = document.querySelector('.prize-form__terms');
 
         this.form.addEventListener('submit', (e) => this.onFormSubmit(e));
+        this.checkbox.addEventListener('click', (e) => this.checkboxClicked(e));
+    }
+
+    checkboxClicked(e) {
+        this.termsAgree = !this.termsAgree;
     }
 
     onFormSubmit(e) {
@@ -46,6 +53,12 @@ class PrizeForm {
     }
 
     submitCode() {
+
+        if (!this.termsAgree) {
+            this.showMessage('Please  accept terms before submit', 'error');
+            return;
+        }
+
         this.callCodeApi()
             .done(data => {
                 this.codeStatus = data;
@@ -76,8 +89,8 @@ class PrizeForm {
                     this.showMessage('Email can\'t be submitted to newsletter. Maybe you are already signed?', 'error');
                 });
             })
-            .fail( (xhr) => {
-                if(xhr.status === 404) {
+            .fail((xhr) => {
+                if (xhr.status === 404) {
                     this.showMessage('Sorry, code not valid', 'error');
                 } else {
                     this.showMessage('Something went wrong, try again later', 'error');

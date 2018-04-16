@@ -6,6 +6,20 @@
     padding-right: 20px;
   }
 
+  &__checkbox {
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+    align-items: flex-start;
+    font-weight: 300;
+  }
+
+  &__checkbox-text {
+    color: $dark;
+    padding-left: 20px;
+    margin: 0;
+  }
+
   input[type="text"],
   input[type="email"] {
     border: 1px solid $gray;
@@ -74,3 +88,52 @@
     }
   }
 }
+
+.check {
+  min-width: 30px;
+  height: 30px;
+  position: relative;
+  margin-bottom: 0;
+  margin-top: 4px;
+
+  input {
+    display: none;
+    &:checked + .box {
+      background-color: $blue-on-light;
+
+      &:after {
+        top: 0;
+      }
+    }
+  }
+
+  .box {
+    width: 100%;
+    height: 100%;
+    transition: all 1.1s cubic-bezier(.19,1,.22,1);
+    background-color: white;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid $blue-on-light;
+    border-radius: 5px;
+    &:after {
+      width: 50%;
+      height: 20%;
+      content: '';
+      position: absolute;
+      border-left: 3px solid;
+      border-bottom: 3px solid;
+      border-color: white;
+      transform: rotate(-45deg) translate3d(0,0,0);
+      transform-origin: center center;
+      transition: all 1.1s cubic-bezier(.19,1,.22,1);
+      left: 0;
+      right: 0;
+      top: 200%;
+      bottom: 5%;
+      margin: auto;
+    }
+  }
+}
+
