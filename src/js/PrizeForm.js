@@ -15,13 +15,14 @@ class PrizeForm {
         this.emailInput = document.querySelector('.prize-form__email');
         this.codeInput = document.querySelector('.prize-form__code');
         this.message = document.querySelector('.prize-form__message-container');
-        this.checkbox = document.querySelector('.prize-form__terms');
+        this.checkbox = document.querySelector('.box');
 
         this.form.addEventListener('submit', (e) => this.onFormSubmit(e));
         this.checkbox.addEventListener('click', (e) => this.checkboxClicked(e));
     }
 
     checkboxClicked(e) {
+        console.log('terms clicked')
         this.termsAgree = !this.termsAgree;
     }
 
@@ -53,6 +54,8 @@ class PrizeForm {
     }
 
     submitCode() {
+
+        console.log(this.termsAgree);
 
         if (!this.termsAgree) {
             this.showMessage('Please  accept terms before submit', 'error');
