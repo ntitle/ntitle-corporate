@@ -55,7 +55,7 @@ class PrizeForm {
     submitCode() {
 
         if (!this.termsAgree) {
-            this.showMessage('Please  accept terms before submit', 'error');
+            this.showMessage('Please accept terms by checking the box', 'error');
             return;
         }
 
@@ -67,8 +67,8 @@ class PrizeForm {
                     this.showMessage('Sorry, this code has been used', 'error');
                     return;
                 } else {
-                    this.showMessage(`Congratulations! You have won ${this.codeStatus.ntl} NTL! (1 NTL = 0.10 USD)`, 'success')
-                    this.showMessage(`To claim your prize, please check the email we sent with further instructions.`, 'success')
+                    this.showMessage(`Congratulations! You have won ${this.codeStatus.ntl} NTL! \n (1 NTL = 0.10 USD)`, 'success')
+                    this.showMessage(`You will receive further instructions on how to claim your prize during our ICO.`, 'success')
                     this.showMessage(`If you do not receive an email contact us at contact@ntitle.network. But first, please make sure you check your spam folder.`, 'success')
                 }
 
@@ -76,7 +76,7 @@ class PrizeForm {
                     .done(status => {
                         if (status.result === 'error') {
                             this.newsletterEmailValid = false;
-                            this.showMessage('Email can\'t be submitted to newsletter. Maybe you are already signed?', 'error');
+                            this.showMessage('Email can\'t be submitted to newsletter. Maybe you are already signed up?', 'error');
 
                         } else {
                             this.newsletterEmailValid = true;
