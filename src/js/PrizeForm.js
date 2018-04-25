@@ -68,9 +68,7 @@ class PrizeForm {
                     return;
                 } else {
                     this.showMessage(`Congratulations! You have won ${this.codeStatus.ntl} NTL! \n (1 NTL = 0.10 USD)`, 'success')
-                    this.showMessage(`You will receive further instructions on how to claim your prize during our ICO.`, 'success')
-                    this.showMessage(`If you do not receive an email contact us at contact@ntitle.network. But first, please make sure you check your spam folder.`, 'success')
-                }
+                    this.showMessage(`You will receive further instructions on how to claim your prize during our ICO.`, 'success')}
 
                 this.signToNewsletter()
                     .done(status => {
@@ -80,7 +78,7 @@ class PrizeForm {
 
                         } else {
                             this.newsletterEmailValid = true;
-                            this.showMessage('Email has been submitted, check your inbox', 'success');
+                            this.showMessage('Email has been submitted.', 'success');
 
                         }
 
