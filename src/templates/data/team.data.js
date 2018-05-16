@@ -53,7 +53,7 @@ module.exports = [
         description: 'Marcin has a strong background in software engineering including cloud, mobile platforms, cryptography and security, system level programming, and systems development life cycle. He has experience in developing and implementing concepts and technologies for IoT, hands-on experience with Ethereum/Solidity, blockchain technologies, distributed ledger, cryptocurrencies and Smart Contracts.',
         linkedin: 'https://www.linkedin.com/in/marcingierlak/',
         avatar: '/img/team/marcin.jpg',
-        role: 'Blockchain Engineer',
+        role: 'Blockchain Solutions Architect',
     },
     {
         name: 'Marlena Pawlukowska',
