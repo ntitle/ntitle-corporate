@@ -2,37 +2,57 @@
     <div class="container-fluid">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4">
+                <div class="col-lg-6">
                     <div class="section-intro__intro-wrapper">
                         <h1 class="col-heading">
-                            <span class="en">n</span>Title Disrupts the Gaming Industry!
+                            DECENTRALISED BLOCKCHAIN COMMERCE FOR INDIE GAME DEVELOPERS
                         </h1>
                         <p>
-                            We’re building the next generation gaming platform – one that puts the
-                            power back where it
-                            belongs – in the hands of the independent developers and gamers who
-                            drive the industry.
+                            The discovery of games and virtual items is increasingly happening <strong>outside of
+                                centralised
+                                marketplaces</strong> (e.g. Steam) and instead via social media and streaming platforms.
+                            Using
+                            nTitle’s bCommerce software you can <strong>sell at the point of discovery</strong>, connect
+                            with gamers &
+                            influencers and <strong>incentivise them to promote games.</strong>
+
                         </p>
-                        <p class="text-center text-md-left section-intro__cta">
-                            Watch the video to learn more!
-                        </p>
-                        <a href="#newsletter" class="js-scroll-trigger intro-newsletter">
-                            <button class="btn button-light">Sign up to newsletter</button>
-                        </a>
+                        <div class="section-intro__cta">
+                            <a
+                                    href="https://docs.google.com/forms/d/e/1FAIpQLSegOe_T3c6Q4oZrjIyYE9BRR3L2KWRdCpYSVvTNX-cqM-wnIw/viewform"
+                                    class="js-scroll-trigger intro-newsletter">
+                                <button class="btn button-light">Whitelist</button>
+                            </a>
+                            <a href="#newsletter" class="js-scroll-trigger intro-newsletter">
+                                <button class="btn button-light">Sign up to newsletter</button>
+                            </a>
+                        </div>
+                        <div class="row">
+                            {% for socialMedium in social %}
+                                <div class="community-item">
+                                    <a href="{{ socialMedium.url }}" target="_blank" aria-label="{{ socialMedium.cta }}">
+                                        <i class="community-item__icon fab fa-2x fa-{{ socialMedium.icon }}" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            {% endfor %}
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-8">
-                    <div class="video-wrapper">
-                        <div class="video-back">
-                            <img src="/img/middlemen_monster.jpg"
-                                 alt="yt animation video poster - middlemen monster">
-                        </div>
-                        <div class="embed-responsive embed-responsive-16by9">
-                            <iframe class="embed-responsive-item"
-                                    src="https://www.youtube.com/embed/AIRNRVsv2OA?rel=0&amp;showinfo=0"
-                                    gesture="media"
-                                    allow="encrypted-media" allowfullscreen></iframe>
-                        </div>
+                <div class="col-lg-6 section-intro__mockup">
+                    {#<div class="video-wrapper">#}
+                    {#<div class="video-back">#}
+                    {#<img src="/img/middlemen_monster.jpg"#}
+                    {#alt="yt animation video poster - middlemen monster">#}
+                    {#</div>#}
+                    {#<div class="embed-responsive embed-responsive-16by9">#}
+                    {#<iframe class="embed-responsive-item"#}
+                    {#src="https://www.youtube.com/embed/AIRNRVsv2OA?rel=0&amp;showinfo=0"#}
+                    {#gesture="media"#}
+                    {#allow="encrypted-media" allowfullscreen></iframe>#}
+                    {#</div>#}
+                    {#</div>#}
+                    <div class="mockup-ui-wrapper">
+                        <img src="/img/ntitle_ui.png" class="mockap-ui" />
                     </div>
                 </div>
             </div>

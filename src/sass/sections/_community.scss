@@ -1,5 +1,5 @@
 .community-item {
-  padding: 0 20px;
+  transform: scale(.5);
 
   &__icon {
     @extend %icon-border;

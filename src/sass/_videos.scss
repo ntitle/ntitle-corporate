@@ -61,3 +61,14 @@ video#bgvid {
   margin-top: $breather/2;
   margin-bottom: 0;
 }
+
+.mockap-ui {
+  width: 125%;
+  object-fit: contain;
+}
+
+.mockup-ui-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}

@@ -5,6 +5,10 @@
     padding: 70px 0;
   }
 
+  &__mockup {
+    display: flex;
+  }
+
   &__intro-wrapper {
     align-items: center;
     display: flex;
@@ -19,11 +23,11 @@
   }
 
   &__cta {
-    align-self: stretch;
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    width: 100%;
 
-    @media (max-width: 768px) {
-      margin-bottom: 30px;
-    }
   }
 }
 
