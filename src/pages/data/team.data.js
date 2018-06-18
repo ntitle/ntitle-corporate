@@ -16,14 +16,6 @@ module.exports = [
         role: 'CTO',
     },
     {
-        name: 'John Clancy',
-        displayName: 'John<br>Clancy',
-        description: 'John Clancy has over 20 years experience in defining, developing and implementing innovative marketing, PR and sales strategies for new and established companies. His clients are based in Europe, the Middle East and North and South America.\n He is also a marketing and business development lecturer at Inholland University in the Netherlands, visiting professor at the University of Bari Aldo Moro, serial entrepreneur, app developer and author of two books.',
-        linkedin: 'https://www.linkedin.com/in/johndavidclancy/',
-        avatar: '/img/team/john.jpg',
-        role: 'CMO',
-    },
-    {
         name: 'Freddy Bucknell',
         displayName: 'Freddy<br/>Bucknell',
         description: 'Freddy is an ICAEW Chartered Accountant having spent 5 years at Deloitte LLP. He joined Deloitte as a graduate in the UK Financial Services Audit and Advisory team where he gained experience with a range of clients in insurance, banking and asset finance. He worked in the Deloitte London office as a Manager specializing in banking, where his main client was a FTSE 250 bank. Freddy took an early interest in blockchain technology and has been an active trader and avid investor in cryptocurrencies. He spends his spare time learning all he can about technical analysis and fundamental trading strategies.',

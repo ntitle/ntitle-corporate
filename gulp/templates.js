@@ -12,11 +12,11 @@ module.exports = () => {
         return require(dataPath);
     }
 
-    return gulp.src(['src/templates/*.njk', '!src/templates/default.njk'])
+    return gulp.src(['src/pages/*.njk', '!src/pages/default.njk'])
         .pipe(data(getDataForFile))
         .pipe(nunjucksRender({
-            path: ['src/partials', 'src/templates']
+            path: ['src/partials', 'src/templates', 'src/utils', 'src/components', 'src/pages', 'src/**/*.njk']
         }))
-        .pipe(htmlmin({collapseWhitespace: true}))
+        .pipe(htmlmin({ collapseWhitespace: true }))
         .pipe(gulp.dest('dist'));
 };

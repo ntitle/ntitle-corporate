@@ -32,7 +32,7 @@
         }
         // Accept cookie
 
-        $('.js-acccept-cookie').on('click', function () {
+        $('.js-accept-cookie').on('click', function () {
             document.cookie = "cookie_accepted=true;domain=.ntitle.network";
 
             $('.cookie-bar').remove();

@@ -12,17 +12,21 @@
 @import "line-separator";
 
 //sections
-@import "./partials/nav";
-@import "cookie-bar";
 @import "sections/white_section";
 @import "sections/input-sections";
-@import "sections/industries";
 @import "sections/testimonials";
-@import "sections/community";
-@import "sections/intro";
 @import "sections/team";
-@import "sections/faq";
-@import "partials/footer";
 @import "partials/prize-form";
 @import "./404";
-@import "./sections/funding";
+
+// components
+@import "../components/CookieBar/CookieBar";
+@import "../components/Footer/Footer";
+@import "../components/Header/Header";
+@import "../components/SectionDude/SectionDude";
+@import "../components/SectionIntro/SectionIntro";
+@import "../components/FundingHeader/FundingHeader";
+@import "../components/SectionCommunity/SectionCommunity";
+@import "../components/SectionFaq/SectionFaq";
+@import "../components/SectionIndustries/SectionIndustries";
+@import "../components/SectionJoin/SectionJoin";
