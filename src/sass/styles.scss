@@ -15,12 +15,11 @@
 //sections
 @import "sections/white_section";
 @import "sections/input-sections";
-@import "sections/testimonials";
-@import "sections/team";
 @import "partials/prize-form";
 @import "./404";
 
 // components
+@import "../components/SectionTeam/SectionTeam";
 @import "../components/CookieBar/CookieBar";
 @import "../components/Footer/Footer";
 @import "../components/Header/Header";
@@ -34,3 +33,4 @@
 @import "../components/EcosystemItem/EcosystemItem";
 @import "../components/SectionKeypoints/SectionKeypoints";
 @import "../components/SectionBenefits/SectionBenefits";
+@import "../components/SectionTestimontials/SectionTestimontials";

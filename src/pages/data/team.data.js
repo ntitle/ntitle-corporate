@@ -18,7 +18,7 @@ module.exports = [
     {
         name: 'Freddy Bucknell',
         displayName: 'Freddy<br/>Bucknell',
-        description: 'Freddy is an ICAEW Chartered Accountant having spent 5 years at Deloitte LLP. He joined Deloitte as a graduate in the UK Financial Services Audit and Advisory team where he gained experience with a range of clients in insurance, banking and asset finance. He worked in the Deloitte London office as a Manager specializing in banking, where his main client was a FTSE 250 bank. Freddy took an early interest in blockchain technology and has been an active trader and avid investor in cryptocurrencies. He spends his spare time learning all he can about technical analysis and fundamental trading strategies.',
+        description: 'Freddy is an ICAEW Chartered Accountant having worked for Deloitte LLP in the Financial Services Advisory team in London where managed a range of clients in insurance, banking and asset finance. He worked in the Deloitte London office as a Manager specializing in banking, where his main client was a FTSE 250 bank. Freddy took an early interest in blockchain technology and has been an active trader and avid investor in cryptocurrencies.',
         linkedin: 'https://www.linkedin.com/in/freddy-bucknell-0985a322/',
         avatar: '/img/team/freddy.png',
         role: 'COO',
@@ -58,7 +58,7 @@ module.exports = [
     {
         name: 'Guido Hakkenberg',
         displayName: 'Guido<br/>Hakkenberg',
-        description: 'Guido Hakkenberg is a multicultural former business & innovation student who\'s passion for innovation has lead him to the world of blockchain and cryptocurrencies. His previous experience in social media management for a large IT company and his keen interest in business development combined with his well-developed "people skills" make him the perfect community manager for nTitle. Guido is likeable and easy-going and always manages to make friends where ever he goes. He speaks fluent English, French, Dutch and dabbles in Japanese.',
+        description: 'Guido Hakkenberg is a multicultural former business & innovation student who\'s passion for innovation has lead him to the world of blockchain and cryptocurrencies. He has previous experience in social media management for a large IT company. Guido is likeable and easy-going and always manages to make friends wherever he goes. He speaks fluent English, French, Dutch and dabbles in Japanese.',
         linkedin: 'https://www.linkedin.com/in/guido-hakkenberg/',
         avatar: '/img/team/guido.png',
         role: 'Community Manager',
