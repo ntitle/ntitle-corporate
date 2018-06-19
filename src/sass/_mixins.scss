@@ -1,0 +1,44 @@
+@mixin container {
+  max-width: $content-width;
+  margin: 0 auto;
+
+  padding: 0 2rem;
+}
+
+@mixin list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin resetButton {
+  border: none;
+  outline: none;
+  background: none;
+
+  &:hover, &:focus {
+    border: none;
+    outline: none;
+  }
+}
+
+@mixin paperSection {
+  @include container();
+  border-radius: 0.5rem;
+  background-color: $light;
+  padding: 4rem;
+  box-shadow: 3px 3px 5px 1px rgba($black, 0.1);
+}
+
+@mixin paperSectionDark {
+  @include container();
+  border-radius: 0.5rem;
+  background: transparent;
+  padding: 4rem;
+  box-shadow: 3px 3px 5px 1px rgba($black, 0.1);
+}
+
+@mixin darkSection {
+  color: $light;
+  background-color: $dark-gray;
+}

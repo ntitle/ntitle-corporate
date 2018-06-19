@@ -5,6 +5,7 @@
 
 //body, typography, sections, containers
 @import "global";
+@import "../sass/mixins";
 
 //boxes, buttons, icons
 @import "elements";
@@ -30,3 +31,5 @@
 @import "../components/SectionFaq/SectionFaq";
 @import "../components/SectionIndustries/SectionIndustries";
 @import "../components/SectionJoin/SectionJoin";
+@import "../components/EcosystemItem/EcosystemItem";
+@import "../components/SectionKeypoints/SectionKeypoints";

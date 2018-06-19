@@ -1,0 +1,28 @@
+{% macro ecosystemItem(headline, subheadline, text, theme, themeIcon) %}
+    <div class="ecosystem-item ecosystem-item--v-{{ theme }}">
+        <div class="ecosystem-item__wrapper">
+            {% if theme === "dev" %}
+                <div class="ecosystem-item__avatar ecosystem-item__avatar--dev">
+                    <img src="/img/ecosystem/dev_comic_cloud_icon.svg" class="ecosystem-item__avatar-image" />
+                    <img src="/img/ecosystem/{{ themeIcon }}" class="ecosystem-item__theme-icon" />
+                </div>
+            {% endif %}
+            {% if theme === "gamer" %}
+                <div class="ecosystem-item__avatar ecosystem-item__avatar--gamer">
+                    <img src="/img/ecosystem/gamer_comic_cloud_icon.svg" class="ecosystem-item__avatar-image" />
+                    <img src="/img/ecosystem/{{ themeIcon }}" class="ecosystem-item__theme-icon" />
+                </div>
+            {% endif %}
+            <div class="ecosystem-item__content">
+                <h2 class="ecosystem-item__headline headline headline--secondary">
+                    {{ headline | safe }}
+                </h2>
+                <h3 data-text="{{ subheadline }}" class="ecosystem-item__subheadline headline headline--tertiary">
+                    {{ subheadline | safe }}
+                </h3>
+                <div class="ecosystem-item__text">{{ text | safe }}</div>
+            </div>
+        </div>
+
+    </div>
+{% endmacro %}

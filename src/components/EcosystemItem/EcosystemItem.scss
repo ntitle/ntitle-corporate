@@ -1,0 +1,155 @@
+.ecosystem-item {
+
+  &--v-dev {
+    .ecosystem-item__headline {
+      color: $green;
+      border-color: $green;
+    }
+    .ecosystem-item__subheadline {
+      color: $green;
+    }
+
+    .ecosystem-item__avatar--gamer {
+      display: none;
+    }
+  }
+
+  &--v-gamer {
+    .ecosystem-item__headline {
+      color: $blue;
+      border-color: $blue;
+    }
+    .ecosystem-item__subheadline {
+      color: $blue;
+    }
+
+    .ecosystem-item__avatar--dev {
+      display: none;
+    }
+  }
+
+  &__icon {
+    width: 20rem;
+    margin: 0 auto 4rem;
+
+    @media (max-width: 1024px) {
+      width: 10rem;
+    }
+  }
+
+  &__headline {
+    line-height: 1.5;
+    font-size: 3rem;
+    text-align: center;
+    padding: 3rem 0;
+    border-bottom: 1px solid;
+    letter-spacing: normal;
+
+    @media(max-width: 1024px) {
+      font-size: 1.6rem;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: 1024px) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__avatar {
+    flex: 0 0 20rem;
+    position: relative;
+
+    @media (max-width: 1024px) {
+      order: 0;
+      width: 10rem;
+    }
+
+    &--dev {
+      margin-right: 4rem;
+
+      @media (max-width: 1024px) {
+        margin: 0;
+      }
+    }
+
+    &--gamer {
+      margin-right: 4rem;
+
+      @media (max-width: 1024px) {
+        margin: 0;
+      }
+    }
+  }
+
+  &__theme-icon {
+    position: absolute;
+    top: 4rem;
+    left: 50%;
+    width: 7rem;
+    height: 7rem;
+    margin-left: -3.7rem;
+
+    @media(max-width: 1024px) {
+      width: 3rem;
+      height: 3rem;
+      margin-left: -1.5rem;
+      top: 2rem;
+    }
+
+  }
+
+  &__avatar-image {
+
+  }
+
+  &__content {
+    flex: 1 1 auto;
+
+    @media (max-width: 1024px) {
+      order: 1;
+    }
+  }
+
+  &__subheadline {
+    font-size: 2rem;
+    margin: 0;
+    margin-bottom: 4rem;
+    text-align: center;
+    display: block;
+    width: 100%;
+
+    @media(max-width: 1024px) {
+      font-size: 1.6rem;
+    }
+  }
+
+  &__text {
+    margin: 0;
+    font-size: 2rem;
+    line-height: 1.4;
+    text-align: center;
+    display: block;
+    width: 100%;
+
+    @media(max-width: 1024px) {
+      font-size: 1.4rem;
+    }
+
+    p {
+      font-size: inherit;
+      margin-top: 0;
+    }
+  }
+
+  svg {
+    margin-top: 4rem;
+    width: 100%;
+  }
+
+}

@@ -1,0 +1,133 @@
+.section-ecosystem {
+  &__headline {
+    color: $black;
+    margin-bottom: 3rem;
+  }
+
+  &__intro-text {
+    font-size: 2rem;
+    max-width: 60rem;
+    margin: 6rem auto;
+    text-align: center;
+    line-height: 1.4;
+    color: $blue-on-light;
+    letter-spacing: normal;
+  }
+
+  &__features-container {
+    @include container();
+    padding: 0;
+    border: 1px solid $light-gray;
+    display: flex;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    margin-bottom: 10rem;
+  }
+
+  &__tabs-wrapper {
+    flex: 0 0 30rem;
+    background: $light-gray;
+
+    @media(max-width: 1024px) {
+      flex: 0 0 20rem;
+    }
+
+    @media (max-width: 767px) {
+      flex: 0 0 10rem;
+    }
+  }
+
+  &__tabs-list {
+    @include list();
+
+  }
+
+  &__tabs-label {
+    padding: 1rem;
+    font-size: 1.6rem;
+    text-align: center;
+    color: darken($gray, 0.1);
+
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+
+  &__tab {
+    font-size: 1.8rem;
+    padding: 2rem 1rem;
+    border-bottom: 1px solid $light-gray;
+    border-right: 1px solid $light-gray;
+    background: darken($light, 2%);
+    cursor: pointer;
+
+    img {
+      display: none;
+      width: 5rem;
+      height: 5rem;
+      margin: 0 auto;
+      pointer-events: none;
+    }
+
+    span {
+      pointer-events: none;
+    }
+
+    @media(max-width: 1024px) {
+      font-size: 1.2rem;
+    }
+
+    @media (max-width: 767px) {
+      span {
+        display: none;
+      }
+
+      img {
+        display: block;
+      }
+    }
+
+    &--dev {
+      color: $green;
+    }
+
+    &--gamer {
+      color: $blue-on-light;
+    }
+
+    &--active {
+      border-right: none;
+      box-shadow: -1px 4px 10px -4px rgba($dark-gray, 0.2);
+      background: $light;
+      z-index: 1;
+      position: relative;
+    }
+  }
+
+  &__content {
+    flex: 1 1 auto;
+    background: $light;
+    box-shadow: -1px -1px 10px 2px rgba($dark-gray, 0.2);
+  }
+
+  &__content-section {
+    padding: 2rem;
+    display: none;
+
+    &--visible {
+      display: block;
+    }
+  }
+
+  &__bottom-image {
+    width: 60rem;
+    margin: 0 auto;
+    border-radius: 0.5rem;
+  }
+
+  &__diagram {
+    max-width: 120rem;
+    padding: 0 2rem;
+    margin: 0 auto;
+  }
+}
