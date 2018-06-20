@@ -17,21 +17,30 @@
                             influencers and <strong>incentivise them to promote games.</strong>
 
                         </p>
-                        <div class="section-intro__cta">
-                            <a
-                                    href="https://docs.google.com/forms/d/e/1FAIpQLSegOe_T3c6Q4oZrjIyYE9BRR3L2KWRdCpYSVvTNX-cqM-wnIw/viewform"
-                                    class="js-scroll-trigger intro-newsletter">
-                                <button class="btn button-light">Whitelist</button>
-                            </a>
-                            <a href="#newsletter" class="js-scroll-trigger intro-newsletter">
-                                <button class="btn button-light">Sign up to newsletter</button>
-                            </a>
+                        <div class="row">
+                            <div class="section-intro__buttons">
+
+                                <div class="col-sm-12">
+                                    <a
+                                            href="https://docs.google.com/forms/d/e/1FAIpQLSegOe_T3c6Q4oZrjIyYE9BRR3L2KWRdCpYSVvTNX-cqM-wnIw/viewform"
+                                            class="button-intro section-countdown__whitelist">Whitepaper</a>
+
+                                    <a href="#newsletter" class="button-intro section-countdown__newsletter">
+                                        Subscribe to Newsletter
+                                    </a>
+                                </div>
+                            </div>
+
                         </div>
                         <div class="row section-intro__community">
                             {% for socialMedium in social %}
                                 <div class="community-item">
-                                    <a href="{{ socialMedium.url }}" target="_blank" aria-label="{{ socialMedium.cta }}">
-                                        <i class="community-item__icon fab fa-2x fa-{{ socialMedium.icon }}" aria-hidden="true"></i>
+                                    <a
+                                            href="{{ socialMedium.url }}" target="_blank"
+                                            aria-label="{{ socialMedium.cta }}">
+                                        <i
+                                                class="community-item__icon fab fa-{{ socialMedium.icon }}"
+                                                aria-hidden="true"></i>
                                     </a>
                                 </div>
                             {% endfor %}
@@ -39,18 +48,6 @@
                     </div>
                 </div>
                 <div class="col-lg-6 section-intro__mockup">
-                    {#<div class="video-wrapper">#}
-                    {#<div class="video-back">#}
-                    {#<img src="/img/middlemen_monster.jpg"#}
-                    {#alt="yt animation video poster - middlemen monster">#}
-                    {#</div>#}
-                    {#<div class="embed-responsive embed-responsive-16by9">#}
-                    {#<iframe class="embed-responsive-item"#}
-                    {#src="https://www.youtube.com/embed/AIRNRVsv2OA?rel=0&amp;showinfo=0"#}
-                    {#gesture="media"#}
-                    {#allow="encrypted-media" allowfullscreen></iframe>#}
-                    {#</div>#}
-                    {#</div>#}
                     <div class="mockup-ui-wrapper">
                         <img src="/img/ntitle_ui.png" class="mockap-ui" />
                     </div>
