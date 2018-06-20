@@ -25,6 +25,10 @@
 
 <body>
 
+<div class="overlay overlay--hidden">
+    {% include "../components/Overlay/Overlay.njk" %}
+</div>
+
 {% include "../utils/Gtags/Gtags.njk" %}
 {% include "../components/CookieBar/CookieBar.njk" %}
 
@@ -32,10 +36,6 @@
 <div class="video-overlay"></div>
 
 {% include "../components/Header/Header.njk" %}
-
-<div class="overlay">
-    {% include "../components/Overlay/Overlay.njk" %}
-</div>
 
 {% block content %}
 
