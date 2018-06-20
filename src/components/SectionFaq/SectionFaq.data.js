@@ -1,31 +1,36 @@
 module.exports = [
     {
         id: '#faq-1',
-        question: 'What is nTitle?',
-        answer: 'nTitle is a powerful platform built on top of the Ethereum peer-to-peer network where game developers have full control over the sale of their games without the exorbitant costs and lack of marketing support they currently receive. And at the same time, gamers actually own the games they purchase along with the alienable right to lend, sell, or gift it to whomever they like.'
+        question: 'Does nTitle make games?',
+        answer: 'We do not make games. We develop decentralised software for game developers to market and sell their games using blockchain technology. We have plans, however, to fund the development of new games via our developer program and accelerator program.'
     },
     {
         id: '#faq-2',
-        question: 'Is nTitle just for gaming?',
-        answer: 'nTitle is designed to give back control to both creators and consumers of digital products. We will start with gaming, but our blockchain based licensing platform can also be used for other industries like books, music, video, enterprise software, documents, certificates and diplomas.'
+        question: 'Why does nTitle need a blockchain?',
+        answer: 'Blockchain is fundamental to our core technology - the Liquid Licensing solution which uses the blockchain to record, audit and track licensing information. Blockchain-based tokens are used to manage licenses and trading ecosystems are driven by smart contract technology.'
     },
     {
         id: '#faq-3',
-        question: 'What is the difference between nTitle and other gaming marketplaces?',
-        answer: 'nTitle is a next-generation gaming platform. Unlike other platforms, nTitle will provide a reward system using gamification and other motivational tools that will allow both gamers and game developers to profit. Gamers will earn money, rewards and free games for helping to promote games and developers will build an army of ambassadors by connecting with gamers and profiting from their social reach. On top of that, nTitle will enable gamers and game developers to profit from a peer-to-peer market where gamers will actually own the game they purchase along with the alienable right to lend, sell, or gift it to whomever they like and developers will have full control over the sale of their games without the exorbitant costs and lack of marketing support they currently receive.'
+        question: 'Which blockchain is nTitle using?',
+        answer: 'Our open-source software is developed on top of the Ethereum blockchain. The nTitle token (NTL) is an ERC-20 compliant token.'
     },
     {
         id: '#faq-4',
-        question: 'What is the purpose of a blockchain technology in a game trading marketplace?',
-        answer: 'Blockchain technology has many advantages. The one that we focus on with our licencing platform is specifically "proof of ownership". If ownership, identity and authentication are established, then licenses and payments can seamlessly change hands through both primary and peer-to-peer markets.'
+        question: 'How does my game connect to the blockchain?',
+        answer: 'Using the nTitle SDK which supports all popular development environments and 3D engines such as Unity, Unreal Engine, Godot, HTML5, C#, C++...'
     },
     {
         id: '#faq-5',
-        question: 'Is there a tokensale planned to fund nTitle?',
-        answer: 'Yes, we are planning to do a crowdfunding event at the end of the first quarter of 2018. You can subscribe to our newsletter to stay up to date on our progress.'
+        question: 'How does nTitle make money?',
+        answer: 'Any transaction that takes place within the nTitle bcommerce solution environment will incur a small fee of up to 3%. The dynamic discounting mechanisms reward activity and usage in the ecosystem by reducing this transaction fee.'
     },
     {
         id: '#faq-6',
+        question: 'Is nTitle doing a token sale?',
+        answer: 'Yes. The public sale will take place on 1st September 2018. For more information please visit <a href="https://tokensale.ntitle.network">tokensale.ntitle.network</a>'
+    },
+    {
+        id: '#faq-7',
         question: 'How can I get in touch with staff at nTitle?',
         answer: 'Please use the contact form at the bottom of this page or if you prefer, write us an email to <a class="maillink" href="mailto:contact@ntitle.network">contact@ntitle.network</a> or contact us via one of our social media channels and we will be happy to assist with any enquiry you may have about our project.'
     },
