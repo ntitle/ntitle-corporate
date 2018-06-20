@@ -1,5 +1,4 @@
 const defaultData = require('./default.data');
-const ecosystem = require('../components/SectionKeypoints/SectionKeyPoints.data');
 const benefits = require('../components/SectionBenefits/SectionBenefits.data');
 const social = require('./data/social.data');
 const members = require('./data/team.data');
@@ -13,7 +12,6 @@ const data = {
     },
     social,
     logoUrl: '#page-top',
-    ecosystem,
     benefits,
     faq,
 };
