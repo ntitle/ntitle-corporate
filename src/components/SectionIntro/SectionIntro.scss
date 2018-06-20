@@ -1,6 +1,17 @@
 .section-intro {
   padding: 150px 0 50px;
 
+  &__community {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+
+    .community-item {
+      transform: scale(.5);
+    }
+  }
+
   @media (max-width: 768px) {
     padding: 70px 0;
   }
@@ -60,4 +71,15 @@
     margin-bottom: 20px;
     text-align: center;
   }
+}
+
+.mockap-ui {
+  width: 125%;
+  object-fit: contain;
+}
+
+.mockup-ui-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
 }

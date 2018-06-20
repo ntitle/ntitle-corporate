@@ -25,6 +25,8 @@
   &__content-section {
     color: #000;
     display: none;
+    padding-top: 80px;
+    padding-bottom: 0;
 
     &--visible {
       display: flex;
