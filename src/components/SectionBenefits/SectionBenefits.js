@@ -20,14 +20,9 @@ function handleBenefits() {
     triggers.forEach((trigger) => {
         const tabId = trigger.dataset.triggerId;
 
-        console.log('id', tabId);
-
         trigger.addEventListener('click', (e) => {
-            console.log('triggered', { e, trigger });
             hideSections();
             setTabsInactive();
-
-            console.log('list class', e.target);
 
             e.target.classList.add(activeTabClass);
             const activeSection = document.getElementById(`${tabId}`);

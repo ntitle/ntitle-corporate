@@ -31,4 +31,12 @@ module.exports = [
         avatar: '/img/team/richard.png',
         role: 'Strategic Director at Utomik Inc.',
     },
+    {
+        name: 'Reinout te Brake',
+        displayName: 'Reinout te Brake',
+        description: 'Reinout te Brake is well known in the international gaming business. With more than 15 years of experience, publishers, developers, entrepreneurs and CEO’s of large corporations seek his advice on technical, operational, strategic and commercial matters. Reinout established his credentials through investments, start-ups and board positions that led to strong bonds with key stakeholders in this fast-paced industry.',
+        linkedin: 'https://www.linkedin.com/in/reinouttebrake/',
+        avatar: '/img/team/reinout.png',
+        role: 'Gaming Expert',
+    },
 ];

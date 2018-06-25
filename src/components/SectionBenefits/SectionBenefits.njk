@@ -16,12 +16,14 @@
         <div class="row section-benefits__characters">
             <img
                     data-trigger-id="benefits-section-1" class="section-benefits__character"
+                    data-character="dev"
                     src="/img/benefits/developer_icon.png" alt="">
             <div class="section-benefits__character-separator">
                 <img src="/img/benefits/benefit_separator.png" alt="">
             </div>
             <img
                     data-trigger-id="benefits-section-2"
+                    data-character="gamer"
                     class="section-benefits__character section-benefits__character--active"
                     src="/img/benefits/gamer_icon.png" alt="">
             <div class="section-benefits__character-separator">
@@ -29,6 +31,7 @@
             </div>
             <img
                     data-trigger-id="benefits-section-3" class="section-benefits__character"
+                    data-character="infl"
                     src="/img/benefits/inf_icon.png" alt="">
         </div>
         <div class="row section-benefits__contents">
@@ -36,9 +39,10 @@
                 {% for section in benefits.sections %}
                     <section
                             id="benefits-section-{{ loop.index }}"
+
                             class="section-benefits__content-section {{ 'section-benefits__content-section--visible' if loop.index == 2 }}">
                         {% for bene in section.benefits %}
-                            <div class="benefit-item__title">
+                            <div class="benefit-item__title benefit-item__title--blue">
                                 {{ bene.title }}
                             </div>
                             <div class="benefit-item__body">

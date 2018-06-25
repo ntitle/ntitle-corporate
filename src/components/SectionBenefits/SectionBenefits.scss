@@ -4,6 +4,7 @@
     display: flex;
     width: 100%;
     justify-content: space-around;
+    margin: 0;
   }
 
   &__character {
@@ -52,7 +53,18 @@
   &__title {
     font-size: 16pt;
     font-weight: bolder;
-    color: $blue-on-light;
+
+    &--blue {
+      color: $benefit-blue;
+    }
+
+    &--green {
+      color: $benefit-green;
+    }
+
+    &--violet {
+      color: $benefit-violet;
+    }
   }
 
   &__body {
