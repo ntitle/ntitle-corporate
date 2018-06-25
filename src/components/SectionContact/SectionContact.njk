@@ -12,7 +12,7 @@
                 <form id="formContact" accept-charset="UTF-8" action="https://formkeep.com/f/71e6e532b307" method="POST">
                     <div class="row">
                         <div class="col-md-6">
-                            <h5>CONTACT US:</h5>
+                            <h5 class="contact-title">CONTACT US:</h5>
                             <div class="form-group">
                                 <select class="form-control" name="who" required>
                                     <option selected disabled value="">Who are you?</option>
@@ -37,24 +37,60 @@
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <h5>OFFICES:</h5>
-                            <p>
-                                🇳🇱 Amsterdam, Netherlands
-                                +31 20 777 29 62
-                                Joan Muyskenweg 22
-                                1096 CJ Amsterdam, Netherlands
+                            <h5 class="contact-title">OFFICES:</h5>
+                            <div class="contact-offices">
+                                <div class="contact-office">
+                                    <div class="contact-office__header">
+                                        <img class="contact-office__flag" src="/img/flags/nl.png" alt="nl flag">
+                                        <div class="contact-office__country-wrapper">
+                                            <div class="contact-office__country">Netherlands</div>
+                                            <div class="contact-office__city">Amsterdam</div>
+                                        </div>
+                                    </div>
+                                    <div class="contact-office__number">
+                                        +31 20 777 29 62
+                                    </div>
+                                    <div class="contact-office__address">
+                                        Joan Muyskenweg 22 1096 CJ
+                                        <br />
+                                        Amsterdam, Netherlands
+                                    </div>
+                                </div>
 
-                            </p>
-                            <p>
-                                🇵🇱 Krakow, Poland
-                                +48 12 446 70 86
-                                Connaxis Sp. zo.o.
-                                ul. gen Józefa Chłopickiego 1/1
-                                31-525, Kraków, Poland
-                            </p>
-                            <p>
-                                🇬🇮 Gibraltar (coming soon…)
-                            </p>
+                                <div class="contact-office">
+                                    <div class="contact-office__header">
+                                        <img class="contact-office__flag" src="/img/flags/pl.png" alt="pl flag">
+                                        <div class="contact-office__country-wrapper">
+                                            <div class="contact-office__country">Poland</div>
+                                            <div class="contact-office__city">Kraków</div>
+                                        </div>
+                                    </div>
+                                    <div class="contact-office__number">
+                                        +48 12 446 70 86
+                                    </div>
+                                    <div class="contact-office__address">
+                                        Connaxis Sp. zo.o.
+                                        <br />
+                                        ul. gen Józefa Chłopickiego 1/1
+                                    </div>
+                                </div>
+
+                                <div class="contact-office">
+                                    <div class="contact-office__header">
+                                        <img class="contact-office__flag" src="/img/flags/gb.png" alt="gb flag">
+                                        <div class="contact-office__country-wrapper">
+                                            <div class="contact-office__country">Gibraltar</div>
+                                            <div class="contact-office__city"></div>
+                                        </div>
+                                    </div>
+                                    <div class="contact-office__number">
+                                    </div>
+                                    <div class="contact-office__address">
+                                        coming soon…
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                         <div class="clearfix"></div>
                         <div class="col-lg-12 text-center">

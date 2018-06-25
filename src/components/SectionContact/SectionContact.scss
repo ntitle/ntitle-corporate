@@ -51,6 +51,7 @@ section#contact {
     color: $gray;
   }
 }
+
 .form-group__send {
   display: flex;
   width: 100%;
@@ -59,4 +60,60 @@ section#contact {
   .button-light {
     margin-top: 0;
   }
+}
+
+.contact-offices {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 2rem;
+  grid-row-gap: 4rem;
+}
+
+.contact-office {
+  color: $dark;
+  display: flex;
+  flex-direction: column;
+
+  &__flag {
+    height: 3rem;
+  }
+
+  &__header {
+    display: flex;
+  }
+
+  &__country-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 1rem;
+  }
+
+  &__country {
+    font-weight: bolder;
+    font-size: .8rem;
+    line-height: .8rem;
+    text-transform: uppercase;
+  }
+
+  &__city {
+    font-weight: bolder;
+    font-size: 1.2rem;
+    line-height: 1rem;
+  }
+
+  &__number {
+    margin: 2rem 0;
+    font-size: 1rem;
+    line-height: 1rem;
+    font-weight: bolder;
+  }
+
+  &__address {
+    font-size: 1rem;
+  }
+}
+
+.contact-title {
+  margin-bottom: 4rem;
 }
