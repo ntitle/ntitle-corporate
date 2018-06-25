@@ -15,9 +15,6 @@ submitNewsletter.addEventListener('click', (e) => {
     document.body.classList.remove(offScroll);
 });
 
-const newsletterArea = document.querySelector('section-newsletter');
-
-
 function overlayListener() {
     mainOverlay.addEventListener('click', (e) => {
         console.log('overlayListener')
@@ -40,6 +37,10 @@ newsletterButton.addEventListener('click', (e) => {
     mainOverlay.classList.add(visibleClass);
 
     document.body.classList.add(offScroll);
+
+    const newsletterArea = document.querySelector('.section-newsletter');
+
+    console.log('newsletterArea', newsletterArea);
 
     newsletterArea.addEventListener('click', (ev) => {
         ev.preventDefault();

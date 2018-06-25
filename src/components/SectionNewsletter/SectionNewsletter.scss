@@ -1,5 +1,10 @@
 section.section-newsletter {
   padding: 50px 0 !important;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  right: 0;
 }
 
 .section-newsletter {

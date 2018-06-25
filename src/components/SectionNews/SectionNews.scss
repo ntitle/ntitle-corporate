@@ -7,6 +7,18 @@
 
     flex-wrap: wrap;
     padding: 6rem;
+
+    @media (min-width: 1600px) {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    @media (max-width: 992px) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media (max-width: 767px) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__media-img {
@@ -16,7 +28,6 @@
 
   &__media {
     text-decoration: none;
-    //flex: 0 0 calc(25vw - 1rem);
     transition: transform 0.2s;
     margin-bottom: 1rem;
     justify-content: center;
