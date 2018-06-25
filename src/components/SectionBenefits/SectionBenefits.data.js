@@ -12,16 +12,12 @@ module.exports = {
                     text: 'Earn up to 30% more on every sale made by selling directly to your customer avoiding centralised marketplaces fee. Trade of virtual items, control over resale terms and referral programs open up new revenue streams'
                 },
                 {
+                    title: 'Referral and Incentive Programs',
+                    text: 'Get access to a network of influencers, create custom referral and incentive programs, set the commission terms and get your game promoted on all social media channels'
+                },
+                {
                     title: 'Get Paid Instantly',
                     text: 'Receive payouts from sales instantly via nTitle’s smart contract technology'
-                },
-                {
-                    title: 'Connect with Influencers',
-                    text: 'Get access to a network of influencers, find the right influencer for your game, set the commission terms and get your game promoted'
-                },
-                {
-                    title: 'Referral and Incentive Programs',
-                    text: 'Create custom referral and incentive programs to get your games promoted on all social media platforms'
                 }
             ]
         },
@@ -35,10 +31,6 @@ module.exports = {
                 {
                     title: 'Own Your Goods',
                     text: 'Ownership of your digital assets is ensured through blockchain technology with “proof of ownership”. Decentralized, auditable and public.'
-                },
-                {
-                    title: 'Get Paid Instantly',
-                    text: 'Receive payouts from sales instantly via nTitle’s smart contract technology'
                 },
                 {
                     title: 'Influencer Program',

@@ -2,7 +2,7 @@ module.exports = [
     {
         title: 'Game Developer Conference',
         url: 'https://www.youtube.com/watch?v=YBijFXQFZrc',
-        image: '/img/media/gdc_logo.jpg',
+        image: '/img/media/gdc_logo.png',
     },
     {
         title: 'Blockchain Expo Global',

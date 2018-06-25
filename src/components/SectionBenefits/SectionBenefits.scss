@@ -30,13 +30,17 @@
     padding-bottom: 0;
 
     &--visible {
-      display: flex;
+      //display: flex;
       flex-direction: column;
       align-items: center;
-      width: 50%;
+      width: 70%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 6rem;
 
-      @media(max-width: 767px) {
-        width: 75%;
+      @media (max-width: 991px) {
+        width: 80%;
+        grid-template-columns: 1fr;
       }
     }
   }
@@ -53,6 +57,8 @@
   &__title {
     font-size: 16pt;
     font-weight: bolder;
+    text-align: center;
+    margin-bottom: 1rem;
 
     &--blue {
       color: $benefit-blue;
