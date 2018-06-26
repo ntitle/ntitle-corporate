@@ -2,7 +2,14 @@
   @include dottedBg;
 }
 
+.community-row {
+  display: flex;
+  justify-content: space-around;
+}
+
 .community-item {
+
+  margin: 2rem;
 
   &__icon {
     @extend %icon-border;

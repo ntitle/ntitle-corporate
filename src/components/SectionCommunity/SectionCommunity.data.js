@@ -29,4 +29,9 @@ module.exports = [
         icon: 'medium-m',
         url: 'https://medium.com/@ntitle'
     },
+    {
+        cta: 'Go to Telegram',
+        icon: 'telegram-plane',
+        url: 'https://t.me/nTitle',
+    }
 ];

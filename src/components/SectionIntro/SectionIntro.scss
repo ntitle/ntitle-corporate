@@ -16,13 +16,12 @@
   }
 
   &__community {
-    display: flex;
     width: 100%;
+    display: flex;
     justify-content: space-around;
-    flex-wrap: nowrap;
 
     .community-item {
-      //transform: scale(.5);
+      margin: 0;
     }
   }
 
