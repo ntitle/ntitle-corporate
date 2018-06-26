@@ -1,6 +1,5 @@
 body {
   background-color: $bg-color;
-  background-image: url('../img/waves_1080p.jpg');
   color: $light;
   font-family: $headig-font;
   overflow-x: hidden;
@@ -8,12 +7,13 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-@media(max-width: 800px) {
-  body {
-    background-image: url('../img/waves_mobile.jpg');
-    background-position: center;
-  }
-}
+//@media(max-width: 800px) {
+//  body {
+//    background-image: url('../img/waves_mobile.jpg');
+//    background-position: center;
+//  }
+//}
+
 
 section,
 article {
@@ -24,21 +24,21 @@ header {
   padding: 0;
 }
 
-#terms {
-  padding: $breather+50px 0 $breather/2 0;
-  background-image: url('../img/waves_1080p.jpg');
-  background-size: 100%;
-  position: relative;
-}
+//#terms {
+//  padding: $breather+50px 0 $breather/2 0;
+//  background-image: url('../img/waves_1080p.jpg');
+//  background-size: 100%;
+//  position: relative;
+//}
 
-#terms .overlay {
-  position: absolute;
-  background-color: rgba(0, 0, 0, .5);
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-}
+//#terms .overlay {
+//  position: absolute;
+//  background-color: rgba(0, 0, 0, .5);
+//  top: 0;
+//  left: 0;
+//  height: 100%;
+//  width: 100%;
+//}
 
 p, h1, h2, h3, h4, h5, h6, li {
   color: $light;

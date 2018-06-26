@@ -23,7 +23,7 @@ video#bgvid {
 .video-overlay {
   @extend %video-background;
   z-index: -99;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.8);
 
   .overlay-off & {
     z-index: 0;

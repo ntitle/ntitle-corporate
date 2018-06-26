@@ -1,5 +1,6 @@
 .section-intro {
   padding: 150px 0 50px;
+  @include dottedBg;
 
   &__buttons {
     display: flex;

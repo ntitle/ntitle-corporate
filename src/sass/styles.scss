@@ -4,8 +4,8 @@
 @import "placeholders";
 
 //body, typography, sections, containers
-@import "global";
 @import "../sass/mixins";
+@import "global";
 
 //boxes, buttons, icons
 @import "elements";

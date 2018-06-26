@@ -1,3 +1,7 @@
+.community-section {
+  @include dottedBg;
+}
+
 .community-item {
 
   &__icon {

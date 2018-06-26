@@ -1,3 +1,7 @@
+.faq-section {
+  @include dottedBg;
+}
+
 .faq-items {
   padding-left: 40px;
 }

@@ -14,3 +14,7 @@
     height: 2.5em;
   }
 }
+
+.industries-section {
+  @include dottedBg;
+}
