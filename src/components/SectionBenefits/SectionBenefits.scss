@@ -5,12 +5,22 @@
     width: 100%;
     justify-content: space-around;
     margin: 0;
+
+    @media (max-width: 767px) {
+
+    }
   }
 
   &__character {
     cursor: pointer;
     opacity: .2;
     object-fit: contain;
+
+
+    @media (max-width: 767px) {
+      height: auto;
+      width: 25%;
+    }
 
     &--active {
       opacity: 1;
@@ -49,6 +59,10 @@
     display: flex;
     align-items: center;
     padding-bottom: 2rem;
+
+    @media (max-width: 767px) {
+      display: none;
+    }
   }
 }
 

@@ -149,6 +149,11 @@
 .mockap-ui {
   width: 125%;
   object-fit: contain;
+
+  @media (max-width: 990px) {
+    width: 100%;
+
+  }
 }
 
 .mockup-ui-wrapper {
