@@ -1,29 +1,15 @@
 (function ($) {
     $(function () {
-        "use strict"; // Start of use strict
-
-        // /**
-        //  * Defer youtube loading
-        //  */
-        // function lazyLoadIframes() {
-        //     var vidDefer = document.getElementsByTagName('iframe');
-        //     for (var i = 0; i < vidDefer.length; i++) {
-        //         if (vidDefer[i].getAttribute('data-src')) {
-        //             vidDefer[i].setAttribute('src', vidDefer[i].getAttribute('data-src'));
-        //         }
-        //     }
-        // }
-
-        // lazyLoadIframes();
+        'use strict'; // Start of use strict
 
         function getCookie(name) {
-            var value = "; " + document.cookie;
-            var parts = value.split("; " + name + "=");
-            if (parts.length === 2) return parts.pop().split(";").shift();
+            const value = `; ${document.cookie}`;
+            const parts = value.split(`; ${name}=`);
+            if (parts.length === 2) return parts.pop().split(';').shift();
         }
 
         // Show cookie
-        var cookieAccepted = getCookie('cookie_accepted') === "true";
+        const cookieAccepted = getCookie('cookie_accepted') === 'true';
 
         if (cookieAccepted) {
             $('.cookie-bar').remove();
@@ -33,16 +19,16 @@
         // Accept cookie
 
         $('.js-accept-cookie').on('click', function () {
-            document.cookie = "cookie_accepted=true;domain=.ntitle.network";
+            document.cookie = 'cookie_accepted=true;domain=.ntitle.network';
 
             $('.cookie-bar').remove();
         });
 
-        //scroll-reveal
-        window.sr = ScrollReveal({reset: true});
-        sr.reveal('.section-heading', {mobile: false});
-        sr.reveal('.section-headingwithsub', {mobile: false});
-        sr.reveal('.section-subheading', {mobile: false});
+        // scroll-reveal
+        window.sr = ScrollReveal({ reset: true });
+        sr.reveal('.section-heading', { mobile: false });
+        sr.reveal('.section-headingwithsub', { mobile: false });
+        sr.reveal('.section-subheading', { mobile: false });
         sr.reveal('.from-left', {
             origin: 'left',
             distance: '300px',
@@ -57,13 +43,13 @@
             delay: 3,
             mobile: false
         });
-        sr.reveal('.col-heading', {mobile: false});
-        sr.reveal('.fas', {mobile: false});
-        sr.reveal('.fab', {mobile: false});
-        sr.reveal('.rounded-circle', {mobile: false});
-        sr.reveal('.team-member-description', {mobile: false});
+        sr.reveal('.col-heading', { mobile: false });
+        sr.reveal('.fas', { mobile: false });
+        sr.reveal('.fab', { mobile: false });
+        sr.reveal('.rounded-circle', { mobile: false });
+        sr.reveal('.team-member-description', { mobile: false });
 
-        //mailchimp
+        // mailchimp
         $('.mailchimp-form').submit(function (e) {
             e.preventDefault();
             var $form = $(this);
@@ -75,12 +61,12 @@
                 dataType: 'jsonp',
                 jsonp: 'c', // trigger MailChimp to return a JSONP response
                 contentType: 'application/json; charset=utf-8',
-                error: function (error) {
+                error: function (err) {
                     // According to jquery docs, this is never called for cross-domain JSONP requests
                 },
                 success: function (data) {
-                    var message = "";
-                    if (data.result != 'success') {
+                    let message = '';
+                    if (data.result !== 'success') {
                         message = data.msg || 'Sorry. Unable to subscribe. Please try again later.';
                         if (data.msg && data.msg.indexOf('already subscribed') >= 0) {
                             message = 'You\'re already subscribed. Thank you.';
@@ -99,8 +85,8 @@
             });
         });
 
-        //jq form plugin
-        $('#formContact').ajaxForm({
+        // jq form plugin
+        $('#formContact').submit({
             success: function () {
                 $('#formContact input[type=email], #formContact input[type=text], #formContact select, #formContact textarea').val('');
                 $('.form-thanks-message').show();
@@ -110,22 +96,22 @@
             }
         });
 
-        /*Functionalities below based on script from Agency Start Bootstrap Template*/
-        /*!
-        * Start Bootstrap - Agency v4.0.0-beta.2 (https://startbootstrap.com/template-overviews/agency)
-        * Copyright 2013-2017 Start Bootstrap
-        * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-agency/blob/master/LICENSE)
+        /* Functionalities below based on script from Agency Start Bootstrap Template */
+        /* !
+        *  Start Bootstrap - Agency v4.0.0-beta.2 (https://startbootstrap.com/template-overviews/agency)
+        *  Copyright 2013-2017 Start Bootstrap
+        *  Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-agency/blob/master/LICENSE)
         */
 
         // Smooth scrolling using jQuery easing
-        $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function () {
+        $("a.js-scroll-trigger[href*='#']:not([href='#'])").click(function () {
             if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-                var target = $(this.hash);
+                let target = $(this.hash);
                 target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
                 if (target.length) {
                     $('html, body').animate({
                         scrollTop: (target.offset().top - 48)
-                    }, 1000, "easeInOutExpo");
+                    }, 1000, 'easeInOutExpo');
                     return false;
                 }
             }
@@ -143,11 +129,11 @@
         });
 
         // Collapse Navbar
-        var navbarCollapse = function () {
-            if ($("#mainNav").offset().top > 100) {
-                $("#mainNav").addClass("navbar-shrink");
+        let navbarCollapse = function () {
+            if ($('#mainNav').offset().top > 100) {
+                $('#mainNav').addClass('navbar-shrink');
             } else {
-                $("#mainNav").removeClass("navbar-shrink");
+                $('#mainNav').removeClass('navbar-shrink');
             }
         };
         // Collapse now if page is not at top
@@ -155,32 +141,32 @@
         // Collapse the navbar when page is scrolled
         $(window).scroll(navbarCollapse);
 
-        (function (o, l, a, r, k, y) {
-            if (o.olark) return;
-            r = "script";
-            y = l.createElement(r);
-            r = l.getElementsByTagName(r)[0];
-            y.async = 1;
-            y.src = "//" + a;
-            r.parentNode.insertBefore(y, r);
-            y = o.olark = function () {
-                k.s.push(arguments);
-                k.t.push(+new Date)
-            };
-            y.extend = function (i, j) {
-                y("extend", i, j)
-            };
-            y.identify = function (i) {
-                y("identify", k.i = i)
-            };
-            y.configure = function (i, j) {
-                y("configure", i, j);
-                k.c[i] = j
-            };
-            k = y._ = {s: [], t: [+new Date], c: {}, l: a};
-        })(window, document, "static.olark.com/jsclient/loader.js");
-        /* custom configuration goes here (www.olark.com/documentation) */
-        olark.identify('6726-310-10-1482');
+        // (function (o, l, a, r, k, y) {
+        //     if (o.olark) return;
+        //     r = 'script';
+        //     y = l.createElement(r);
+        //     r = l.getElementsByTagName(r)[0];
+        //     y.async = 1;
+        //     y.src = '//' + a;
+        //     r.parentNode.insertBefore(y, r);
+        //     y = o.olark = function () {
+        //         k.s.push(arguments);
+        //         k.t.push(+new Date)
+        //     };
+        //     y.extend = function (i, j) {
+        //         y('extend', i, j)
+        //     };
+        //     y.identify = function (i) {
+        //         y('identify', k.i = i)
+        //     };
+        //     y.configure = function (i, j) {
+        //         y('configure', i, j);
+        //         k.c[i] = j
+        //     };
+        //     k = y._ = { s: [], t: [+new Date], c: {}, l: a };
+        // })(window, document, 'static.olark.com/jsclient/loader.js');
+        // /* custom configuration goes here (www.olark.com/documentation) */
+        // olark.identify('6726-310-10-1482');
 
     }); // End of use strict
 })(window.jQuery);

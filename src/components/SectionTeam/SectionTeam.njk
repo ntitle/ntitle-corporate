@@ -8,12 +8,19 @@
         </div>
         <ul class="list-inline social-buttons">
             {% if teamMember.linkedin %}
-                <li class="list-inline-item">
-                    <a href="{{ teamMember.linkedin }}" target="_blank"
-                       aria-label="Go to team member Linkedin">
-                        <i class="fab fa-2x fa-linkedin-in"></i>
-                    </a>
-                </li>
+                {#<li class="list-inline-item">#}
+                    {#<a href="{{ teamMember.linkedin }}" target="_blank"#}
+                       {#aria-label="Go to team member Linkedin">#}
+                        {#<i class="fab fa-2x fa-linkedin-in"></i>#}
+                    {#</a>#}
+                {#</li>#}
+                <div class="team-member__social">
+                    {% if teamMember.linkedin %}
+                        <a class="team-member__social-link" href="{{ teamMember.linkedin }}" target="_blank">
+                            {% include "../Icons/Linkedin.njk" %}
+                        </a>
+                    {% endif %}
+                </div>
             {% endif %}
         </ul>
     </div>
