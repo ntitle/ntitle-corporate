@@ -1,10 +1,18 @@
 .section-benefits {
 
+  &__every {
+    line-height: 1.5em;
+    margin-bottom: 4rem;
+  }
+
   &__characters {
     display: flex;
     width: 100%;
     justify-content: space-around;
     margin: 0;
+
+    border-bottom: 1px solid rgba($gray, .2);
+    padding-bottom: 4rem;
 
     @media (max-width: 767px) {
 
@@ -36,14 +44,14 @@
   &__content-section {
     color: #000;
     display: none;
-    padding-top: 80px;
+    padding-top: 4rem;
     padding-bottom: 0;
 
     &--visible {
       //display: flex;
       flex-direction: column;
       align-items: center;
-      width: 70%;
+      width: 100%;
       display: grid;
       grid-template-columns: 1fr 1fr;
       column-gap: 6rem;
@@ -66,12 +74,19 @@
   }
 }
 
+.benefit-item-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  height: 100%;
+}
+
 .benefit-item {
 
   &__title {
     font-size: 16pt;
     font-weight: bolder;
-    text-align: center;
+    //text-align: center;
     margin-bottom: 1rem;
 
     &--blue {
@@ -88,7 +103,7 @@
   }
 
   &__body {
-    text-align: center;
+    //text-align: center;
     margin-bottom: 2rem;
   }
 }

@@ -4,13 +4,11 @@
             <div class="col-lg-12 text-center">
                 <h2 class="section-headingwithsub text-uppercase">USING <span class="en">n</span>Title
                 </h2>
-                <h3>
+                <h3 class="section-benefits__every">
                     <strong>EVERY</strong> GAME DEVELOPER CAN BECOME A GLOBAL BRAND
                     <br />
                     <strong>EVERY</strong> GAMER CAN BECOME A POPULAR INFLUENCER
                 </h3>
-                <h3 class="section-subheading">Are you passionate about gaming but feel the industry is unfairly
-                    structured? Well we do! That’s why we’ve created nTitle.</h3>
             </div>
         </div>
         <div class="row section-benefits__characters">
@@ -42,7 +40,7 @@
 
                             class="section-benefits__content-section {{ 'section-benefits__content-section--visible' if loop.index == 2 }}">
                         {% for bene in section.benefits %}
-                            <div>
+                            <div class="benefit-item-wrapper">
                                 <div class="benefit-item__title benefit-item__title--blue">
                                     {{ bene.title }}
                                 </div>
