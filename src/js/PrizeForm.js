@@ -1,7 +1,7 @@
 class PrizeForm {
     constructor() {
         this.newsletterFormUrl = 'https://network.us17.list-manage.com/subscribe/post-json?u=38836b86bdc2b88a242addc37&id=1bf326666b';
-        this.codeApiUrl = 'http://localhost:8888/codes/assign';
+        this.codeApiUrl = 'https://prize-api.ntitle.network/codes/assign';
         this.formSubmitted = false;
         this.newsletterEmailValid = undefined;
         this.code = '';
