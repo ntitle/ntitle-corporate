@@ -1,8 +1,14 @@
 .section-benefits {
 
   &__every {
-    line-height: 1.5em;
+    line-height: 1em;
     margin-bottom: 4rem;
+    @media (max-width: 767px) {
+      &:nth-child(0) {
+        margin-bottom: 2rem;
+      }
+    }
+
   }
 
   &__characters {
@@ -14,9 +20,7 @@
     border-bottom: 1px solid rgba($gray, .2);
     padding-bottom: 4rem;
 
-    @media (max-width: 767px) {
 
-    }
   }
 
   &__character {

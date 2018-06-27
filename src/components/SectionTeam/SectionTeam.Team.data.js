@@ -77,6 +77,6 @@ module.exports = [
         description: 'Szymon is a front-end developer, with significant experience in hybrid mobile development and well-grounded aspirations for full stack development. Recently he stepped into the world of digital ledgers, mastering techniques around React/Ionic/web3.js driven development of decentralised applications.',
         linkedin: 'https://www.linkedin.com/in/szymon-bury-36b7a698/',
         avatar: '/img/team/szymon.jpg',
-        role: 'Mobile/Web developer',
+        role: 'Mobile/Web Developer',
     },
 ];

@@ -1,5 +1,5 @@
-{% macro TeamMember(teamMember) %}
-    <div class="col-xl-4 col-lg-6 team-member">
+{% macro TeamMember(teamMember, class) %}
+    <div class="col-xl-4 col-lg-6 team-member {{ class }}">
         <div class="team-member-info">
             <img class="mx-auto rounded-circle" src="{{ teamMember.avatar }}" alt="{{ teamMember.name }}">
             <h3 class="col-heading">{{ teamMember.displayName | safe }}</h3>
@@ -8,12 +8,6 @@
         </div>
         <ul class="list-inline social-buttons">
             {% if teamMember.linkedin %}
-                {#<li class="list-inline-item">#}
-                    {#<a href="{{ teamMember.linkedin }}" target="_blank"#}
-                       {#aria-label="Go to team member Linkedin">#}
-                        {#<i class="fab fa-2x fa-linkedin-in"></i>#}
-                    {#</a>#}
-                {#</li>#}
                 <div class="team-member__social">
                     {% if teamMember.linkedin %}
                         <a class="team-member__social-link" href="{{ teamMember.linkedin }}" target="_blank">
@@ -33,10 +27,24 @@
                 <h2 class="section-heading text-uppercase">Our team</h2>
             </div>
         </div>
+
         <div class="row">
             {% for teamMember in team.members %}
-                {{ TeamMember(teamMember) }}
+
+                {% if loop.index < 4 %}
+
+                    {{ TeamMember(teamMember) }}
+
+                {% endif %}
+
+                {% if loop.index > 3 %}
+
+                    {{ TeamMember(teamMember, 'team-member--hidden') }}
+
+                {% endif %}
             {% endfor %}
+
+            <button id="team-toggle" class="button-intro">See more</button>
         </div>
 
         <!--advisors-->
