@@ -147,12 +147,16 @@
 }
 
 .mockap-ui {
-  width: 125%;
+  width: 100%;
   object-fit: contain;
+
+  @media (min-width: 1600px) {
+    width: 125%;
+  }
 
   @media (max-width: 990px) {
     width: 100%;
-
+    margin-top: 2rem;
   }
 }
 
