@@ -2,14 +2,26 @@
   padding: 150px 0 50px;
   @include dottedBg;
 
+  &__papers {
+    display: flex;
+    justify-content: space-evenly;
+
+    @media (max-width: 767px) {
+      flex-direction: column;
+    }
+  }
+
   &__buttons-wrapper {
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
-
+    width: 80%;
+    margin-left: 10%;
 
     @media (max-width: 767px) {
       flex-wrap: wrap;
+      width: 100%;
+      margin-left: 0;
     }
   }
 
@@ -195,8 +207,8 @@
   border-radius: 0.5rem;
   white-space: nowrap;
   text-decoration: none;
-  width: 100%;
   margin: .5rem 0;
+  width: 100%;
 
   @media (max-width: 767px) {
     margin: 10px 0;
@@ -216,4 +228,8 @@
   &:focus, &:active {
     border: 2px solid $blue-on-light;
   }
+}
+
+.margin-left {
+  margin-right: 1rem;
 }
