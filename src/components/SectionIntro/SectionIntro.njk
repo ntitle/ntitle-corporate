@@ -17,39 +17,45 @@
                             influencers and <strong>incentivise them to promote games.</strong>
 
                         </p>
-                        <div class="row">
-                            <div class="section-intro__buttons">
+                        <div class="section-intro__buttons">
 
-                                <div class="col-sm-12 section-intro__buttons-wrapper">
-                                    <a
-                                            href="#"
-                                            class="button-intro section-countdown__whitelist">Whitepaper (coming soon)</a>
+                            <div class="col-sm-12 section-intro__buttons-wrapper">
 
-                                    <a href="#newsletter" id="newsletter-trigger" class="button-intro section-countdown__newsletter">
-                                        Subscribe to Newsletter
-                                    </a>
-                                </div>
+                                <a
+                                        href="/img/whitepaper.pdf" target="_blank"
+                                        class="button-intro section-countdown__whitelist">Whitepaper</a>
+
+                                <a
+                                        href="/img/litepaper.pdf" target="_blank"
+                                        class="button-intro section-countdown__whitelist">Litepaper</a>
+
+
+                                <a
+                                        href="#newsletter" id="newsletter-trigger"
+                                        class="button-intro section-countdown__newsletter">
+                                    Subscribe to Newsletter
+                                </a>
+
                             </div>
-
-                        </div>
-                        <div class="row section-intro__community">
-                            {% for socialMedium in social %}
-                                <div class="community-item">
-                                    <a
-                                            href="{{ socialMedium.url }}" target="_blank"
-                                            aria-label="{{ socialMedium.cta }}">
-                                        <i
-                                                class="community-item__icon fab fa-{{ socialMedium.icon }}"
-                                                aria-hidden="true"></i>
-                                    </a>
-                                </div>
-                            {% endfor %}
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6 section-intro__mockup">
                     <div class="mockup-ui-wrapper">
                         <img src="/img/intro_mockup-min.png" class="mockap-ui" />
+                    </div>
+                    <div class="row section-intro__community">
+                        {% for socialMedium in social %}
+                            <div class="community-item">
+                                <a
+                                        href="{{ socialMedium.url }}" target="_blank"
+                                        aria-label="{{ socialMedium.cta }}">
+                                    <i
+                                            class="community-item__icon fab fa-{{ socialMedium.icon }}"
+                                            aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        {% endfor %}
                     </div>
                 </div>
             </div>

@@ -5,6 +5,8 @@
   &__buttons-wrapper {
     display: flex;
     flex-wrap: nowrap;
+    flex-direction: column;
+
 
     @media (max-width: 767px) {
       flex-wrap: wrap;
@@ -15,9 +17,9 @@
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
-    margin-top: 4rem;
     width: 100%;
     margin-bottom: 2rem;
+    flex-direction: column;
 
     @media (max-width: 1023px) {
       padding: 0 2rem;
@@ -45,6 +47,14 @@
 
   &__mockup {
     display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    justify-content: space-around;
+
+    @media (max-width: 768px) {
+      justify-content: center;
+      padding: 0;
+    }
   }
 
   &__intro-wrapper {
@@ -184,8 +194,9 @@
   line-height: calc(3rem - 4px);
   border-radius: 0.5rem;
   white-space: nowrap;
-  margin-right: 1rem;
   text-decoration: none;
+  width: 100%;
+  margin: .5rem 0;
 
   @media (max-width: 767px) {
     margin: 10px 0;
