@@ -2,14 +2,14 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h2 class="section-heading text-uppercase">NEWS AND EVENTS</h2>
+                <h2 class="section-heading text-uppercase">NEWS</h2>
             </div>
         </div>
     </div>
     <div class="container-fluid section-news__media-container">
 
         {% for article in news %}
-            <div>
+            <div class="section-news__media-item">
                 <a target="_blank" href="{{ article.url }}" class="section-news__media">
                     <img class="section-news__media-img" src="{{ article.image }}" />
                     <span>{{ article.title }}</span>
