@@ -26,10 +26,10 @@
     }
   
     &__media-item {
-      flex: 0 0 calc(22% - 1rem);    
+      flex: 0 0 calc(15% - 1rem);    
   
       @media (max-width: 1024px) {
-        flex: 0 0 calc(33.33% - 1rem);
+        flex: 0 0 calc(22% - 1rem);
         margin-bottom: 1rem;
       }
   
