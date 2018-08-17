@@ -4,6 +4,7 @@ const members = require('../components/SectionTeam/SectionTeam.Team.data');
 const advisors = require('../components/SectionTeam/SectionTeam.Advisors.data');
 const faq = require('../components/SectionFaq/SectionFaq.data');
 const news = require('../components/SectionNews/SectionNews.data');
+const newsSmall = require('../components/SectionNewsSmall/SectionNewsSmall.data');
 const partners = require('../components/SectionPartners/SectionPartners.data');
 const events = require('../components/SectionEvents/SectionEvents.data');
 const newsletter = require('../components/SectionNewsletter/SectionNewsletter.data');
@@ -18,6 +19,7 @@ const data = {
     benefits,
     faq,
     news,
+    newsSmall,
     partners,
     events,
     newsletter,
