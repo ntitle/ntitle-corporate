@@ -168,5 +168,130 @@
         /* custom configuration goes here (www.olark.com/documentation) */
         olark.identify('6726-310-10-1482');
 
+
+        // DApp video section
+        // Logic: when you click on the play button the videos get played after eachother
+        // At the last video play button comes back to replay
+        $('#DAppGameDevVideo').get(0).pause();
+        $('#DAppGamerVideo').get(0).pause();
+        $('#DAppInfluencerVideo').get(0).pause();
+
+        $('#VideoPlayBtn').click(()=>{
+            $('#VideoPlayBtn').hide();
+            $('#DAppGameDevVideoShade').hide();
+            // Play first video
+            $('#DAppGameDevVideo').get(0).play();
+            // If first video ends
+            $('#DAppGameDevVideo').on('ended',function(){
+                $('#DAppGameDevVideoShade').show();
+                // Play second video
+                $('#DAppGamerVideoShade').hide();
+                $('#DAppGamerVideo').get(0).play();
+                // If second video ends
+                $('#DAppGamerVideo').on('ended',function(){
+                    $('#DAppGamerVideoShade').show();
+                    // Play third video
+                    $('#DAppInfluencerVideoShade').hide();
+                    $('#DAppInfluencerVideo').get(0).play();
+                    // If third video ends
+                    $('#DAppInfluencerVideo').on('ended',function(){
+                        $('#DAppInfluencerVideoShade').show();
+                        // Show play btn
+                        $('#VideoPlayBtn').show();
+                    });
+                });
+            });
+        });
+
+        
+
+        // Swiper carousels
+        // Section News Small
+        var SectionNewsSmallSwiper = new Swiper ('.section-news-small__carousel', {
+            loop: false,
+            slidesPerView: 7,
+            autoplay: true,
+            speed: 1000,
+            spaceBetween: 20,
+            // centeredSlides: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            simulateTouch: false
+        })
+
+        // Section News
+        var SectionNewsSwiper = new Swiper ('.section-news__carousel', {
+            slidesPerView: 3,
+            slidesPerGroup: 3,
+            autoplay: false,
+            speed: 1000,
+            spaceBetween: 20,
+            breakpoints: {
+                767: {
+                  slidesPerView: 1,
+                  slidesPerGroup: 1,
+                  spaceBetween: 10
+                },
+                992: {
+                  slidesPerView: 2,
+                  slidesPerGroup: 2,
+                  spaceBetween: 20
+                },
+                // when window width is <= 640px
+                1600: {
+                  slidesPerView: 3,
+                  slidesPerGroup: 3,
+                  spaceBetween: 20
+                }
+            },
+            pagination: {
+                el: '.news-swiper-pagination',
+                type: 'bullets',
+            },
+            navigation: {
+                nextEl: '.news-next',
+                prevEl: '.news-prev',
+            },
+            simulateTouch: false
+        })
+
+        // Section Events
+        var SectionEventsSwiper = new Swiper ('.section-events__carousel', {
+            slidesPerView: 3,
+            slidesPerGroup: 3,
+            autoplay: false,
+            speed: 1000,
+            spaceBetween: 20,
+            breakpoints: {
+                767: {
+                  slidesPerView: 1,
+                  slidesPerGroup: 1,
+                  spaceBetween: 10
+                },
+                992: {
+                  slidesPerView: 2,
+                  slidesPerGroup: 2,
+                  spaceBetween: 20
+                },
+                // when window width is <= 640px
+                1600: {
+                  slidesPerView: 3,
+                  slidesPerGroup: 3,
+                  spaceBetween: 20
+                }
+            },
+            pagination: {
+                el: '.events-swiper-pagination',
+                type: 'bullets',
+            },
+            navigation: {
+                nextEl: '.events-next',
+                prevEl: '.events-prev',
+            },
+            simulateTouch: false
+        })
+
     }); // End of use strict
 })(window.jQuery);

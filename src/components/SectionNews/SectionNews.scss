@@ -45,45 +45,100 @@
   }
 
   &__media {
+    // width: 33.33%;
     text-decoration: none;
     transition: transform 0.2s;
-    justify-content: center;
+    justify-content: flex-start;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
+    border: 1px solid rgba(164,164,164,0.2);
 
-    @media (min-width: 1600px) {
-      padding: 0 1rem;
-    }
-
-    @media (max-width: 992px) {
-      padding: 1rem;
-    }
-
-    @media (max-width: 767px) {
-      padding: 1rem;
+    img {
+      width: 100%;
     }
 
     &:hover {
       transform: translateY(-1rem);
       text-decoration: none;
     }
+  }
+
+  &__media-content {
+    height: 200px;
+    padding: 15px 15px 0 15px;
+    overflow: hidden;
+
+    h3 {
+      color: $blue;
+      font-size: 1.2em;
+      font-weight: bolder;
+      margin-bottom: 0.3rem;
+    }
+
+    h4 {
+      color: #000;
+      font-size: 1em;
+      font-weight: 200;
+      font-family: "Nunito Sans",sans-serif;
+    }
 
     span {
       display: block;
-      font-size: 1.4rem;
+      font-size: 1rem;
       color: $dark;
       font-weight: 300;
-      margin-top: 1rem;
-      text-align: center;
+      text-align: left;
 
       @media (max-width: 1024px) {
         font-size: 1.2rem;
       }
     }
 
-    img {
+    
+  }
 
+  .read-more {
+    padding: 0 15px 15px 15px;
+  }
+
+  .carousel {
+    width: 80%;
+
+    @media (max-width: 1024px) {
+      width: 85%;
+    }
+
+    @media (max-width: 767px) {
+      width: 100%;
+    }
+
+    .swiper-container {
+      padding: 1rem;
+      width: 90%;
+
+      @media (max-width: 1024px) {
+        width: 85%;
+      }
+  
+      @media (max-width: 767px) {
+        width: 80%;
+      }
+    }
+
+    .swiper-button-disabled {
+      display: none;
+    }
+
+    .pagination-container{ 
+      width: 100%;
+      margin-top: 15px;
+      display: flex;
+      justify-content: center;
+
+      .swiper-pagination-bullet {
+        margin: 5px;
+      }
     }
   }
 }
