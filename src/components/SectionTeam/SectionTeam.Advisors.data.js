@@ -25,7 +25,7 @@ module.exports = [
     },
     {
         name: 'Reinout te Brake',
-        displayName: 'Reinout te Brake',
+        displayName: 'Reinout<br/>te Brake',
         description: 'Reinout is well known in the international gaming business - publishers, developers, entrepreneurs and CEOs of large corporations seek his advice on technical, operational, strategic and commercial matters. His company GWC Investments is a consultancy and (seed) investment firm offering online gaming expertise within the gaming industry. It consists of a team of highly experienced gaming professionals and industry veterans in the field of Esports, iGaming and (mobile) gaming.',
         linkedin: 'https://www.linkedin.com/in/reinouttebrake/',
         avatar: '/img/team/reinout.png',
@@ -33,10 +33,18 @@ module.exports = [
     },
     {
         name: 'Richard van Barneveld',
-        displayName: 'Richard van Barneveld',
+        displayName: 'Richard van<br/>Barneveld',
         description: 'Richard’s areas of expertise include strategic business planning, corporate business development and fundraising for tech startups. He is the Strategic Director and Founder of Utomik Inc., a game subscription service with partners from Disney, Take2, Ubisoft, Warner and more. Prior to that he was Strategic Director at Kalydo, which powers games for game publishers & developers from companies that include The Cartoon Network (Turner), Gungho, Gameforge, COG, Chiyu, Gamigo and Gravity.',
         linkedin: 'https://www.linkedin.com/in/richardvanbarneveld',
         avatar: '/img/team/richard.png',
         role: 'Strategic Director, Utomik Inc.',
+    },
+    {
+        name: 'Gareth Lewis',
+        displayName: 'Gareth<br>Lewis',
+        description: 'Gareth is the Head of Technology for Poland and Eastern Europe at a top-tier investment bank. He is an experienced leader in FinTech with expertise in blockchain research and emerging financial technologies. In May 2018, Gareth was awarded a grant from the Ethereum Foundation to develop his project on the Ethereum blockchain (a cryptowallet incorporating smart contract custody).',
+        linkedin: 'https://www.linkedin.com/in/garethtlewis/',
+        avatar: '/img/team/GarethLewis.png',
+        role: 'Solidity Expert',
     },
 ];

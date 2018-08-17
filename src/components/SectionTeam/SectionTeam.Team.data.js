@@ -33,7 +33,7 @@ module.exports = [
     },
     {
         name: 'Szymon Bury',
-        displayName: 'Szymon Bury',
+        displayName: 'Szymon<br/>Bury',
         description: 'Szymon is a front-end developer, with significant experience in hybrid mobile development and well-grounded aspirations for full stack development. He is a former mobile and web developer at Phenomaly and IT specialist at Unima 2000. Recently he stepped into the world of digital ledgers, mastering techniques around React, Ionic and web3.js driven development of decentralised applications.',
         linkedin: 'https://www.linkedin.com/in/szymon-bury-36b7a698/',
         avatar: '/img/team/szymon.jpg',
@@ -86,5 +86,21 @@ module.exports = [
         linkedin: 'https://www.linkedin.com/in/edward-hewett/',
         avatar: '/img/team/edward.png',
         role: 'Marketing & Communications',
+    },
+    {
+        name: 'Victor Kashirin',
+        displayName: 'Victor<br>Kashirin',
+        description: 'Victor’s range of professional interests includes front-end development, UX and UI design, data analytics and visualisation. He has experience in doing academic research, developing enterprise applications for large corporations as well as helping to shape environmental agendas through research, data preparation and presentation. On the front-end side, he is most curious about making blockchain-enabled applications accessible, intuitive and reliable.',
+        linkedin: 'https://www.linkedin.com/in/victorkashirin/',
+        avatar: '/img/team/VictorK.png',
+        role: 'User Experience / Frontend',
+    },
+    {
+        name: 'Bas van Oostveen',
+        displayName: 'Bas van<br>Oostveen',
+        description: 'Bas is a blockchain expert that mined his first Bitcoin in 2010 and has been involved in blockchain ever since. With over 20 years of IT experience and a background in security and open source software he has created engineering departments, lead architecture design, development & management of several high volume internet and security platforms. Under which are real-time trading and advertisement systems and digital media platforms with over 9,000 websites, sustaining traffic of over 4gbit/s, combining micropayments, credit-card handling and fraud detection/prevention.',
+        linkedin: 'https://www.linkedin.com/in/oostveen/',
+        avatar: '/img/team/BasvO2.png',
+        role: 'Blockchain Consultant',
     }
 ];
