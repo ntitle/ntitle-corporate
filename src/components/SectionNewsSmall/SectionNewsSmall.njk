@@ -1,0 +1,28 @@
+<section id="news-small" class="light-bg section-news-small">
+    {# Slider temporarily disabled until more items are added #}
+    {# <div class="carousel">
+        <button class="swiper-button-prev"></button>
+        <button class="swiper-button-next"></button>
+        <div class="swiper-container section-news-small__carousel">
+            <div class="swiper-wrapper">
+                {% for article in news %}
+                    <div class="swiper-slide">
+                        <a target="_blank" href="{{ article.url }}" class="section-news-small__media">
+                            <img class="section-news-small__media-img" src="{{ article.image }}" />
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div> #}
+    <div class="container-fluid section-news-small__media-container">
+        {% for article in newsSmall %}
+            <div class="section-news-small__media-item">
+                <a target="_blank" href="{{ article.url }}" class="section-news-small__media">
+                    <img class="section-news-small__media-img" src="{{ article.image }}" />
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+</section>
+
