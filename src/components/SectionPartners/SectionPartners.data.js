@@ -7,7 +7,7 @@ module.exports = [
     {
         title: 'Abstraction Games',
         url: 'https://abstractiongames.com/',
-        image: '/img/partners/Abstraction-Games.jpg'
+        image: '/img/partners/AbstractionGames.jpg'
     },
     {
         title: '3goo',
