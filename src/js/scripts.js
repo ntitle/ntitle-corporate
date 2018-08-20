@@ -282,8 +282,8 @@
             },
             // centeredSlides: true,
             navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
+                nextEl: '.news-small-next',
+                prevEl: '.news-small-prev',
             },
             simulateTouch: false
         })
