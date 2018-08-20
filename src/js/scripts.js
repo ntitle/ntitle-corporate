@@ -378,7 +378,6 @@ document.getElementById('DAppSubmit').addEventListener('click', ()=>{
     var email = DAppEmail.value;
     console.log(DAppTermsCheck.checked)
     if(validateEmail(email) && DAppTermsCheck.checked){
-        console.log('email is valid');
         DAppSubscribe(email);
         DAppSucces.style.display = 'block';
         DAppEmailContainer.style.display = 'none';
@@ -398,8 +397,7 @@ document.getElementById('DAppSubmit').addEventListener('click', ()=>{
 function DAppSubscribe(email) {
     var data = JSON.stringify([
         {
-          "email": email,
-          "notes": "DApp beta tester"
+          "email": email
         }
     ]);
       
@@ -407,7 +405,9 @@ function DAppSubscribe(email) {
     
     xhr.addEventListener("readystatechange", function () {
         if (this.readyState === this.DONE) {
-            console.log(this.responseText);
+            var result = JSON.parse(this.responseText)
+            console.log(result.persisted_recipients[0]);
+            DAppAddSubscriberToList(result.persisted_recipients[0])
         }
     });
     
@@ -415,6 +415,24 @@ function DAppSubscribe(email) {
     xhr.setRequestHeader("authorization", "Bearer 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");
     xhr.setRequestHeader("content-type", "application/json");
     
+    xhr.send(data);
+}
+
+function DAppAddSubscriberToList(subscriber){
+    var data = "null";
+
+    var xhr = new XMLHttpRequest();
+    // xhr.withCredentials = true;
+
+    xhr.addEventListener("readystatechange", function () {
+    if (this.readyState === this.DONE) {
+        console.log(this.responseText);
+    }
+    });
+
+    xhr.open("POST", "https://api.sendgrid.com/v3/contactdb/lists/4834254/recipients/"+subscriber);
+    xhr.setRequestHeader("authorization", "Bearer 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");
+
     xhr.send(data);
 }
 
