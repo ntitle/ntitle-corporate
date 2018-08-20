@@ -368,6 +368,62 @@ function validateEmail(email) {
     return re.test(email);
 }
 
+// Newsletter subscription
+var NewsletterEmail = document.getElementById('newsletterEmail');
+var NewsletterSucces = document.getElementById('newsletterSucces');
+var NewsletterError = document.getElementById('newsletterError');
+var NewsletterTermsCheck = document.getElementById('NewsletterTermsCheck');
+var NewsletterPrivacyCheck = document.getElementById('NewsletterPrivacyCheck');
+var SubmitNewsletterContainer = document.getElementById('submitNewsletterContainer');
+var SubmitNewsletter = document.getElementById('submitNewsletter');
+var CloseNewsletter = document.getElementById('closeNewsletterContainer');
+SubmitNewsletter.addEventListener('click', ()=>{
+    console.log('submit clicked');
+    var email = NewsletterEmail.value;
+    if(validateEmail(email) && NewsletterTermsCheck.checked){
+        NewsletterSubscribe(email);
+        NewsletterSucces.style.display = 'block';
+        CloseNewsletter.style.display = 'block';
+        NewsletterEmail.style.display = 'none';
+        NewsletterError.style.display = 'none';
+        NewsletterPrivacyCheck.style.display = 'none';
+        SubmitNewsletter.style.display = 'none';
+    } else {
+        if(!NewsletterTermsCheck.checked && !validateEmail(email)) {
+            NewsletterError.innerHTML = "Please enter a valid email address and accept our terms."
+        } else if(!NewsletterTermsCheck.checked) {
+            NewsletterError.innerHTML = "Please accept our terms.";
+        } else {
+            NewsletterError.innerHTML = "Please enter a valid email address.";
+        }
+    }
+});
+function NewsletterSubscribe(email) {
+    var data = JSON.stringify([
+        {
+          "email": email
+        }
+    ]);
+      
+    var xhr = new XMLHttpRequest();
+    
+    xhr.addEventListener("readystatechange", function () {
+        if (this.readyState === this.DONE) {
+            var result = JSON.parse(this.responseText)
+            console.log(result.persisted_recipients[0]);
+            AddSubscriberToList(result.persisted_recipients[0], 3871051)
+        }
+    });
+    
+    xhr.open("POST", "https://api.sendgrid.com/v3/contactdb/recipients");
+    xhr.setRequestHeader("authorization", "Bearer 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");
+    xhr.setRequestHeader("content-type", "application/json");
+    
+    xhr.send(data);
+}
+
+
+// DApp beta subscription
 var DAppEmail = document.getElementById('DAppEmail');
 var DAppEmailContainer = document.getElementById('DAppEmailContainer');
 var DAppError = document.getElementById('DAppErrors');
@@ -385,15 +441,14 @@ document.getElementById('DAppSubmit').addEventListener('click', ()=>{
         DAppPrivacyCheck.style.display = 'none';
     } else {
         if(!DAppTermsCheck.checked && !validateEmail(email)) {
-            DAppError.innerHTML = "Please enter a valid email adres and accept our terms."
+            DAppError.innerHTML = "Please enter a valid email address and accept our terms."
         } else if(!DAppTermsCheck.checked) {
             DAppError.innerHTML = "Please accept our terms.";
         } else {
-            DAppError.innerHTML = "Please enter a valid email adres.";
+            DAppError.innerHTML = "Please enter a valid email address.";
         }
     }
 });
-// DApp beta subscription
 function DAppSubscribe(email) {
     var data = JSON.stringify([
         {
@@ -405,9 +460,9 @@ function DAppSubscribe(email) {
     
     xhr.addEventListener("readystatechange", function () {
         if (this.readyState === this.DONE) {
-            var result = JSON.parse(this.responseText)
+            var result = JSON.parse(this.responseText);
             console.log(result.persisted_recipients[0]);
-            DAppAddSubscriberToList(result.persisted_recipients[0])
+            AddSubscriberToList(result.persisted_recipients[0], 4834254);
         }
     });
     
@@ -418,7 +473,8 @@ function DAppSubscribe(email) {
     xhr.send(data);
 }
 
-function DAppAddSubscriberToList(subscriber){
+// Function to add subscribers to a list after being added
+function AddSubscriberToList(subscriber, listId){
     var data = "null";
 
     var xhr = new XMLHttpRequest();
@@ -430,7 +486,7 @@ function DAppAddSubscriberToList(subscriber){
     }
     });
 
-    xhr.open("POST", "https://api.sendgrid.com/v3/contactdb/lists/4834254/recipients/"+subscriber);
+    xhr.open("POST", "https://api.sendgrid.com/v3/contactdb/lists/"+listId+"/recipients/"+subscriber);
     xhr.setRequestHeader("authorization", "Bearer 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");
 
     xhr.send(data);
