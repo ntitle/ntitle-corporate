@@ -170,40 +170,89 @@
 
 
         // DApp video section
+        var videoActivated = false;
+        // If user scrolls to video, play it
+        $( window ).scroll( () => {
+            if($('#DAppGameDevVideo').visible() && !videoActivated){
+                videoActivated = true;
+                $('#DAppGameDevVideoPlayBtn').hide();
+                $('#DAppGameDevVideoPauseBtnSmall').show();
+                $('#DAppGameDevVideoShade').hide();
+                // Play first video
+                $('#DAppGameDevVideo').get(0).play();
+            }
+        });
         // Logic: when you click on the play button the videos get played after eachother
         // At the last video play button comes back to replay
         $('#DAppGameDevVideo').get(0).pause();
+        $('#DAppGameDevVideoPlayBtnSmall').hide();
+        $('#DAppGameDevVideoPauseBtnSmall').hide();
         $('#DAppGamerVideo').get(0).pause();
+        $('#DAppGamerVideoPauseBtnSmall').hide();
         $('#DAppInfluencerVideo').get(0).pause();
+        $('#DAppInfluencerVideoPauseBtnSmall').hide();
 
-        $('#VideoPlayBtn').click(()=>{
-            $('#VideoPlayBtn').hide();
+        // Sequence play
+        $('#DAppGameDevVideoPlayBtn').click(()=>{
+            $('#DAppGameDevVideoPlayBtn').hide();
+            $('#DAppGameDevVideoPauseBtnSmall').show();
             $('#DAppGameDevVideoShade').hide();
             // Play first video
             $('#DAppGameDevVideo').get(0).play();
-            // If first video ends
-            $('#DAppGameDevVideo').on('ended',function(){
-                $('#DAppGameDevVideoShade').show();
-                // Play second video
-                $('#DAppGamerVideoShade').hide();
-                $('#DAppGamerVideo').get(0).play();
-                // If second video ends
-                $('#DAppGamerVideo').on('ended',function(){
-                    $('#DAppGamerVideoShade').show();
-                    // Play third video
-                    $('#DAppInfluencerVideoShade').hide();
-                    $('#DAppInfluencerVideo').get(0).play();
-                    // If third video ends
-                    $('#DAppInfluencerVideo').on('ended',function(){
-                        $('#DAppInfluencerVideoShade').show();
-                        // Show play btn
-                        $('#VideoPlayBtn').show();
-                    });
-                });
-            });
+        });
+        // If first video ends
+        $('#DAppGameDevVideo').on('ended',function(){
+            $('#DAppGameDevVideoShade').show();
+            // Play second video
+            $('#DAppGamerVideoShade').hide();
+            $('#DAppGamerVideoPlayBtnSmall').hide();
+            $('#DAppGamerVideoPauseBtnSmall').show();
+            $('#DAppGamerVideo').get(0).play();
+        });
+        // If second video ends
+        $('#DAppGamerVideo').on('ended',function(){
+            $('#DAppGamerVideoShade').show();
+            $('#DAppGamerVideoPlayBtnSmall').show();
+            $('#DAppGamerVideoPauseBtnSmall').hide();
+            // Play third video
+            $('#DAppInfluencerVideoShade').hide();
+            $('#DAppInfluencerVideoPlayBtnSmall').hide();
+            $('#DAppInfluencerVideoPauseBtnSmall').show();
+            $('#DAppInfluencerVideo').get(0).play();
+        });
+        // If third video ends
+        $('#DAppInfluencerVideo').on('ended',function(){
+            $('#DAppInfluencerVideoShade').show();
+            $('#DAppInfluencerVideoPlayBtnSmall').show();
+            $('#DAppInfluencerVideoPauseBtnSmall').hide();
+            // Show play btn
+            $('#DAppGameDevVideoPlayBtn').show();
+            $('#DAppGameDevVideoShade').show();
+            $('#DAppGameDevVideoPlayBtnSmall').hide();
+            $('#DAppGameDevVideoPauseBtnSmall').hide();
         });
 
-        
+        // Small action buttons
+        function videoAction(element, action) {
+            if(action === 'pause') {
+                $('#'+element+'Video').get(0).pause();
+                $('#'+element+'VideoPauseBtnSmall').hide();
+                $('#'+element+'VideoPlayBtnSmall').show();
+                $('#'+element+'VideoShade').show();
+            } else {
+                $('#'+element+'Video').get(0).play();
+                $('#'+element+'VideoPauseBtnSmall').show();
+                $('#'+element+'VideoPlayBtnSmall').hide();
+                $('#'+element+'VideoShade').hide();
+            }
+        }
+        $('#DAppGameDevVideoPauseBtnSmall').click(()=>{videoAction('DAppGameDev', 'pause')});
+        $('#DAppGameDevVideoPlayBtnSmall').click(()=>{videoAction('DAppGameDev', 'play')});
+        $('#DAppGamerVideoPauseBtnSmall').click(()=>{videoAction('DAppGamer', 'pause')});
+        $('#DAppGamerVideoPlayBtnSmall').click(()=>{videoAction('DAppGamer', 'play')});
+        $('#DAppInfluencerVideoPauseBtnSmall').click(()=>{videoAction('DAppInfluencer', 'pause')});
+        $('#DAppInfluencerVideoPlayBtnSmall').click(()=>{videoAction('DAppInfluencer', 'play')});
+
 
         // Swiper carousels
         // Section News Small
@@ -213,6 +262,24 @@
             autoplay: true,
             speed: 1000,
             spaceBetween: 20,
+            breakpoints: {
+                767: {
+                  slidesPerView: 2,
+                  slidesPerGroup: 2,
+                  spaceBetween: 10
+                },
+                992: {
+                  slidesPerView: 5,
+                  slidesPerGroup: 5,
+                  spaceBetween: 20
+                },
+                // when window width is <= 640px
+                1600: {
+                  slidesPerView: 7,
+                  slidesPerGroup: 7,
+                  spaceBetween: 20
+                }
+            },
             // centeredSlides: true,
             navigation: {
                 nextEl: '.swiper-button-next',
@@ -295,3 +362,62 @@
 
     }); // End of use strict
 })(window.jQuery);
+
+function validateEmail(email) {
+    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+}
+
+var DAppEmail = document.getElementById('DAppEmail');
+var DAppEmailContainer = document.getElementById('DAppEmailContainer');
+var DAppError = document.getElementById('DAppErrors');
+var DAppTermsCheck = document.getElementById('DAppTermsCheck');
+var DAppPrivacyCheck = document.getElementById('DAppPrivacyCheck');
+var DAppSucces = document.getElementById('DAppSucces');
+document.getElementById('DAppSubmit').addEventListener('click', ()=>{
+    var email = DAppEmail.value;
+    console.log(DAppTermsCheck.checked)
+    if(validateEmail(email) && DAppTermsCheck.checked){
+        console.log('email is valid');
+        DAppSubscribe(email);
+        DAppSucces.style.display = 'block';
+        DAppEmailContainer.style.display = 'none';
+        DAppError.style.display = 'none';
+        DAppPrivacyCheck.style.display = 'none';
+    } else {
+        if(!DAppTermsCheck.checked && !validateEmail(email)) {
+            DAppError.innerHTML = "Please enter a valid email adres and accept our terms."
+        } else if(!DAppTermsCheck.checked) {
+            DAppError.innerHTML = "Please accept our terms.";
+        } else {
+            DAppError.innerHTML = "Please enter a valid email adres.";
+        }
+    }
+});
+// DApp beta subscription
+function DAppSubscribe(email) {
+    var data = JSON.stringify([
+        {
+          "email": email,
+          "notes": "DApp beta tester"
+        }
+    ]);
+      
+    var xhr = new XMLHttpRequest();
+    xhr.withCredentials = true;
+    
+    xhr.addEventListener("readystatechange", function () {
+        if (this.readyState === this.DONE) {
+            console.log(this.responseText);
+        }
+    });
+    
+    xhr.open("POST", "https://api.sendgrid.com/v3/contactdb/recipients");
+    xhr.setRequestHeader("authorization", "Bearer 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");
+    xhr.setRequestHeader("content-type", "application/json");
+    
+    xhr.send(data);
+}
+
+
+

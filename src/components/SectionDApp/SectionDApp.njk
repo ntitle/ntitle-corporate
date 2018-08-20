@@ -12,9 +12,9 @@
                 <div class="DApp-item col-lg-4 col-md-6 col-sm-12">
                     <div class="DApp-item__phone-container">
                         <div class="video-container">
-                            <div id="VideoPlayBtn" class="playBtn">
-                                <img src="/img/DApp/playbtn.png">
-                            </div>
+                            <div id="DAppGameDevVideoPlayBtn" class="playBtn"><img src="/img/DApp/playbtn.png"></div>
+                            <div id="DAppGameDevVideoPlayBtnSmall" class="smallBtn"><img src="/img/DApp/playbtn.png"></div>
+                            <div id="DAppGameDevVideoPauseBtnSmall" class="smallBtn"><img src="/img/DApp/pausebtn.png"></div>
                             <div id="DAppGameDevVideoShade" class="video-shade"></div>
                             <video autoplay id="DAppGameDevVideo">
                                 <source src="/img/DApp/Gamedevv1.mp4" type="video/mp4">
@@ -33,6 +33,8 @@
                 <div class="DApp-item col-lg-4 col-md-6 col-sm-12">
                     <div class="DApp-item__phone-container">
                         <div class="video-container">
+                            <div id="DAppGamerVideoPlayBtnSmall" class="smallBtn"><img src="/img/DApp/playbtn.png"></div>
+                            <div id="DAppGamerVideoPauseBtnSmall" class="smallBtn"><img src="/img/DApp/pausebtn.png"></div>
                             <div id="DAppGamerVideoShade" class="video-shade"></div>
                             <video autoplay id="DAppGamerVideo">
                                 <source src="/img/DApp/GamerDAppv1.mp4" type="video/mp4">
@@ -51,6 +53,8 @@
                 <div class="DApp-item col-lg-4 col-md-6 col-sm-12">
                     <div class="DApp-item__phone-container">
                         <div class="video-container">
+                            <div id="DAppInfluencerVideoPlayBtnSmall" class="smallBtn"><img src="/img/DApp/playbtn.png"></div>
+                            <div id="DAppInfluencerVideoPauseBtnSmall" class="smallBtn"><img src="/img/DApp/pausebtn.png"></div>
                             <div id="DAppInfluencerVideoShade" class="video-shade"></div>
                             <video autoplay id="DAppInfluencerVideo">
                                 <source src="/img/DApp/Influencer final.mp4" type="video/mp4">
@@ -79,16 +83,18 @@
                             <span class="title">Sign up now to join the exclusive <b>Beta testing program</b> for our bcommerce Mobile Trading DApp!</span>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-12">
-                            <form action="" class="beta-form-group">
-                                <div class="email-container">
-                                    <input type="text" name="email" id="" placeholder="your email" class="text-field">
-                                    <button class="button send button-light">GET ACCESS</button>
+                            <div class="beta-form-group">
+                                <div class="email-container" id="DAppEmailContainer">
+                                    <input type="text" name="email" id="DAppEmail" placeholder="your email" class="text-field">
+                                    <button class="button send button-light" id="DAppSubmit">GET ACCESS</button>
                                 </div>
-                                <div class="privacy-check">
-                                    <input type="checkbox" name="" id="">
-                                    I agree to the <a href="http://">terms & conditions</a> and <a href="http://">privacy policy</a>
+                                <div class="privacy-check" id="DAppPrivacyCheck">
+                                    <input type="checkbox" name="termsCheck" id="DAppTermsCheck">
+                                    <label for="DAppTermsCheck">I agree to the <a href="/terms">terms & conditions</a> and <a href="/privacy">privacy policy</a></label>
                                 </div>
-                            </form>
+                                <div class="errors" id="DAppErrors"></div>
+                                <div class="succes" id="DAppSucces">Thank you for joining the Beta testing program!</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -101,13 +107,15 @@
                         <img src="/img/DApp/iphone-hor.png" class="phone-hor">
                     </div>
                 </div>
-                <div class="col-lg-9 col-md-9 col-sm-12 beta-arrows">
-                    <img src="/img/DApp/betaArrows.png" class="beta-arrows__image">
-                    <div class="beta-arrows__text">
-                        <div class="one">Get access to our limited Program</div>
-                        <div class="two">Follow the instructions to download the bcommerce Mobile Trading DApp Beta</div>
-                        <div class="three">Setup the DApp and link with your Metamask account</div>
-                        <div class="four">Purchase and send game licenses on the blockchain</div>
+                <div class="col-lg-9 col-md-9 col-sm-12 beta-arrows-container">
+                    <div class="beta-arrows-wrapper">
+                        <img src="/img/DApp/betaArrows.png" class="beta-arrows-wrapper__image">
+                        <div class="beta-arrows-wrapper__text">
+                            <div class="one">Get access to our limited Program</div>
+                            <div class="two">Follow the instructions to download the bcommerce Mobile Trading DApp Beta</div>
+                            <div class="three">Setup the DApp and link with your Metamask account</div>
+                            <div class="four">Purchase and send game licenses on the blockchain</div>
+                        </div>
                     </div>
                 </div>
             </div>
