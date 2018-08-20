@@ -415,6 +415,7 @@ function DAppSubscribe(email) {
     xhr.open("POST", "https://api.sendgrid.com/v3/contactdb/recipients");
     xhr.setRequestHeader("authorization", "Bearer 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");
     xhr.setRequestHeader("content-type", "application/json");
+    xhr.setRequestHeader("Access-Control-Allow-Origin", "https://dev-ntitle.ntitle.network/, https://ntitle.network/");
     
     xhr.send(data);
 }
