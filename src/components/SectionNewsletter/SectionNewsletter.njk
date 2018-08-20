@@ -12,20 +12,23 @@
 
                 <!--signup box mailchimp-->
                 <div class="col-lg-12">
-                    <form action="{{ newsletter.action }}" method="post" class="mailchimp-form">
+                    <div class="newsletter-form-group">
                         <div class="col-12">
-                            <input type="email" value="" name="EMAIL" placeholder="email@domain.com" required>
+                            <input type="email" value="" name="EMAIL" placeholder="email@domain.com" id="newsletterEmail" required>
                         </div>
-                        <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                        <div style="position: absolute; left: -5000px;" aria-hidden="true">
-                            <input type="text" name="b_38836b86bdc2b88a242addc37_048dc960ca" tabindex="-1" value="">
+                        <div class="news-thanks-message" id="newsletterSucces">Thanks for subscribing!</div>
+                        <div class="newsletter-privacy-check" id="NewsletterPrivacyCheck">
+                            <input type="checkbox" name="NewsletterTermsCheck" id="NewsletterTermsCheck">
+                            <label for="NewsletterTermsCheck">I agree to the <a href="/terms">terms & conditions</a> and <a href="/privacy">privacy policy</a></label>
                         </div>
-                        <div class="news-thanks-message">
+                        <div id="newsletterError"></div>
+                        <div class="col-12" id="submitNewsletterContainer">
+                            <button id="submitNewsletter" class="btn button-light">{{ newsletter.buttonText }}</button>
                         </div>
-                        <div class="col-12">
-                            <button type="submit" id="submitNewsletter" class="btn button-light js-scroll-trigger">{{ newsletter.buttonText }}</button>
+                        <div class="col-12" id="closeNewsletterContainer">
+                            <button id="closeNewsletter" class="btn button-light">Close</button>
                         </div>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>

@@ -18,3 +18,58 @@ section.section-newsletter {
   }
 }
 
+.newsletter-form-group {
+  .newsletter-privacy-check{
+    color: #000;
+    padding: 10px 0 0;
+    width: 100%;
+    #NewsletterTermsCheck + label {
+      display: block;
+      margin: 0.2em;
+      cursor: pointer;
+      padding: 0.2em;
+    }
+      
+    #NewsletterTermsCheck {
+      display: none;
+    }
+      
+    #NewsletterTermsCheck + label:before {
+      content: "\2714";
+      text-align: center;
+      line-height: 1em;
+      border: 0.1em solid $blue;
+      border-radius: 0.1em;
+      display: inline-block;
+      width: 1.1em;
+      height: 1.1em;
+      padding-left: 0.1em;
+      margin-right: 0.4em;
+      vertical-align: middle;
+      color: transparent;
+      // transition: .2s;
+    }
+      
+    #NewsletterTermsCheck + label:active:before {
+      transform: scale(0);
+    }
+      
+    #NewsletterTermsCheck:checked + label:before {
+      background-color: $blue;
+      border-color: $blue;
+      color: #fff;
+    }
+  }
+  #newsletterError {
+    color: red;
+  }
+  .news-thanks-message {
+    font-size: 2em;
+    color: #000;
+    display: none;
+  }
+  #closeNewsletterContainer {
+    display: none;
+  }
+}
+
