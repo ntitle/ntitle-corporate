@@ -27,19 +27,19 @@
     }
   }
 
-  &__media-item {
-    flex: 0 0 calc(15% - 1rem);    
+  // &__media-item {
+  //   flex: 0 0 calc(15% - 1rem);    
 
-    @media (max-width: 1024px) {
-      flex: 0 0 calc(50% - 1rem);
-      margin-bottom: 1rem;
-    }
+  //   @media (max-width: 1024px) {
+  //     flex: 0 0 calc(50% - 1rem);
+  //     margin-bottom: 1rem;
+  //   }
 
-    @media (max-width: 767px) {
-      flex: 0 0 calc(100%);
-      margin-bottom: 1rem;
-    }
-  }
+  //   @media (max-width: 767px) {
+  //     flex: 0 0 calc(100%);
+  //     margin-bottom: 1rem;
+  //   }
+  // }
 
   &__media-img {
     width: 100%;

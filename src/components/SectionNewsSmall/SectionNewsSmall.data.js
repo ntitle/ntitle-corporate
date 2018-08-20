@@ -1,5 +1,25 @@
 module.exports = [
     {
+        title: 'Ethereum blockchain network nTitle partners with Team Dutch Gaming',
+        url: 'https://www.dailyesports.gg/ethereum-blockchain-network-ntitle-partners-with-team-dutch-gaming/',
+        image: '/img/media/dailyes-news.jpg'
+    },
+    {
+        title: 'Met meer blockchainspellen zoals CryptoKitties komen 100 miljoen extra mensen naar crypto',
+        url: 'https://www.crypto-gids.nl/recap-met-peter-van-grinsven-ceo-ntitle-met-meer-blockchainspellen-zoals-cryptokitties-komen-100-miljoen-extra-mensen-naar-crypto/',
+        image: '/img/media/cryptogids-news.jpg'
+    },
+    {
+        title: 'Decentralized Blockchain commerce for indie game developers ',
+        url: 'https://www.blockbar.nl/blockrock-podcast-9-ntitle-decentralised-blockchain-commerce-for-indie-game-developers/',
+        image: '/img/media/blockbar-news.jpg'
+    },
+    {
+        title: 'the gamer must do with his product what he wants',
+        url: 'http://cryptomedia.press/interview-peter-van-grinsven-ntitle-ceo-gamer-must-product-wants/',
+        image: '/img/media/cryptomedia-news.jpg'
+    },
+    {
         title: 'Blockchainstartup nTitle gives back power to the game-developer and gamer',
         url: 'https://www.emerce.nl/interviews/interview-vergeet-steam-nederlandse-blockchainstartup-ntitle-geeft-macht-terug-gameontwikkelaar-n-gamer',
         image: '/img/media/emerce-news.jpg'
