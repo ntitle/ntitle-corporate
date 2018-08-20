@@ -404,7 +404,6 @@ function DAppSubscribe(email) {
     ]);
       
     var xhr = new XMLHttpRequest();
-    xhr.withCredentials = true;
     
     xhr.addEventListener("readystatechange", function () {
         if (this.readyState === this.DONE) {
@@ -415,7 +414,6 @@ function DAppSubscribe(email) {
     xhr.open("POST", "https://api.sendgrid.com/v3/contactdb/recipients");
     xhr.setRequestHeader("authorization", "Bearer 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");
     xhr.setRequestHeader("content-type", "application/json");
-    xhr.setRequestHeader("Access-Control-Allow-Origin", "https://dev-ntitle.ntitle.network/, https://ntitle.network/");
     
     xhr.send(data);
 }
