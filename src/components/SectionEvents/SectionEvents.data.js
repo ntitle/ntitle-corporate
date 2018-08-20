@@ -42,12 +42,6 @@ module.exports = [
         image: '/img/media/ca-nl.png'
     },
     {
-        title: 'DailyHODL',
-        location: '',
-        url: 'https://dailyhodl.com/2018/02/16/what-is-ntitle/',
-        image: '/img/media/the-daily-hodl-logo.png'
-    },
-    {
         title: 'Impact Tech',
         location: 'Kraków, Poland',
         url: 'https://www.youtube.com/watch?v=HEC2Jw8hJB0',
