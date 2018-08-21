@@ -77,6 +77,10 @@
     justify-content: center;
     height: 100%;
 
+    .col-heading, p {
+      width: 100%;
+    }
+
     @media (max-width: 768px) {
       display: block;
     }
@@ -175,6 +179,7 @@
 
   @media (min-width: 1600px) {
     width: 125%;
+    height: auto;
   }
 
   @media (max-width: 990px) {
@@ -187,13 +192,13 @@
   position: relative;
   display: flex;
   align-items: center;
+  height: 100%;
 }
 
 .button-intro {
   //@include resetButton();
   color: $blue-on-light;
   min-width: 5rem;
-  height: 3rem;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.1em;

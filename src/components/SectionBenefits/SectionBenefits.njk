@@ -45,8 +45,9 @@
                             id="benefits-section-{{ loop.index }}"
 
                             class="section-benefits__content-section {{ 'section-benefits__content-section--visible' if loop.index == 2 }}">
+                        <div class="row">
                         {% for bene in section.benefits %}
-                            <div class="benefit-item-wrapper">
+                            <div class="col-lg-6 col-md-6 col-sm-12 benefit-item-wrapper">
                                 <div class="benefit-item__title benefit-item__title--blue">
                                     {{ bene.title }}
                                 </div>
@@ -54,7 +55,11 @@
                                     {{ bene.text }}
                                 </div>
                             </div>
+                            {% if loop.index == 2 %}
+                                <div class="w-100"></div>
+                            {% endif %}
                         {% endfor %}
+                        </div>
                     </section>
                 {% endfor %}
             </div>
