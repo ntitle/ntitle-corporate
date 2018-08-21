@@ -77,6 +77,10 @@
     justify-content: center;
     height: 100%;
 
+    .col-heading, p {
+      width: 100%;
+    }
+
     @media (max-width: 768px) {
       display: block;
     }
@@ -171,13 +175,16 @@
 
 .mockap-ui {
   width: 100%;
+  height: auto;
   object-fit: contain;
 
   @media (min-width: 1600px) {
     width: 125%;
+    height: auto;
   }
 
   @media (max-width: 990px) {
+    height: auto;
     width: 100%;
     margin-top: 2rem;
   }
@@ -187,13 +194,13 @@
   position: relative;
   display: flex;
   align-items: center;
+  height: auto;
 }
 
 .button-intro {
   //@include resetButton();
   color: $blue-on-light;
   min-width: 5rem;
-  height: 3rem;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.1em;
