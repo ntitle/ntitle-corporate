@@ -1,3 +1,5 @@
+const SendGridKey = require('./SendGridKey.json');
+
 (function ($) {
     $(function () {
         'use strict'; // Start of use strict
@@ -117,7 +119,7 @@
             }
         });
 
-        // Closes responsive menu when a scroll trigger link is clicked
+        // Closes responsive menu when a Fcroll trigger link is clicked
         $('.js-scroll-trigger').click(function () {
             $('.navbar-collapse').collapse('hide');
         });
@@ -416,7 +418,7 @@ function NewsletterSubscribe(email) {
     });
     
     xhr.open("POST", "https://api.sendgrid.com/v3/contactdb/recipients");
-    xhr.setRequestHeader("authorization", "Bearer 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");
+    xhr.setRequestHeader("authorization", "Bearer "+SendGridKey.key);
     xhr.setRequestHeader("content-type", "application/json");
     
     xhr.send(data);
@@ -487,7 +489,7 @@ function AddSubscriberToList(subscriber, listId){
     });
 
     xhr.open("POST", "https://api.sendgrid.com/v3/contactdb/lists/"+listId+"/recipients/"+subscriber);
-    xhr.setRequestHeader("authorization", "Bearer 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");
+    xhr.setRequestHeader("authorization", "Bearer "+SendGridKey.key);
 
     xhr.send(data);
 }
