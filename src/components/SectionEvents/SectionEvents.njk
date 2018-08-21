@@ -1,0 +1,47 @@
+<section id="events" class="light-bg section-events">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading text-uppercase">EVENTS</h2>
+            </div>
+        </div>
+    </div>
+    {# <div class="container-fluid section-events__media-container">
+
+        {% for article in events %}
+            <div>
+                <a target="_blank" href="{{ article.url }}" class="section-events__media">
+                    <img class="section-events__media-img" src="{{ article.image }}" />
+                    <span>{{ article.title }}</span>
+                </a>
+            </div>
+        {% endfor %}
+
+    </div> #}
+    <div class="container-fluid section-events__media-container">
+        <div class="carousel">
+            <button class="swiper-button-prev events-prev"></button>
+            <button class="swiper-button-next events-next"></button>
+            <div class="swiper-container section-events__carousel">
+                <div class="swiper-wrapper">
+                    {% for article in events %}
+                        <div class="swiper-slide">
+                            <a href="{{ article.url }}" target="_blank" class="section-events__media">
+                                <img class="section-events__media-img" src="{{ article.image }}" />
+                                <div class="section-events__media-content">
+                                    <h3>{{ article.title }}</h3>
+                                    <h4>{{ article.location }}</h4>
+                                    <span>{{ article.snippet }}</span>
+                                </div>
+                            </a>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="pagination-container">
+                <div class="events-swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
+</section>
+

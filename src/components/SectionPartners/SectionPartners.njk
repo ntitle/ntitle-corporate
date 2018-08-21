@@ -1,0 +1,21 @@
+<section id="partners" class="light-bg section-partners">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading text-uppercase">Partners</h2>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid section-partners__media-container">
+
+        {% for article in partners %}
+            <div class="section-partners__media-item">
+                <a target="_blank" href="{{ article.url }}" class="section-partners__media">
+                    <img class="section-partners__media-img" src="{{ article.image }}" />
+                </a>
+            </div>
+        {% endfor %}
+
+    </div>
+</section>
+

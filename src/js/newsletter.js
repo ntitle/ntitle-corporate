@@ -1,18 +1,18 @@
 const newsletterButton = document.getElementById('newsletter-trigger');
 const mainOverlay = document.querySelector('.overlay');
 const submitNewsletter = document.getElementById('submitNewsletter');
-
+const closeNewsletter = document.getElementById('closeNewsletter');
 
 const offScroll = 'scroll-off';
 
 const hiddenClass = 'overlay--hidden';
 const visibleClass = 'overlay--visible';
 
-submitNewsletter.addEventListener('click', (e) => {
-    mainOverlay.classList.remove(visibleClass);
-    mainOverlay.classList.add(hiddenClass);
-    document.body.classList.remove(offScroll);
-});
+// submitNewsletter.addEventListener('click', (e) => {
+//     mainOverlay.classList.remove(visibleClass);
+//     mainOverlay.classList.add(hiddenClass);
+//     document.body.classList.remove(offScroll);
+// });
 
 function overlayListener() {
     mainOverlay.addEventListener('click', (e) => {
@@ -21,6 +21,12 @@ function overlayListener() {
         document.body.classList.remove(offScroll);
     });
 }
+
+closeNewsletter.addEventListener('click', (e) => {
+    mainOverlay.classList.remove(visibleClass);
+    mainOverlay.classList.add(hiddenClass);
+    document.body.classList.remove(offScroll);
+});
 
 newsletterButton.addEventListener('click', (e) => {
 
@@ -35,7 +41,7 @@ newsletterButton.addEventListener('click', (e) => {
     const newsletterArea = document.querySelector('.section-newsletter');
 
     newsletterArea.addEventListener('click', (ev) => {
-        ev.preventDefault();
+        // ev.preventDefault();
         ev.stopPropagation();
     });
 

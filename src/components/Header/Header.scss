@@ -50,6 +50,8 @@
   }
   .navbar-nav {
     .nav-item {
+      display: flex;
+      align-items: center;
       .nav-link {
         text-align: center;
         font-size: 100%;
@@ -60,6 +62,12 @@
         &.active,
         &:hover {
           color: $blue-on-light;
+        }
+        &.telegram {
+          margin-right: 15px;
+          img {
+            width: 30px;
+          }
         }
       }
     }

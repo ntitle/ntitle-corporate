@@ -2,14 +2,14 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h2 class="section-heading text-uppercase">NEWS AND EVENTS</h2>
+                <h2 class="section-heading text-uppercase">NEWS</h2>
             </div>
         </div>
     </div>
-    <div class="container-fluid section-news__media-container">
+    {# <div class="container-fluid section-news__media-container">
 
         {% for article in news %}
-            <div>
+            <div class="section-news__media-item">
                 <a target="_blank" href="{{ article.url }}" class="section-news__media">
                     <img class="section-news__media-img" src="{{ article.image }}" />
                     <span>{{ article.title }}</span>
@@ -17,6 +17,31 @@
             </div>
         {% endfor %}
 
+    </div> #}
+    <div class="container-fluid section-news__media-container">
+        <div class="carousel">
+            <button class="swiper-button-prev news-prev"></button>
+            <button class="swiper-button-next news-next"></button>
+            <div class="swiper-container section-news__carousel">
+                <div class="swiper-wrapper">
+                    {% for article in news %}
+                        <div class="swiper-slide">
+                            <a href="{{ article.url }}" target="_blank" class="section-news__media">
+                                <img class="section-news__media-img" src="{{ article.image }}" />
+                                <div class="section-news__media-content">
+                                    <h3>{{ article.title }}</h3>
+                                    <h4>{{ article.date }}</h4>
+                                    <span>{{ article.snippet }}</span>
+                                </div>
+                            </a>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="pagination-container">
+                <div class="news-swiper-pagination"></div>
+            </div>
+        </div>
     </div>
 </section>
 

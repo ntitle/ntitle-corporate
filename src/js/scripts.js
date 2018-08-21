@@ -141,32 +141,356 @@
         // Collapse the navbar when page is scrolled
         $(window).scroll(navbarCollapse);
 
-        // (function (o, l, a, r, k, y) {
-        //     if (o.olark) return;
-        //     r = 'script';
-        //     y = l.createElement(r);
-        //     r = l.getElementsByTagName(r)[0];
-        //     y.async = 1;
-        //     y.src = '//' + a;
-        //     r.parentNode.insertBefore(y, r);
-        //     y = o.olark = function () {
-        //         k.s.push(arguments);
-        //         k.t.push(+new Date)
-        //     };
-        //     y.extend = function (i, j) {
-        //         y('extend', i, j)
-        //     };
-        //     y.identify = function (i) {
-        //         y('identify', k.i = i)
-        //     };
-        //     y.configure = function (i, j) {
-        //         y('configure', i, j);
-        //         k.c[i] = j
-        //     };
-        //     k = y._ = { s: [], t: [+new Date], c: {}, l: a };
-        // })(window, document, 'static.olark.com/jsclient/loader.js');
-        // /* custom configuration goes here (www.olark.com/documentation) */
-        // olark.identify('6726-310-10-1482');
+        (function (o, l, a, r, k, y) {
+            if (o.olark) return;
+            r = 'script';
+            y = l.createElement(r);
+            r = l.getElementsByTagName(r)[0];
+            y.async = 1;
+            y.src = '//' + a;
+            r.parentNode.insertBefore(y, r);
+            y = o.olark = function () {
+                k.s.push(arguments);
+                k.t.push(+new Date)
+            };
+            y.extend = function (i, j) {
+                y('extend', i, j)
+            };
+            y.identify = function (i) {
+                y('identify', k.i = i)
+            };
+            y.configure = function (i, j) {
+                y('configure', i, j);
+                k.c[i] = j
+            };
+            k = y._ = { s: [], t: [+new Date], c: {}, l: a };
+        })(window, document, 'static.olark.com/jsclient/loader.js');
+        /* custom configuration goes here (www.olark.com/documentation) */
+        olark.identify('6726-310-10-1482');
+
+
+        // DApp video section
+        var videoActivated = false;
+        // If user scrolls to video, play it
+        $( window ).scroll( () => {
+            if($('#DAppGameDevVideo').visible() && !videoActivated){
+                videoActivated = true;
+                $('#DAppGameDevVideoPlayBtn').hide();
+                $('#DAppGameDevVideoPauseBtnSmall').show();
+                $('#DAppGameDevVideoShade').hide();
+                // Play first video
+                $('#DAppGameDevVideo').get(0).play();
+            }
+        });
+        // Logic: when you click on the play button the videos get played after eachother
+        // At the last video play button comes back to replay
+        $('#DAppGameDevVideo').get(0).pause();
+        $('#DAppGameDevVideoPlayBtnSmall').hide();
+        $('#DAppGameDevVideoPauseBtnSmall').hide();
+        $('#DAppGamerVideo').get(0).pause();
+        $('#DAppGamerVideoPauseBtnSmall').hide();
+        $('#DAppInfluencerVideo').get(0).pause();
+        $('#DAppInfluencerVideoPauseBtnSmall').hide();
+
+        // Sequence play
+        $('#DAppGameDevVideoPlayBtn').click(()=>{
+            $('#DAppGameDevVideoPlayBtn').hide();
+            $('#DAppGameDevVideoPauseBtnSmall').show();
+            $('#DAppGameDevVideoShade').hide();
+            // Play first video
+            $('#DAppGameDevVideo').get(0).play();
+        });
+        // If first video ends
+        $('#DAppGameDevVideo').on('ended',function(){
+            $('#DAppGameDevVideoShade').show();
+            // Play second video
+            $('#DAppGamerVideoShade').hide();
+            $('#DAppGamerVideoPlayBtnSmall').hide();
+            $('#DAppGamerVideoPauseBtnSmall').show();
+            $('#DAppGamerVideo').get(0).play();
+        });
+        // If second video ends
+        $('#DAppGamerVideo').on('ended',function(){
+            $('#DAppGamerVideoShade').show();
+            $('#DAppGamerVideoPlayBtnSmall').show();
+            $('#DAppGamerVideoPauseBtnSmall').hide();
+            // Play third video
+            $('#DAppInfluencerVideoShade').hide();
+            $('#DAppInfluencerVideoPlayBtnSmall').hide();
+            $('#DAppInfluencerVideoPauseBtnSmall').show();
+            $('#DAppInfluencerVideo').get(0).play();
+        });
+        // If third video ends
+        $('#DAppInfluencerVideo').on('ended',function(){
+            $('#DAppInfluencerVideoShade').show();
+            $('#DAppInfluencerVideoPlayBtnSmall').show();
+            $('#DAppInfluencerVideoPauseBtnSmall').hide();
+            // Show play btn
+            $('#DAppGameDevVideoPlayBtn').show();
+            $('#DAppGameDevVideoShade').show();
+            $('#DAppGameDevVideoPlayBtnSmall').hide();
+            $('#DAppGameDevVideoPauseBtnSmall').hide();
+        });
+
+        // Small action buttons
+        function videoAction(element, action) {
+            if(action === 'pause') {
+                $('#'+element+'Video').get(0).pause();
+                $('#'+element+'VideoPauseBtnSmall').hide();
+                $('#'+element+'VideoPlayBtnSmall').show();
+                $('#'+element+'VideoShade').show();
+            } else {
+                $('#'+element+'Video').get(0).play();
+                $('#'+element+'VideoPauseBtnSmall').show();
+                $('#'+element+'VideoPlayBtnSmall').hide();
+                $('#'+element+'VideoShade').hide();
+            }
+        }
+        $('#DAppGameDevVideoPauseBtnSmall').click(()=>{videoAction('DAppGameDev', 'pause')});
+        $('#DAppGameDevVideoPlayBtnSmall').click(()=>{videoAction('DAppGameDev', 'play')});
+        $('#DAppGamerVideoPauseBtnSmall').click(()=>{videoAction('DAppGamer', 'pause')});
+        $('#DAppGamerVideoPlayBtnSmall').click(()=>{videoAction('DAppGamer', 'play')});
+        $('#DAppInfluencerVideoPauseBtnSmall').click(()=>{videoAction('DAppInfluencer', 'pause')});
+        $('#DAppInfluencerVideoPlayBtnSmall').click(()=>{videoAction('DAppInfluencer', 'play')});
+
+
+        // Swiper carousels
+        // Section News Small
+        var SectionNewsSmallSwiper = new Swiper ('.section-news-small__carousel', {
+            loop: false,
+            slidesPerView: 7,
+            autoplay: true,
+            speed: 1000,
+            spaceBetween: 20,
+            breakpoints: {
+                767: {
+                  slidesPerView: 2,
+                  slidesPerGroup: 2,
+                  spaceBetween: 10
+                },
+                992: {
+                  slidesPerView: 5,
+                  slidesPerGroup: 5,
+                  spaceBetween: 20
+                },
+                // when window width is <= 640px
+                1600: {
+                  slidesPerView: 7,
+                  slidesPerGroup: 7,
+                  spaceBetween: 20
+                }
+            },
+            // centeredSlides: true,
+            navigation: {
+                nextEl: '.news-small-next',
+                prevEl: '.news-small-prev',
+            },
+            simulateTouch: false
+        })
+
+        // Section News
+        var SectionNewsSwiper = new Swiper ('.section-news__carousel', {
+            slidesPerView: 3,
+            slidesPerGroup: 3,
+            autoplay: false,
+            speed: 1000,
+            spaceBetween: 20,
+            breakpoints: {
+                767: {
+                  slidesPerView: 1,
+                  slidesPerGroup: 1,
+                  spaceBetween: 10
+                },
+                992: {
+                  slidesPerView: 2,
+                  slidesPerGroup: 2,
+                  spaceBetween: 20
+                },
+                // when window width is <= 640px
+                1600: {
+                  slidesPerView: 3,
+                  slidesPerGroup: 3,
+                  spaceBetween: 20
+                }
+            },
+            pagination: {
+                el: '.news-swiper-pagination',
+                type: 'bullets',
+            },
+            navigation: {
+                nextEl: '.news-next',
+                prevEl: '.news-prev',
+            },
+            simulateTouch: false
+        })
+
+        // Section Events
+        var SectionEventsSwiper = new Swiper ('.section-events__carousel', {
+            slidesPerView: 3,
+            slidesPerGroup: 3,
+            autoplay: false,
+            speed: 1000,
+            spaceBetween: 20,
+            breakpoints: {
+                767: {
+                  slidesPerView: 1,
+                  slidesPerGroup: 1,
+                  spaceBetween: 10
+                },
+                992: {
+                  slidesPerView: 2,
+                  slidesPerGroup: 2,
+                  spaceBetween: 20
+                },
+                // when window width is <= 640px
+                1600: {
+                  slidesPerView: 3,
+                  slidesPerGroup: 3,
+                  spaceBetween: 20
+                }
+            },
+            pagination: {
+                el: '.events-swiper-pagination',
+                type: 'bullets',
+            },
+            navigation: {
+                nextEl: '.events-next',
+                prevEl: '.events-prev',
+            },
+            simulateTouch: false
+        })
 
     }); // End of use strict
 })(window.jQuery);
+
+function validateEmail(email) {
+    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+}
+
+// Newsletter subscription
+var NewsletterEmail = document.getElementById('newsletterEmail');
+var NewsletterSucces = document.getElementById('newsletterSucces');
+var NewsletterError = document.getElementById('newsletterError');
+var NewsletterTermsCheck = document.getElementById('NewsletterTermsCheck');
+var NewsletterPrivacyCheck = document.getElementById('NewsletterPrivacyCheck');
+var SubmitNewsletterContainer = document.getElementById('submitNewsletterContainer');
+var SubmitNewsletter = document.getElementById('submitNewsletter');
+var CloseNewsletter = document.getElementById('closeNewsletterContainer');
+SubmitNewsletter.addEventListener('click', ()=>{
+    console.log('submit clicked');
+    var email = NewsletterEmail.value;
+    if(validateEmail(email) && NewsletterTermsCheck.checked){
+        NewsletterSubscribe(email);
+        NewsletterSucces.style.display = 'block';
+        CloseNewsletter.style.display = 'block';
+        NewsletterEmail.style.display = 'none';
+        NewsletterError.style.display = 'none';
+        NewsletterPrivacyCheck.style.display = 'none';
+        SubmitNewsletter.style.display = 'none';
+    } else {
+        if(!NewsletterTermsCheck.checked && !validateEmail(email)) {
+            NewsletterError.innerHTML = "Please enter a valid email address and accept our terms."
+        } else if(!NewsletterTermsCheck.checked) {
+            NewsletterError.innerHTML = "Please accept our terms.";
+        } else {
+            NewsletterError.innerHTML = "Please enter a valid email address.";
+        }
+    }
+});
+function NewsletterSubscribe(email) {
+    var data = JSON.stringify([
+        {
+          "email": email
+        }
+    ]);
+      
+    var xhr = new XMLHttpRequest();
+    
+    xhr.addEventListener("readystatechange", function () {
+        if (this.readyState === this.DONE) {
+            var result = JSON.parse(this.responseText)
+            console.log(result.persisted_recipients[0]);
+            AddSubscriberToList(result.persisted_recipients[0], 3871051)
+        }
+    });
+    
+    xhr.open("POST", "https://api.sendgrid.com/v3/contactdb/recipients");
+    xhr.setRequestHeader("authorization", "Bearer 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");
+    xhr.setRequestHeader("content-type", "application/json");
+    
+    xhr.send(data);
+}
+
+
+// DApp beta subscription
+var DAppEmail = document.getElementById('DAppEmail');
+var DAppEmailContainer = document.getElementById('DAppEmailContainer');
+var DAppError = document.getElementById('DAppErrors');
+var DAppTermsCheck = document.getElementById('DAppTermsCheck');
+var DAppPrivacyCheck = document.getElementById('DAppPrivacyCheck');
+var DAppSucces = document.getElementById('DAppSucces');
+document.getElementById('DAppSubmit').addEventListener('click', ()=>{
+    var email = DAppEmail.value;
+    console.log(DAppTermsCheck.checked)
+    if(validateEmail(email) && DAppTermsCheck.checked){
+        DAppSubscribe(email);
+        DAppSucces.style.display = 'block';
+        DAppEmailContainer.style.display = 'none';
+        DAppError.style.display = 'none';
+        DAppPrivacyCheck.style.display = 'none';
+    } else {
+        if(!DAppTermsCheck.checked && !validateEmail(email)) {
+            DAppError.innerHTML = "Please enter a valid email address and accept our terms."
+        } else if(!DAppTermsCheck.checked) {
+            DAppError.innerHTML = "Please accept our terms.";
+        } else {
+            DAppError.innerHTML = "Please enter a valid email address.";
+        }
+    }
+});
+function DAppSubscribe(email) {
+    var data = JSON.stringify([
+        {
+          "email": email
+        }
+    ]);
+      
+    var xhr = new XMLHttpRequest();
+    
+    xhr.addEventListener("readystatechange", function () {
+        if (this.readyState === this.DONE) {
+            var result = JSON.parse(this.responseText);
+            console.log(result.persisted_recipients[0]);
+            AddSubscriberToList(result.persisted_recipients[0], 4834254);
+        }
+    });
+    
+    xhr.open("POST", "https://api.sendgrid.com/v3/contactdb/recipients");
+    xhr.setRequestHeader("authorization", "Bearer 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");
+    xhr.setRequestHeader("content-type", "application/json");
+    
+    xhr.send(data);
+}
+
+// Function to add subscribers to a list after being added
+function AddSubscriberToList(subscriber, listId){
+    var data = "null";
+
+    var xhr = new XMLHttpRequest();
+    // xhr.withCredentials = true;
+
+    xhr.addEventListener("readystatechange", function () {
+    if (this.readyState === this.DONE) {
+        console.log(this.responseText);
+    }
+    });
+
+    xhr.open("POST", "https://api.sendgrid.com/v3/contactdb/lists/"+listId+"/recipients/"+subscriber);
+    xhr.setRequestHeader("authorization", "Bearer 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");
+
+    xhr.send(data);
+}
+
+
+
