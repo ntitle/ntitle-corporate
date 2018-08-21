@@ -72,7 +72,7 @@
     h3 {
       color: $blue;
       font-size: 1.2em;
-      font-weight: bolder;
+      font-weight: 200;
       margin-bottom: 0.3rem;
     }
 
@@ -87,12 +87,26 @@
       display: block;
       font-size: 1rem;
       color: $dark;
-      font-weight: 300;
+      font-weight: 400;
       text-align: left;
-
-      @media (max-width: 1024px) {
-        font-size: 1.2rem;
-      }
+    }
+    @media (max-width: 1400px) {
+      h3 { font-size: 0.8em; }
+      h4 { font-size: 0.7em; }
+      span { font-size: 0.8rem; }
+    }
+    @media (max-width: 1024px) {
+      h3 { font-size: 0.8em; }
+      h4 { font-size: 0.7em; }
+      span { font-size: 0.8rem; }
+    }
+    @media (max-width: 992px) {
+      h3 { font-size: 0.8em; }
+      h4 { font-size: 0.7em; }
+      span { font-size: 0.8rem; }
+    }
+    @media (max-width: 767px) {
+      padding: 0 1rem;
     }
 
     

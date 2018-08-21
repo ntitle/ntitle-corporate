@@ -34,7 +34,7 @@
                     padding: 0 20px;
                 }
                 .title {
-                    font-size: 1.3em;
+                    font-size: 1.2em;
                     font-weight: 200;
                 }
             }
@@ -339,13 +339,15 @@
 
     &__title {
         font-size: 1.5em;
+        font-weight: 200;
     }
 
     &__description {
         @extend %col-text;
         color: $blue-on-dark;
-        font-size: 1.2em;
+        font-size: 1.1em;
         padding: 0 30px;
+        font-weight: 400;
     }
   }
   
