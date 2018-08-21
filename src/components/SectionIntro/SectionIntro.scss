@@ -175,6 +175,7 @@
 
 .mockap-ui {
   width: 100%;
+  height: auto;
   object-fit: contain;
 
   @media (min-width: 1600px) {
@@ -183,6 +184,7 @@
   }
 
   @media (max-width: 990px) {
+    height: auto;
     width: 100%;
     margin-top: 2rem;
   }
