@@ -1,6 +1,5 @@
 node_modules/
 dist/
-src/js/SendGridKey.json
 .idea/
 .DS_Store
 
