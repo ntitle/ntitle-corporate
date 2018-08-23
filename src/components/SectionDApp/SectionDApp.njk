@@ -16,7 +16,7 @@
                             <div id="DAppGameDevVideoPlayBtnSmall" class="smallBtn"><img src="/img/DApp/playbtn.png"></div>
                             <div id="DAppGameDevVideoPauseBtnSmall" class="smallBtn"><img src="/img/DApp/pausebtn.png"></div>
                             <div id="DAppGameDevVideoShade" class="video-shade"></div>
-                            <video autoplay id="DAppGameDevVideo">
+                            <video autoplay muted id="DAppGameDevVideo">
                                 <source src="/img/DApp/Gamedevv1.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
@@ -36,7 +36,7 @@
                             <div id="DAppGamerVideoPlayBtnSmall" class="smallBtn"><img src="/img/DApp/playbtn.png"></div>
                             <div id="DAppGamerVideoPauseBtnSmall" class="smallBtn"><img src="/img/DApp/pausebtn.png"></div>
                             <div id="DAppGamerVideoShade" class="video-shade"></div>
-                            <video autoplay id="DAppGamerVideo">
+                            <video autoplay muted id="DAppGamerVideo">
                                 <source src="/img/DApp/GamerDAppv1.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
@@ -56,7 +56,7 @@
                             <div id="DAppInfluencerVideoPlayBtnSmall" class="smallBtn"><img src="/img/DApp/playbtn.png"></div>
                             <div id="DAppInfluencerVideoPauseBtnSmall" class="smallBtn"><img src="/img/DApp/pausebtn.png"></div>
                             <div id="DAppInfluencerVideoShade" class="video-shade"></div>
-                            <video autoplay id="DAppInfluencerVideo">
+                            <video autoplay muted id="DAppInfluencerVideo">
                                 <source src="/img/DApp/Influencer final.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
@@ -84,6 +84,17 @@
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-12">
                             <div class="beta-form-group">
+                                <div class="os-container"  id="DAppOsContainer">
+                                    Select your OS:
+                                    <div class="ios DApp-radio-btn">
+                                        <input type="radio" name="OS" value="ios" id="DAppIos">
+                                        <label for="DAppIos">iOS</label>
+                                    </div>
+                                    <div class="android DApp-radio-btn">
+                                        <input type="radio" name="OS" value="android" id="DAppAndroid">
+                                        <label for="DAppAndroid">Android</label>
+                                    </div>
+                                </div>
                                 <div class="email-container" id="DAppEmailContainer">
                                     <input type="text" name="email" id="DAppEmail" placeholder="your email" class="text-field">
                                     <button class="button send button-light" id="DAppSubmit">GET ACCESS</button>
