@@ -27,6 +27,7 @@
             padding: 15px 0;
             text-align: center;
             .title-container{
+                justify-content: center;
                 @media (max-width: 1400px) {
                     padding: 0 20px;
                 }
@@ -39,6 +40,7 @@
                 }
             }
             .beta-form-group {
+                text-align: left;
                 @media (max-width: 767px) {
                     padding: 15px 0;
                 }
