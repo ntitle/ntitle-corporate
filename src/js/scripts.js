@@ -373,12 +373,21 @@ function SendGridSubscribe(email, listId) {
         }
     ]);
       
-    var xhr = new XMLHttpRequest();
+    // var xhr = new XMLHttpRequest();
     
-    xhr.open("POST", "https://demo-api.ntitle.network/api/v1/sendgrid", true);
-    xhr.setRequestHeader("content-type", "application/json");
+    // xhr.open("POST", "https://demo-api.ntitle.network/api/v1/sendgrid", true);
+    // xhr.setRequestHeader("content-type", "application/json");
     
-    xhr.send(data);
+    // xhr.send(data);
+    fetch("https://demo-api.ntitle.network/api/v1/sendgrid", {
+        method: 'POST', // or 'PUT'
+        body: data,
+        headers:{
+          'Content-Type': 'application/json'
+        }
+      }).then(res => res.json())
+      .then(response => console.log('Success:', JSON.stringify(response)))
+      .catch(error => console.error('Error:', error));
 }
 
 function validateEmail(email) {
