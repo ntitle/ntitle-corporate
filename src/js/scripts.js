@@ -376,7 +376,7 @@ function SendGridSubscribe(email, listId, os) {
 
     fetch("https://demo-api.ntitle.network/api/v1/sendgrid", {
         method: 'POST',
-        mode: "no-cors",
+        mode: "cors",
         body: data,
         headers:{
           'Content-Type': 'application/json'
