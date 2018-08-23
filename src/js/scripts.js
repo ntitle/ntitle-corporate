@@ -365,22 +365,18 @@
 
 
 // SendGrid subscribe function
-function SendGridSubscribe(email, listId) {
-    var data = JSON.stringify([
+function SendGridSubscribe(email, listId, os) {
+    var data = JSON.stringify(
         {
           "email": email,
-          "listId": listId
+          "listId": listId,
+          "os": os
         }
-    ]);
-      
-    // var xhr = new XMLHttpRequest();
-    
-    // xhr.open("POST", "https://demo-api.ntitle.network/api/v1/sendgrid", true);
-    // xhr.setRequestHeader("content-type", "application/json");
-    
-    // xhr.send(data);
+    );
+
     fetch("https://demo-api.ntitle.network/api/v1/sendgrid", {
-        method: 'POST', // or 'PUT'
+        method: 'POST',
+        mode: "cors",
         body: data,
         headers:{
           'Content-Type': 'application/json'
@@ -405,19 +401,15 @@ var SubmitNewsletterContainer = document.getElementById('submitNewsletterContain
 var SubmitNewsletter = document.getElementById('submitNewsletter');
 var CloseNewsletter = document.getElementById('closeNewsletterContainer');
 SubmitNewsletter.addEventListener('click', ()=>{
-    console.log('submit clicked');
     var email = NewsletterEmail.value;
     if(validateEmail(email) && NewsletterTermsCheck.checked){
-        if(SendGridSubscribe(email, 3871051)) {
-            NewsletterSucces.style.display = 'block';
-            CloseNewsletter.style.display = 'block';
-            NewsletterEmail.style.display = 'none';
-            NewsletterError.style.display = 'none';
-            NewsletterPrivacyCheck.style.display = 'none';
-            SubmitNewsletter.style.display = 'none';
-        } else {
-            NewsletterError.innerHTML = "Something went wrong.";
-        }
+        SendGridSubscribe(email, 3871051);
+        NewsletterSucces.style.display = 'block';
+        CloseNewsletter.style.display = 'block';
+        NewsletterEmail.style.display = 'none';
+        NewsletterError.style.display = 'none';
+        NewsletterPrivacyCheck.style.display = 'none';
+        SubmitNewsletter.style.display = 'none';
     } else {
         if(!NewsletterTermsCheck.checked && !validateEmail(email)) {
             NewsletterError.innerHTML = "Please enter a valid email address and accept our terms."
@@ -430,6 +422,9 @@ SubmitNewsletter.addEventListener('click', ()=>{
 });
 
 // DApp beta subscription
+var DAppOsContainer = document.getElementById('DAppOsContainer');
+var DAppIos = document.getElementById('DAppIos');
+var DAppAndroid = document.getElementById('DAppAndroid');
 var DAppEmail = document.getElementById('DAppEmail');
 var DAppEmailContainer = document.getElementById('DAppEmailContainer');
 var DAppError = document.getElementById('DAppErrors');
@@ -438,15 +433,19 @@ var DAppPrivacyCheck = document.getElementById('DAppPrivacyCheck');
 var DAppSucces = document.getElementById('DAppSucces');
 document.getElementById('DAppSubmit').addEventListener('click', ()=>{
     var email = DAppEmail.value;
-    console.log(DAppTermsCheck.checked)
+    var os = document.querySelector('input[name="OS"]:checked').value;
+
     if(validateEmail(email) && DAppTermsCheck.checked){
-        SendGridSubscribe(email, 4834254);
+        SendGridSubscribe(email, 4834254, os);
         DAppSucces.style.display = 'block';
+        DAppOsContainer.style.display = 'none';
         DAppEmailContainer.style.display = 'none';
         DAppError.style.display = 'none';
         DAppPrivacyCheck.style.display = 'none';
     } else {
-        if(!DAppTermsCheck.checked && !validateEmail(email)) {
+        if(!DAppIos.checked && !DAppAndroid.checked) {
+            DAppError.innerHTML = "Please select an OS."
+        } else if(!DAppTermsCheck.checked && !validateEmail(email)) {
             DAppError.innerHTML = "Please enter a valid email address and accept our terms."
         } else if(!DAppTermsCheck.checked) {
             DAppError.innerHTML = "Please accept our terms.";

@@ -42,6 +42,42 @@
                 @media (max-width: 767px) {
                     padding: 15px 0;
                 }
+                .os-container {
+                    margin: 0 0 10px 0;
+                    .DApp-radio-btn {
+                        display: inline-block;
+                        input + label {
+                            display: block;
+                            margin: 0.2em;
+                            cursor: pointer;
+                            padding: 0.2em;
+                        }
+                        
+                        input {
+                            display: none;
+                        }
+                        
+                        input + label:before {
+                            content: ".";
+                            text-align: center;
+                            line-height: 1em;
+                            border: 0.1em solid $blue;
+                            border-radius: 100%;
+                            display: inline-block;
+                            width: 1.1em;
+                            height: 1.1em;
+                            padding-left: 0.1em;
+                            margin-right: 0.4em;
+                            vertical-align: middle;
+                            color: transparent;
+                        }
+                        
+                        input:checked + label:before {
+                            background-color: $blue;
+                            border-color: $blue;
+                        }
+                    }
+                }
                 .email-container {
                     display: flex;
                     justify-content: space-between;
