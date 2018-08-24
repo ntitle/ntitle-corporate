@@ -125,6 +125,13 @@
       }
     }
 
+    .swiper-button-prev {
+      background-image: url('/img/slider-arrow-prev.svg');
+    }
+    .swiper-button-next {
+      background-image: url('/img/slider-arrow-next.svg');
+    }
+
     .swiper-button-disabled {
       display: none;
     }
@@ -135,6 +142,9 @@
       display: flex;
       justify-content: center;
 
+      .swiper-pagination-bullet-active {
+        background: $blue;
+      }
       .swiper-pagination-bullet {
         margin: 5px;
       }
