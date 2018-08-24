@@ -99,5 +99,12 @@
         width: 80%;
       }
     }
+    
+    .swiper-button-prev {
+      background-image: url('/img/slider-arrow-prev.svg');
+    }
+    .swiper-button-next {
+      background-image: url('/img/slider-arrow-next.svg');
+    }
   }
 }
