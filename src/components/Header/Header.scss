@@ -39,8 +39,15 @@
 
   .navbar-brand {
     color: $blue-on-light;
+    text-align: center;
     img {
       height: 32px;
+    }
+    .nav-logo-text {
+      display: block;
+      font-size: 0.35em;
+      color: #a3a3a3;
+      transition: none;
     }
     &.active,
     &:focus,
