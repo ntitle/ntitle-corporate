@@ -27,6 +27,20 @@ iframe {
   }
 }
 
+.button-solid {
+  @extend %button-default;
+  color: $light;
+  border-color: transparent;
+  margin-top: $breather/2;
+  background: $blue-on-light;
+  &:hover {
+    color: $light;
+    border-color: transparent;
+    background-color: $third-blue;
+    text-decoration: none;
+  }
+}
+
 //styling elements
 .en {
   font-size: 80%;
