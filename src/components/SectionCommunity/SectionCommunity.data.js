@@ -33,5 +33,10 @@ module.exports = [
         cta: 'Go to Telegram',
         icon: 'telegram-plane',
         url: 'https://t.me/nTitle',
+    },
+    {
+        cta: 'Go to Bitcointalk',
+        icon: 'bitcoin',
+        url: 'https://bitcointalk.org/index.php?topic=4945627.0',
     }
 ];
