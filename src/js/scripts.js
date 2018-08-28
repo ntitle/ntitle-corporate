@@ -168,7 +168,6 @@
         /* custom configuration goes here (www.olark.com/documentation) */
         olark.identify('6726-310-10-1482');
 
-
         // DApp video section
         var videoActivated = false;
         // If user scrolls to video, play it
@@ -182,10 +181,10 @@
                 $('#DAppGameDevVideo').get(0).play();
             }
         });
-        // Logic: when you click on the play button the videos get played after eachother
+        // Logic: when you click on the play button the videos get played after each other
         // At the last video play button comes back to replay
         $('#DAppGameDevVideo').get(0).pause();
-        $('#DAppGameDevVideoPlayBtnSmall').hide();
+        $('#DAppGameDevVideoPlayBtn').hide();
         $('#DAppGameDevVideoPauseBtnSmall').hide();
         $('#DAppGamerVideo').get(0).pause();
         $('#DAppGamerVideoPauseBtnSmall').hide();
@@ -202,33 +201,34 @@
         });
         // If first video ends
         $('#DAppGameDevVideo').on('ended',function(){
+            $('#DAppGameDevVideoPlayBtn').show();
             $('#DAppGameDevVideoShade').show();
+            $('#DAppGameDevVideoPauseBtnSmall').hide();
             // Play second video
             $('#DAppGamerVideoShade').hide();
-            $('#DAppGamerVideoPlayBtnSmall').hide();
+            $('#DAppGamerVideoPlayBtn').hide();
             $('#DAppGamerVideoPauseBtnSmall').show();
             $('#DAppGamerVideo').get(0).play();
         });
         // If second video ends
         $('#DAppGamerVideo').on('ended',function(){
             $('#DAppGamerVideoShade').show();
-            $('#DAppGamerVideoPlayBtnSmall').show();
+            $('#DAppGamerVideoPlayBtn').show();
             $('#DAppGamerVideoPauseBtnSmall').hide();
             // Play third video
             $('#DAppInfluencerVideoShade').hide();
-            $('#DAppInfluencerVideoPlayBtnSmall').hide();
+            $('#DAppInfluencerVideoPlayBtn').hide();
             $('#DAppInfluencerVideoPauseBtnSmall').show();
             $('#DAppInfluencerVideo').get(0).play();
         });
         // If third video ends
         $('#DAppInfluencerVideo').on('ended',function(){
             $('#DAppInfluencerVideoShade').show();
-            $('#DAppInfluencerVideoPlayBtnSmall').show();
+            $('#DAppInfluencerVideoPlayBtn').show();
             $('#DAppInfluencerVideoPauseBtnSmall').hide();
             // Show play btn
             $('#DAppGameDevVideoPlayBtn').show();
             $('#DAppGameDevVideoShade').show();
-            $('#DAppGameDevVideoPlayBtnSmall').hide();
             $('#DAppGameDevVideoPauseBtnSmall').hide();
         });
 
@@ -237,21 +237,21 @@
             if(action === 'pause') {
                 $('#'+element+'Video').get(0).pause();
                 $('#'+element+'VideoPauseBtnSmall').hide();
-                $('#'+element+'VideoPlayBtnSmall').show();
+                $('#'+element+'VideoPlayBtn').show();
                 $('#'+element+'VideoShade').show();
             } else {
                 $('#'+element+'Video').get(0).play();
                 $('#'+element+'VideoPauseBtnSmall').show();
-                $('#'+element+'VideoPlayBtnSmall').hide();
+                $('#'+element+'VideoPlayBtn').hide();
                 $('#'+element+'VideoShade').hide();
             }
         }
         $('#DAppGameDevVideoPauseBtnSmall').click(()=>{videoAction('DAppGameDev', 'pause')});
-        $('#DAppGameDevVideoPlayBtnSmall').click(()=>{videoAction('DAppGameDev', 'play')});
+        $('#DAppGameDevVideoPlayBtn').click(()=>{videoAction('DAppGameDev', 'play')});
         $('#DAppGamerVideoPauseBtnSmall').click(()=>{videoAction('DAppGamer', 'pause')});
-        $('#DAppGamerVideoPlayBtnSmall').click(()=>{videoAction('DAppGamer', 'play')});
+        $('#DAppGamerVideoPlayBtn').click(()=>{videoAction('DAppGamer', 'play')});
         $('#DAppInfluencerVideoPauseBtnSmall').click(()=>{videoAction('DAppInfluencer', 'pause')});
-        $('#DAppInfluencerVideoPlayBtnSmall').click(()=>{videoAction('DAppInfluencer', 'play')});
+        $('#DAppInfluencerVideoPlayBtn').click(()=>{videoAction('DAppInfluencer', 'play')});
 
 
         // Swiper carousels
