@@ -1,5 +1,15 @@
 module.exports = [
     {
+        title: 'Introducing the future of ecommerce: blockchain commerce',
+        url: 'https://bitcoingarden.org/introducing-the-future-of-ecommerce-blockchain-commerce/',
+        image: '/img/media/bitcoin-garden-news.jpg'
+    },
+    {
+        title: 'Introducing the Future of Ecommerce: Blockchain Commerce',
+        url: 'https://www.ccn.com/introducing-the-future-of-ecommerce-blockchain-commerce/',
+        image: '/img/media/ccn-news.jpg'
+    },
+    {
         title: 'Ethereum blockchain network nTitle partners with Team Dutch Gaming',
         url: 'https://www.dailyesports.gg/ethereum-blockchain-network-ntitle-partners-with-team-dutch-gaming/',
         image: '/img/media/dailyes-news.jpg'
