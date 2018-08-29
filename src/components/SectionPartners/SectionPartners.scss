@@ -1,5 +1,6 @@
 .section-partners {
     padding: 0 0 50px;
+    border-top: 4px solid #3fbcfe;
   
     .section-heading{
       padding: 50px 0;
@@ -34,7 +35,7 @@
       }
   
       @media (max-width: 767px) {
-        flex: 0 0 calc(100%);
+        flex: 0 0 calc(50%);
         margin-bottom: 1rem;
       }
     }

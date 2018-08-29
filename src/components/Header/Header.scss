@@ -8,26 +8,6 @@
     display: none;
   }
 
-  &.navbar-shrink {
-    // Its white now... jeez
-
-    .nav-logo__on-white {
-      display: block;
-    }
-    .nav-logo__on-dark {
-      display: none;
-    }
-  }
-
-  @media (max-width: 991px) {
-    .nav-logo__on-white {
-      display: block;
-    }
-    .nav-logo__on-dark {
-      display: none;
-    }
-  }
-
   .navbar-toggler {
     font-size: 22px;
     right: 0;
@@ -39,13 +19,45 @@
 
   .navbar-brand {
     color: $blue-on-light;
+    text-align: center;
     img {
-      height: 32px;
+      height: 40px;
+    }
+    .nav-logo-text {
+      display: block;
+      font-size: 12px;
+      color: #fff;
+      transition: none;
     }
     &.active,
     &:focus,
     &:hover {
       color: darken($blue-on-light, 10%);
+    }
+  }
+  &.navbar-shrink {
+    // Its white now... jeez
+
+    .nav-logo__on-white {
+      display: block;
+    }
+    .nav-logo__on-dark {
+      display: none;
+    }
+    .nav-logo-text {
+      color: #000;
+    }
+  }
+
+  @media (max-width: 991px) {
+    .nav-logo__on-white {
+      display: block;
+    }
+    .nav-logo__on-dark {
+      display: none;
+    }
+    .nav-logo-text {
+      color: #000 !important;
     }
   }
   .navbar-nav {

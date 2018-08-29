@@ -101,7 +101,7 @@
       span { font-size: 0.8rem; }
     }
     @media (max-width: 992px) {
-      h3 { font-size: 0.8em; }
+      h3 { font-size: 0.8em; margin-top: 0.5rem; }
       h4 { font-size: 0.7em; }
       span { font-size: 0.8rem; }
     }
@@ -139,6 +139,13 @@
         width: 80%;
       }
     }
+    
+    .swiper-button-prev {
+      background-image: url('/img/slider-arrow-prev.svg');
+    }
+    .swiper-button-next {
+      background-image: url('/img/slider-arrow-next.svg');
+    }
 
     .swiper-button-disabled {
       display: none;
@@ -150,6 +157,9 @@
       display: flex;
       justify-content: center;
 
+      .swiper-pagination-bullet-active {
+        background: $blue;
+      }
       .swiper-pagination-bullet {
         margin: 5px;
       }

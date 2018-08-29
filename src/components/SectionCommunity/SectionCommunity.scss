@@ -10,13 +10,23 @@
 .community-item {
 
   margin: 2rem;
+  a {
+    text-decoration: none;
+    &:hover {
+      text-decoration: none;
+    }
+  }
 
   &__icon {
     @extend %icon-border;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: $light;
     line-height: 2.5em;
     width: 2.5em;
     height: 2.5em;
+    text-decoration: none;
 
     &:hover {
       color: $blue-on-dark;

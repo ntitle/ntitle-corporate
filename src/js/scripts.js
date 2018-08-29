@@ -168,7 +168,6 @@
         /* custom configuration goes here (www.olark.com/documentation) */
         olark.identify('6726-310-10-1482');
 
-
         // DApp video section
         var videoActivated = false;
         // If user scrolls to video, play it
@@ -182,10 +181,10 @@
                 $('#DAppGameDevVideo').get(0).play();
             }
         });
-        // Logic: when you click on the play button the videos get played after eachother
+        // Logic: when you click on the play button the videos get played after each other
         // At the last video play button comes back to replay
         $('#DAppGameDevVideo').get(0).pause();
-        $('#DAppGameDevVideoPlayBtnSmall').hide();
+        $('#DAppGameDevVideoPlayBtn').hide();
         $('#DAppGameDevVideoPauseBtnSmall').hide();
         $('#DAppGamerVideo').get(0).pause();
         $('#DAppGamerVideoPauseBtnSmall').hide();
@@ -202,33 +201,34 @@
         });
         // If first video ends
         $('#DAppGameDevVideo').on('ended',function(){
+            $('#DAppGameDevVideoPlayBtn').show();
             $('#DAppGameDevVideoShade').show();
+            $('#DAppGameDevVideoPauseBtnSmall').hide();
             // Play second video
             $('#DAppGamerVideoShade').hide();
-            $('#DAppGamerVideoPlayBtnSmall').hide();
+            $('#DAppGamerVideoPlayBtn').hide();
             $('#DAppGamerVideoPauseBtnSmall').show();
             $('#DAppGamerVideo').get(0).play();
         });
         // If second video ends
         $('#DAppGamerVideo').on('ended',function(){
             $('#DAppGamerVideoShade').show();
-            $('#DAppGamerVideoPlayBtnSmall').show();
+            $('#DAppGamerVideoPlayBtn').show();
             $('#DAppGamerVideoPauseBtnSmall').hide();
             // Play third video
             $('#DAppInfluencerVideoShade').hide();
-            $('#DAppInfluencerVideoPlayBtnSmall').hide();
+            $('#DAppInfluencerVideoPlayBtn').hide();
             $('#DAppInfluencerVideoPauseBtnSmall').show();
             $('#DAppInfluencerVideo').get(0).play();
         });
         // If third video ends
         $('#DAppInfluencerVideo').on('ended',function(){
             $('#DAppInfluencerVideoShade').show();
-            $('#DAppInfluencerVideoPlayBtnSmall').show();
+            $('#DAppInfluencerVideoPlayBtn').show();
             $('#DAppInfluencerVideoPauseBtnSmall').hide();
             // Show play btn
             $('#DAppGameDevVideoPlayBtn').show();
             $('#DAppGameDevVideoShade').show();
-            $('#DAppGameDevVideoPlayBtnSmall').hide();
             $('#DAppGameDevVideoPauseBtnSmall').hide();
         });
 
@@ -237,21 +237,21 @@
             if(action === 'pause') {
                 $('#'+element+'Video').get(0).pause();
                 $('#'+element+'VideoPauseBtnSmall').hide();
-                $('#'+element+'VideoPlayBtnSmall').show();
+                $('#'+element+'VideoPlayBtn').show();
                 $('#'+element+'VideoShade').show();
             } else {
                 $('#'+element+'Video').get(0).play();
                 $('#'+element+'VideoPauseBtnSmall').show();
-                $('#'+element+'VideoPlayBtnSmall').hide();
+                $('#'+element+'VideoPlayBtn').hide();
                 $('#'+element+'VideoShade').hide();
             }
         }
         $('#DAppGameDevVideoPauseBtnSmall').click(()=>{videoAction('DAppGameDev', 'pause')});
-        $('#DAppGameDevVideoPlayBtnSmall').click(()=>{videoAction('DAppGameDev', 'play')});
+        $('#DAppGameDevVideoPlayBtn').click(()=>{videoAction('DAppGameDev', 'play')});
         $('#DAppGamerVideoPauseBtnSmall').click(()=>{videoAction('DAppGamer', 'pause')});
-        $('#DAppGamerVideoPlayBtnSmall').click(()=>{videoAction('DAppGamer', 'play')});
+        $('#DAppGamerVideoPlayBtn').click(()=>{videoAction('DAppGamer', 'play')});
         $('#DAppInfluencerVideoPauseBtnSmall').click(()=>{videoAction('DAppInfluencer', 'pause')});
-        $('#DAppInfluencerVideoPlayBtnSmall').click(()=>{videoAction('DAppInfluencer', 'play')});
+        $('#DAppInfluencerVideoPlayBtn').click(()=>{videoAction('DAppInfluencer', 'play')});
 
 
         // Swiper carousels
@@ -362,135 +362,3 @@
 
     }); // End of use strict
 })(window.jQuery);
-
-function validateEmail(email) {
-    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(email);
-}
-
-// Newsletter subscription
-var NewsletterEmail = document.getElementById('newsletterEmail');
-var NewsletterSucces = document.getElementById('newsletterSucces');
-var NewsletterError = document.getElementById('newsletterError');
-var NewsletterTermsCheck = document.getElementById('NewsletterTermsCheck');
-var NewsletterPrivacyCheck = document.getElementById('NewsletterPrivacyCheck');
-var SubmitNewsletterContainer = document.getElementById('submitNewsletterContainer');
-var SubmitNewsletter = document.getElementById('submitNewsletter');
-var CloseNewsletter = document.getElementById('closeNewsletterContainer');
-SubmitNewsletter.addEventListener('click', ()=>{
-    console.log('submit clicked');
-    var email = NewsletterEmail.value;
-    if(validateEmail(email) && NewsletterTermsCheck.checked){
-        NewsletterSubscribe(email);
-        NewsletterSucces.style.display = 'block';
-        CloseNewsletter.style.display = 'block';
-        NewsletterEmail.style.display = 'none';
-        NewsletterError.style.display = 'none';
-        NewsletterPrivacyCheck.style.display = 'none';
-        SubmitNewsletter.style.display = 'none';
-    } else {
-        if(!NewsletterTermsCheck.checked && !validateEmail(email)) {
-            NewsletterError.innerHTML = "Please enter a valid email address and accept our terms."
-        } else if(!NewsletterTermsCheck.checked) {
-            NewsletterError.innerHTML = "Please accept our terms.";
-        } else {
-            NewsletterError.innerHTML = "Please enter a valid email address.";
-        }
-    }
-});
-function NewsletterSubscribe(email) {
-    var data = JSON.stringify([
-        {
-          "email": email
-        }
-    ]);
-      
-    var xhr = new XMLHttpRequest();
-    
-    xhr.addEventListener("readystatechange", function () {
-        if (this.readyState === this.DONE) {
-            var result = JSON.parse(this.responseText)
-            console.log(result.persisted_recipients[0]);
-            AddSubscriberToList(result.persisted_recipients[0], 3871051)
-        }
-    });
-    
-    xhr.open("POST", "https://api.sendgrid.com/v3/contactdb/recipients");
-    xhr.setRequestHeader("authorization", "Bearer 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");
-    xhr.setRequestHeader("content-type", "application/json");
-    
-    xhr.send(data);
-}
-
-
-// DApp beta subscription
-var DAppEmail = document.getElementById('DAppEmail');
-var DAppEmailContainer = document.getElementById('DAppEmailContainer');
-var DAppError = document.getElementById('DAppErrors');
-var DAppTermsCheck = document.getElementById('DAppTermsCheck');
-var DAppPrivacyCheck = document.getElementById('DAppPrivacyCheck');
-var DAppSucces = document.getElementById('DAppSucces');
-document.getElementById('DAppSubmit').addEventListener('click', ()=>{
-    var email = DAppEmail.value;
-    console.log(DAppTermsCheck.checked)
-    if(validateEmail(email) && DAppTermsCheck.checked){
-        DAppSubscribe(email);
-        DAppSucces.style.display = 'block';
-        DAppEmailContainer.style.display = 'none';
-        DAppError.style.display = 'none';
-        DAppPrivacyCheck.style.display = 'none';
-    } else {
-        if(!DAppTermsCheck.checked && !validateEmail(email)) {
-            DAppError.innerHTML = "Please enter a valid email address and accept our terms."
-        } else if(!DAppTermsCheck.checked) {
-            DAppError.innerHTML = "Please accept our terms.";
-        } else {
-            DAppError.innerHTML = "Please enter a valid email address.";
-        }
-    }
-});
-function DAppSubscribe(email) {
-    var data = JSON.stringify([
-        {
-          "email": email
-        }
-    ]);
-      
-    var xhr = new XMLHttpRequest();
-    
-    xhr.addEventListener("readystatechange", function () {
-        if (this.readyState === this.DONE) {
-            var result = JSON.parse(this.responseText);
-            console.log(result.persisted_recipients[0]);
-            AddSubscriberToList(result.persisted_recipients[0], 4834254);
-        }
-    });
-    
-    xhr.open("POST", "https://api.sendgrid.com/v3/contactdb/recipients");
-    xhr.setRequestHeader("authorization", "Bearer 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");
-    xhr.setRequestHeader("content-type", "application/json");
-    
-    xhr.send(data);
-}
-
-// Function to add subscribers to a list after being added
-function AddSubscriberToList(subscriber, listId){
-    var data = "null";
-
-    var xhr = new XMLHttpRequest();
-    // xhr.withCredentials = true;
-
-    xhr.addEventListener("readystatechange", function () {
-    if (this.readyState === this.DONE) {
-        console.log(this.responseText);
-    }
-    });
-
-    xhr.open("POST", "https://api.sendgrid.com/v3/contactdb/lists/"+listId+"/recipients/"+subscriber);
-    xhr.setRequestHeader("authorization", "Bearer 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");
-
-    xhr.send(data);
-}
-
-
-
