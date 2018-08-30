@@ -33,5 +33,10 @@ module.exports = [
         title: 'JiJi Games',
         url: 'http://www.jijigames.eu/',
         image: '/img/partners/jiji-games.jpg',
+    },
+    {
+        title: 'Pillar',
+        url: 'https://www.linkedin.com/company/pillar-games/',
+        image: '/img/partners/Pillar.jpg',
     }
 ];
