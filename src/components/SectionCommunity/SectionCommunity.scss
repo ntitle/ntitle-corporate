@@ -29,7 +29,9 @@
     text-decoration: none;
 
     &:hover {
-      color: $blue-on-dark;
+      color: $dark;
+      border-color: $light;
+      background-color: $light;
     }
   }
 }

@@ -22,8 +22,8 @@ module.exports = [
     },
     {
         title: 'Bitcoin Magazine NL',
-        snippet: 'Een van de meest interessante blockchain startups van eigen bodem is nTitle uit Amsterdam. Bitcoin Magazine NL sprak met oprichter...',
-        url: 'http://bitcoinmagazine.nl/en/2018/04/interview-vergeet-steam-de-nederlandse-blockchainstartup-ntitle-geeft-de-macht-terug-aan-de-game-ontwikkelaar-en-gamer/',
+        snippet: 'Blockchain commerce biedt een nieuw paradigma in licenties voor de gaming-industrie.',
+        url: 'https://bitcoinmagazine.nl/2018/08/ntitle-geeft-game-ontwikkelaars-meer-controle-over-digitaal-eigendom/',
         image: '/img/media/bcmag-news.jpg',
         date: '11-04-2018'
     },
