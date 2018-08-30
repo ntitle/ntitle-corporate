@@ -1,5 +1,12 @@
 module.exports = [
     {
+        title: 'Game developers no longer want to pay the high fees of centralised marketplaces',
+        snippet: 'Publishers are getting tired of platform holders taking enormous cuts of their revenue in order to use their storefronts...',
+        url: 'https://www.cryptoandgamers.com/single-post/Game-developers-no-longer-want-to-pay-the-high-fees-of-centralised-marketplaces',
+        image: '/img/media/cryptogamer-news.jpg',
+        date: '30-08-2018'
+    },
+    {
         title: 'Blockchainstartup nTitle geeft macht terug aan game-ontwikkelaar én gamer',
         snippet: 'Een van de meest interessante blockchain startups van eigen bodem is nTitle uit Amsterdam. Oprichter en ceo Peter van Grinsven bouwde...',
         url: 'https://www.emerce.nl/interviews/interview-vergeet-steam-nederlandse-blockchainstartup-ntitle-geeft-macht-terug-gameontwikkelaar-n-gamer',
