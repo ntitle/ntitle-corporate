@@ -6,7 +6,18 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid section-partners__media-container">
+    <div class="swiper-container section-partners__carousel">
+        <div class="swiper-wrapper">
+            {% for article in partners %}
+                <div class="swiper-slide">
+                    <a target="_blank" href="{{ article.url }}" class="section-partners__media">
+                        <img class="section-partners__media-img" src="{{ article.image }}" />
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    {# <div class="container-fluid section-partners__media-container">
 
         {% for article in partners %}
             <div class="section-partners__media-item">
@@ -16,6 +27,6 @@
             </div>
         {% endfor %}
 
-    </div>
+    </div> #}
 </section>
 

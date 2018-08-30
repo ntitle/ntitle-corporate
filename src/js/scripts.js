@@ -359,6 +359,29 @@
             },
             simulateTouch: false
         })
+        // Section Partners
+        var SectionPartnersSwiper = new Swiper ('.section-partners__carousel', {
+            loop: true,
+            slidesPerView: 6,
+            autoplay: true,
+            speed: 1000,
+            spaceBetween: 20,
+            breakpoints: {
+                767: {
+                  slidesPerView: 2,
+                  spaceBetween: 10
+                },
+                992: {
+                  slidesPerView: 5,
+                  spaceBetween: 20
+                },
+                1600: {
+                  slidesPerView: 6,
+                  spaceBetween: 20
+                }
+            },
+            simulateTouch: false
+        })
 
     }); // End of use strict
 })(window.jQuery);
