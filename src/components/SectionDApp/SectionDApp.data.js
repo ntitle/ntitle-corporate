@@ -3,7 +3,7 @@ module.exports = [
         title: 'Game Developer',
         name: 'GameDev',
         icon: '/img/DApp/code-icon.png',
-        video: '/img/DApp/Gamedevv1.mp4',
+        video: '/img/DApp/GameDev_X_1.mp4',
         lines: [
             'Create and manage your assets easily',
             'Sell directly to the gamer',
@@ -14,7 +14,7 @@ module.exports = [
         title: 'Gamer',
         name: 'Gamer',
         icon: '/img/DApp/controller-icon.png',
-        video: '/img/DApp/GamerDAppv1.mp4',
+        video: '/img/DApp/gamer_X_1.mp4',
         lines: [
             'Manage your digital assets',
             'Buy and sell games and in-game items',
@@ -25,7 +25,7 @@ module.exports = [
         title: 'Influencer',
         name: 'Influencer',
         icon: '/img/DApp/horn-icon.png',
-        video: '/img/DApp/Influencer final.mp4',
+        video: '/img/DApp/Influencer_X_1.mp4',
         lines: [
             'Browse games available for promotion',
             'Share directly to social media',
