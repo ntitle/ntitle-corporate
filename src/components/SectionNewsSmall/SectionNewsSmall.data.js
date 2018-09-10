@@ -46,7 +46,7 @@ module.exports = [
     },
     {
         title: 'Bitcoin Magazine NL',
-        url: 'http://bitcoinmagazine.nl/en/2018/04/interview-vergeet-steam-de-nederlandse-blockchainstartup-ntitle-geeft-de-macht-terug-aan-de-game-ontwikkelaar-en-gamer/',
+        url: 'https://bitcoinmagazine.nl/2018/08/ntitle-geeft-game-ontwikkelaars-meer-controle-over-digitaal-eigendom/',
         image: '/img/media/bcmag-news.jpg'
     }
 ];

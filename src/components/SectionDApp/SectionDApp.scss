@@ -312,14 +312,14 @@
         .video-container{
             position: absolute;
             overflow: hidden;
-            width: 84%;
-            height: 78%;
+            width: 88%;
+            height: 94%;
             margin: auto;
             top: 0; bottom: 0; left: 0; right: 0;
 
             .playBtn {
                 position: absolute;
-                z-index: 6;
+                z-index: 7;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -329,7 +329,7 @@
             }
             .smallBtn {
                 position: absolute;
-                z-index: 6;
+                z-index: 7;
                 display: flex;
                 justify-content: flex-start;
                 align-items: flex-end;
@@ -366,6 +366,8 @@
             }
         }
         .phone {
+            position: relative;
+            z-index: 6;
             display: inline-block;
             width: 100%;
             height: auto;

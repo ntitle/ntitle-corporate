@@ -1,5 +1,12 @@
 module.exports = [
     {
+        title: 'Game developers no longer want to pay the high fees of centralised marketplaces',
+        snippet: 'Publishers are getting tired of platform holders taking enormous cuts of their revenue in order to use their storefronts...',
+        url: 'https://www.cryptoandgamers.com/single-post/Game-developers-no-longer-want-to-pay-the-high-fees-of-centralised-marketplaces',
+        image: '/img/media/cryptogamer-news.jpg',
+        date: '30-08-2018'
+    },
+    {
         title: 'Blockchainstartup nTitle geeft macht terug aan game-ontwikkelaar én gamer',
         snippet: 'Een van de meest interessante blockchain startups van eigen bodem is nTitle uit Amsterdam. Oprichter en ceo Peter van Grinsven bouwde...',
         url: 'https://www.emerce.nl/interviews/interview-vergeet-steam-nederlandse-blockchainstartup-ntitle-geeft-macht-terug-gameontwikkelaar-n-gamer',
@@ -22,8 +29,8 @@ module.exports = [
     },
     {
         title: 'Bitcoin Magazine NL',
-        snippet: 'Een van de meest interessante blockchain startups van eigen bodem is nTitle uit Amsterdam. Bitcoin Magazine NL sprak met oprichter...',
-        url: 'http://bitcoinmagazine.nl/en/2018/04/interview-vergeet-steam-de-nederlandse-blockchainstartup-ntitle-geeft-de-macht-terug-aan-de-game-ontwikkelaar-en-gamer/',
+        snippet: 'Blockchain commerce biedt een nieuw paradigma in licenties voor de gaming-industrie.',
+        url: 'https://bitcoinmagazine.nl/2018/08/ntitle-geeft-game-ontwikkelaars-meer-controle-over-digitaal-eigendom/',
         image: '/img/media/bcmag-news.jpg',
         date: '11-04-2018'
     },

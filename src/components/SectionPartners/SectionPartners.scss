@@ -25,6 +25,36 @@
         padding: 0 1rem;
       }
     }
+
+    &__carousel {
+      width: 80%;
+
+      @media (max-width: 1024px) {
+        width: 85%;
+      }
+  
+      @media (max-width: 767px) {
+        width: 100%;
+      }
+  
+      .swiper-container {
+        width: 92%;
+  
+        .swiper-wrapper {
+          .swiper-slide {
+            width: auto;
+          }
+        }
+  
+        @media (max-width: 1024px) {
+          width: 90%;
+        }
+    
+        @media (max-width: 767px) {
+          width: 80%;
+        }
+      }
+    }
   
     &__media-item {
       flex: 0 0 calc(15% - 1rem);    
