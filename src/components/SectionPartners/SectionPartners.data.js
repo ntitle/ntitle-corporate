@@ -1,5 +1,10 @@
 module.exports = [
     {
+        title: 'TDG',
+        url: 'http://www.tdgesports.com/',
+        image: '/img/partners/tdg.jpg',
+    },
+    {
         title: 'Utomik',
         url: 'https://www.utomik.com/',
         image: '/img/partners/Utomik.jpg',
