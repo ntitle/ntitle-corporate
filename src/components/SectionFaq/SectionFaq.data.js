@@ -27,7 +27,7 @@ module.exports = [
     {
         id: '#faq-6',
         question: 'Is nTitle doing a token sale?',
-        answer: 'Yes. The public sale will take place on 1st October 2018. For more information please visit <a href="https://tokensale.ntitle.network">tokensale.ntitle.network</a>'
+        answer: 'Yes. The exact date for the public sale is still to be announced. For more information please visit <a href="https://tokensale.ntitle.network">tokensale.ntitle.network</a>'
     },
     {
         id: '#faq-7',
