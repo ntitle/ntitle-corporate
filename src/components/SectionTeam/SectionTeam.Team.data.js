@@ -77,7 +77,7 @@ module.exports = [
         description: 'Anna is a graphic designer with a comprehensive skill set who values high quality design and attention to detail. She graduated from the Academy of Fine Arts in 2012 and has over 10 years of experience in brand design, packaging and web design. She accepts no half-measures and demands high standards from herself and those around her. Anna tends to geek out over brand design and typography.',
         linkedin: 'https://www.linkedin.com/in/anna-walo-nowakowska-501b6769/',
         avatar: '/img/team/anna.png',
-        role: 'Graphic Designer',
+        role: 'Senior Graphic Designer',
     },
     {
         name: 'Enver Altuntas',
