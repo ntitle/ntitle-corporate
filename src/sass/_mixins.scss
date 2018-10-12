@@ -46,7 +46,23 @@
 @mixin dottedBg {
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url('../img/waves_new.jpg');
+  background-image: url('../img/plain_background-min.jpg');
+  background-position: center;
+  background-color: $bg-blueish;
+}
+
+@mixin gameBg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('../img/game-background-min.png');
+  background-position: center;
+  background-color: $bg-blueish;
+}
+
+@mixin introBg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('../img/02corporate-page-changes-october-min.png');
   background-position: center;
   background-color: $bg-blueish;
 }

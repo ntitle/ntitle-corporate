@@ -1,6 +1,30 @@
 .section-intro {
   padding: 150px 0 50px;
-  @include dottedBg;
+  @include introBg;
+
+  &__context-names {
+    font-size: 17px;
+    margin-bottom: 4rem;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+  }
+
+  &__header-text {
+    color: #3ebefe;
+  }
+
+  &__body-text {
+    margin-top: 1.5rem;
+    color: #fefeff;
+    padding: 0 1rem;
+    text-align: center;
+  }
 
   &__papers {
     display: flex;
@@ -14,13 +38,14 @@
   &__title-row {
     text-align: center;
     margin-bottom: 50px;
-    border-top: 2px solid #243644;
-    border-bottom: 2px solid #243644;
+    //border-top: 2px solid #243644;
+    //border-bottom: 2px solid #243644;
 
     .col-heading {
       font-size: 1.7em;
       display: inline;
-      margin-left: auto; margin-right: auto;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     @media (max-width: 767px) {
@@ -83,7 +108,7 @@
   &__mockup {
     display: flex;
     flex-direction: column;
-    padding: 0 0 2rem 2rem;
+    //padding: 0 0 2rem 2rem;
     justify-content: space-around;
 
     @media (max-width: 768px) {
@@ -196,12 +221,12 @@
 }
 
 .mockap-ui {
-  width: 100%;
+  width: 150%;
   height: auto;
   object-fit: contain;
 
   @media (min-width: 1600px) {
-    width: 125%;
+    width: 150%;
     height: auto;
   }
 
@@ -239,6 +264,8 @@
   text-decoration: none;
   margin: .5rem 0;
   width: 100%;
+  //border-image-source: linear-gradient(lightgreen, darkgreen);
+  //border-image-slice: 20;
 
   @media (max-width: 767px) {
     margin: 10px 0;

@@ -22,16 +22,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: $light;
+    color: #3EBEFE;
     line-height: 2.5em;
     width: 2.5em;
     height: 2.5em;
     text-decoration: none;
 
     &:hover {
-      color: $dark;
-      border-color: $light;
-      background-color: $light;
+      color: #75ffff;
+      border-color: #75ffff;
+
+      //background-color: $light;
     }
   }
 }
