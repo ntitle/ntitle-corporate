@@ -138,7 +138,6 @@
     flex-direction: column;
     justify-content: space-between;
     margin-top: 10px;
-    z-index: 5;
 
     .col-heading, p {
       width: 100%;
@@ -310,4 +309,8 @@
 
 .margin-left {
   margin-right: 1rem;
+}
+
+.index-up {
+  z-index: 5;
 }
