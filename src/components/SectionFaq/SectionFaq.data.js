@@ -26,11 +26,6 @@ module.exports = [
     },
     {
         id: '#faq-6',
-        question: 'Is nTitle doing a token sale?',
-        answer: 'Yes. The exact date for the public sale is still to be announced. For more information please visit <a href="https://tokensale.ntitle.network">tokensale.ntitle.network</a>'
-    },
-    {
-        id: '#faq-7',
         question: 'How can I get in touch with staff at nTitle?',
         answer: 'Please use the contact form at the bottom of this page or if you prefer, write us an email to <a class="maillink" href="mailto:contact@ntitle.network">contact@ntitle.network</a> or contact us via one of our social media channels and we will be happy to assist with any enquiry you may have about our project.'
     },
